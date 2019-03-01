@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/mx_base_title_layout" />
+
+    <com.mx.exams.view.SlideLinerlayout
+        android:id="@+id/slide_chose_liner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/include"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="gone">
+
+        <com.mx.exams.view.NoTextView
+            android:id="@+id/tv_chose_exams_title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></com.mx.exams.view.NoTextView>
+
+        <com.mx.exams.view.NoRadioGroup
+            android:id="@+id/radio_group_write_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_answer_1"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWihte"
+                android:button="@null"
+                android:drawableLeft="@drawable/mx_selector_menu"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:minHeight="40dp"
+                android:text="A"
+                android:textColor="@color/colorBlack"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/radio_answer_2"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWihte"
+                android:button="@null"
+                android:drawableLeft="@drawable/mx_selector_menu"
+                android:drawablePadding="10dp"
+                android:minHeight="40dp"
+                android:text="B"
+                android:textColor="@color/colorBlack"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/radio_answer_3"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWihte"
+                android:button="@null"
+                android:drawableLeft="@drawable/mx_selector_menu"
+                android:drawablePadding="10dp"
+                android:minHeight="40dp"
+                android:text="C"
+                android:textColor="@color/colorBlack"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/radio_answer_4"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWihte"
+                android:button="@null"
+                android:drawableLeft="@drawable/mx_selector_menu"
+                android:drawablePadding="10dp"
+                android:minHeight="40dp"
+                android:text="D"
+                android:textColor="@color/colorBlack"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+        </com.mx.exams.view.NoRadioGroup>
+
+        <com.mx.exams.view.NoTextView
+            android:id="@+id/tv_chose_exams_analysis_view"
+            android:layout_marginTop="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.mx.exams.view.SlideLinerlayout>
+
+    <com.mx.exams.view.SlideLinerlayout
+        android:id="@+id/slide_liner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/include"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <com.mx.exams.view.NoRelativeLayout
+            android:id="@+id/no_relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.mx.exams.view.NoTextView
+                android:id="@+id/tv_exams_title_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></com.mx.exams.view.NoTextView>
+
+            <com.mx.exams.view.NoTextView
+                android:id="@+id/tv_exams_analysis_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:layout_below="@id/tv_exams_title_view" />
+
+            <com.mx.exams.view.PaintInvalidateRectView
+                android:id="@+id/pirv_home_work_achace"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.mx.exams.view.NoRelativeLayout>
+    </com.mx.exams.view.SlideLinerlayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_page_count"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="40dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_home_work_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:padding="10dp"
+            android:src="@mipmap/mx_img_page_left" />
+
+        <TextView
+            android:id="@+id/tv_home_work_page_count"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="0/0"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_24" />
+
+        <ImageView
+            android:id="@+id/img_home_work_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:padding="10dp"
+            android:src="@mipmap/mx_img_page_right" />
+    </LinearLayout>
+</RelativeLayout>

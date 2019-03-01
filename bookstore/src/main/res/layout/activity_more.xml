@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.moxi.bookstore.activity.MoreActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height">
+
+        <RelativeLayout
+            android:id="@+id/back_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:paddingLeft="20dp"
+            android:onClick="goBack">
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/mx_img_back"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/title"
+                style="@style/book_title"
+                android:text="titlr"
+                android:singleLine="true"
+                android:maxWidth="400dp"
+                android:ellipsize="end"
+                android:paddingLeft="10dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv"/>
+
+        </RelativeLayout>
+        <ImageButton
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/search"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:paddingRight="10dp"
+            android:src="@mipmap/mx_img_read_library_search"
+            android:background="@drawable/white_to_font"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <RelativeLayout
+            android:id="@+id/item_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:paddingLeft="20dp">
+            <ImageView
+                android:id="@+id/item_ico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/history_ico"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/item_title"
+                style="@style/book_author"
+                android:text="titlr"
+                android:singleLine="true"
+                android:maxWidth="400dp"
+                android:ellipsize="end"
+                android:paddingLeft="10dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/item_ico"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+    <com.moxi.bookstore.view.HSlidableGridView
+        android:id="@+id/books_gv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:horizontalSpacing="0dp"
+        android:listSelector="@drawable/white_to_font"
+        android:numColumns="4"
+        android:scrollbars="none"
+        android:verticalSpacing="0dp" />
+    <!--bottom-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorWihte">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/last_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_to_font"
+                android:padding="10dp"
+                android:src="@mipmap/write_left" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp">
+
+                <TextView
+                    android:id="@+id/totle_page_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/page_index_size" />
+
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/next_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_to_font"
+                android:padding="10dp"
+                android:src="@mipmap/write_right" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

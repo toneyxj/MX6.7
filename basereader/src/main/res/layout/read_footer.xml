@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    
+    <com.dangdang.reader.dread.view.BatteryView
+        android:id="@+id/read_footer_battery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:contentDescription="手机电量"
+        android:layout_centerVertical="true"/>
+    
+    <com.dangdang.zframework.view.DDTextView
+        android:id="@+id/read_footer_time"
+        android:layout_toRightOf="@+id/read_footer_battery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="16dp"
+       android:paddingRight="30dip" 
+       android:paddingLeft="5dip"
+       android:lines="1"/>
+    
+    <com.dangdang.zframework.view.DDTextView
+        android:id="@+id/read_footer_page"
+        android:layout_toRightOf="@+id/read_footer_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:layout_alignParentRight="true"/>
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/item_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:background="@drawable/di_white_bian_font"
+        android:orientation="horizontal"
+        android:padding="19dp">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32dp"
+            android:textColor="@color/colorBlack"
+            android:text="90天/及"
+            android:src="@mipmap/vip_icon1" />
+        <ImageView
+            android:id="@+id/discounts_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/discounts"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="1dp"/>
+        <TextView
+            android:id="@+id/orignal_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22dp"
+            android:textColor="@color/colorGray"
+            android:text="原价32元"
+            android:src="@mipmap/vip_icon1" />
+        <TextView
+            android:id="@+id/cur_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textSize="32dp"
+            android:textColor="@color/colorBlack"
+            android:text="32元"
+            android:src="@mipmap/vip_icon1" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/draw_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/line" />
+</LinearLayout>

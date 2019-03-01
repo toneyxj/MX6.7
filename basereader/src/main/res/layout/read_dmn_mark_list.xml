@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/read_dmn_marklayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/read_dmn_empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+
+        <com.dangdang.zframework.view.DDImageView
+            android:id="@+id/read_dmn_empty_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/read_dmn_empty_tip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:contentDescription="没有书签"
+            android:src="@drawable/read_dmn_mark_empty_img" />
+
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/read_dmn_empty_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.5"
+            android:text="@string/reader_mark_empty_tip"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/read_dmn_empty_tip2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/read_dmn_empty_tip"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.5"
+            android:text="@string/reader_mark_empty_tip2"
+            android:textColor="@color/gray"
+            android:textSize="16dp" />
+    </RelativeLayout>
+    <!--<com.mx.mxbase.view.SlideLinerlayout-->
+        <!--android:id="@+id/slide_layout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+    <ListView
+        android:id="@+id/read_dmn_mark_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@drawable/read_note_list_divider"
+        android:dividerHeight="1dip"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="true"
+        android:footerDividersEnabled="false"
+        android:listSelector="@color/transparent"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="none"
+        android:smoothScrollbar="true"
+        android:visibility="visible" />
+<!--</com.mx.mxbase.view.SlideLinerlayout>-->
+</RelativeLayout>

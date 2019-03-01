@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.moxi.haierc">
+
+    <!-- android:sharedUserId="android.uid.system" -->
+
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!--获取前台应用-->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <application
+        android:name=".application.HaiercApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity
+            android:name=".activity.DynamicMainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MXSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MXStorageSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SettingActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AuthenActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MXNewSettingActivity"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hjbook.HJBookIndexActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hjbook.HJBookStacksActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.HJSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.HJOtherSettingActivity"
+            android:screenOrientation="portrait" />
+        <!-- 设备密码管理 -->
+        <activity
+            android:name=".activity.DevicePasswordManagerActivity"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".messenger.MessengerService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.moxi.aidl.getpassword" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service android:name=".service.StartOrOffService" />
+
+        <receiver android:name=".castreceiver.ExternalStorageListener">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_EJECT" />
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+
+                <data android:scheme="file" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".castreceiver.AppInstallReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.moxi.last.reader.aidl.ILaseReaderService">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="com.moxi.last.reader.aidl.LAST_READER" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".activity.Haier68LauncherActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".service.ScreenLightBrocast"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.statusbar.broadcast" />
+                //此处必需指定action，否则监听不到
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".service.ScreenShotBrodcast"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.statusbar.screenShot" />
+                <action android:name="com.booksend.statusbar.screenShot" />
+                //此处必需指定action，否则监听不到
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".service.KeyVoleumeBrocast"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.voleume.plus" />
+                <action android:name="com.voleume.minus" />
+                //此处必需指定action，否则监听不到
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activity.ScreenLightAdjustActivity"
+            android:allowTaskReparenting="true"
+            android:taskAffinity="com.moxi.ScreenLightAdjustActivity"
+            android:theme="@style/AlertDialogStyle" />
+        <activity
+            android:name=".activity.ScreenShotPicActivity"
+            android:allowTaskReparenting="true"
+            android:taskAffinity="com.moxi.ScreenShotPicActivity" />
+
+        <receiver android:name=".service.StartUpBrodcast">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activity.OpenPasswordActivity"
+            android:allowTaskReparenting="true"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"></activity>
+        <activity android:name=".activity.TestActivity"
+            android:launchMode="singleInstance"/>
+    </application>
+
+</manifest>

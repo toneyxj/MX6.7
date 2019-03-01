@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="25dip"
+    android:paddingRight="25dip" >
+
+    <RelativeLayout
+        android:id="@+id/read_dmn_ditem_text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/reader_dir_item_click_bg"
+        android:minHeight="70dp" >
+
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/read_dmn_ditem_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/read_dmn_ditem_page"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+            android:maxLines="2"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_26dp" />
+
+        <com.dangdang.zframework.view.DDImageView
+            android:id="@+id/read_dmn_ditem_lock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/lock"
+            android:visibility="gone" />
+
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/read_dmn_ditem_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_18dp" />
+    </RelativeLayout>
+
+    <com.dangdang.zframework.view.DDImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/read_dmn_ditem_text_layout"
+        android:background="@color/color_line" />
+
+</RelativeLayout>

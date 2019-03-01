@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dangdang.reader.dread.view.toolbar.BottomToolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/read_toolbar_bg" 
+    android:paddingTop="5dip">
+
+    <RelativeLayout
+        android:id="@+id/read_progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dip" 
+        android:layout_alignParentTop="true"
+        android:gravity="center">
+        <com.dangdang.reader.dread.view.ReadProgressSeekBar
+            android:id="@+id/read_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="17dp"
+            android:layout_marginTop="16dp"
+            android:maxHeight="2dp"
+            android:minHeight="2dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:progressDrawable="@drawable/read_bottom_progress_dir"
+            android:thumb="@drawable/reader_bottom_progress_thumb"
+            android:thumbOffset="12dp" 
+            android:visibility="gone"/>
+        
+        <ProgressBar
+            android:id="@+id/read_compprogress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="17dp"
+            android:layout_marginTop="16dp"
+            android:maxHeight="2dp"
+            android:minHeight="2dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progress="50"
+            android:max="100"
+            android:progressDrawable="@drawable/read_bottom_progress_dir"
+            android:visibility="visible"/>
+    </RelativeLayout>
+
+    <com.dangdang.zframework.view.DDImageView
+        android:id="@+id/read_last_pos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/reader_bottom_progress_thumb_prev" />
+
+    <com.dangdang.zframework.view.DDTextView
+        android:id="@+id/read_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/read_toolbar_loading"
+        android:textColor="@color/white"
+        android:textSize="14dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal" >
+
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/read_bottom_dmn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="6dp"
+            android:drawableTop="@drawable/reader_toolbar_bottom_mulu"
+            android:gravity="center_horizontal|bottom"
+            android:minHeight="46dp"
+            android:text="@string/directory"
+            android:textSize="13dp" />
+
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/read_bottom_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="6dp"
+            android:drawableTop="@drawable/reader_toolbar_bottom_setting"
+            android:gravity="center_horizontal|bottom"
+            android:minHeight="46dp"
+            android:text="@string/menu_mode_set"
+            android:textSize="13dp" />
+
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/read_bottom_night"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="6dp"
+            android:drawableTop="@drawable/reader_toolbar_bottom_night"
+            android:gravity="center_horizontal|bottom"
+            android:minHeight="46dp"
+            android:text="@string/night"
+            android:textSize="13dp" />
+
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/read_bottom_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="6dp"
+            android:drawableTop="@drawable/reader_toolbar_bottom_day"
+            android:gravity="center_horizontal|bottom"
+            android:minHeight="46dp"
+            android:text="@string/day"
+            android:textSize="13dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</com.dangdang.reader.dread.view.toolbar.BottomToolbar>

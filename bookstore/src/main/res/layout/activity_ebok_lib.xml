@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWihte">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:layout_height="@dimen/title_height">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            style="@style/book_title"
+            android:onClick="goBack"
+            android:text="  我的图书馆"
+            android:drawableLeft="@mipmap/mx_img_read_my_library"/>
+        <TextView
+            android:id="@+id/my_acont_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            style="@style/book_title"
+            android:layout_alignParentRight="true"
+            android:text="我的账户"/>
+        <RelativeLayout
+            android:id="@+id/search_rl"
+            android:layout_width="@dimen/search_width"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="40dp"
+            android:layout_toLeftOf="@+id/my_acont_tv"
+            android:clickable="true"
+            android:onClick="searchBook"
+            android:background="@drawable/shape_search_bg">
+            <TextView
+                android:id="@+id/tv"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="35dp"
+                style="@style/book_author"
+                android:text="搜索图书" />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/mx_img_read_library_search"
+                android:layout_toLeftOf="@id/tv"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <GridView
+            android:id="@+id/books_gv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:horizontalSpacing="0dp"
+            android:listSelector="@drawable/white_to_font"
+            android:numColumns="4"
+            android:scrollbars="none"
+            android:verticalSpacing="0dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="3">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:layout_height="60dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    style="@style/book_title"
+                    android:text="  网上书城"
+                    android:drawableLeft="@mipmap/mx_img_read_net_book_store"/>
+                <TextView
+                    android:id="@+id/more_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    style="@style/book_title"
+                    android:layout_alignParentRight="true"
+                    android:text="发现更多  "
+                    android:onClick="goMore"
+                    android:clickable="true"
+                    android:drawableRight="@mipmap/mx_img_more"/>
+            </RelativeLayout>
+            <GridView
+                android:id="@+id/net_books_gv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:horizontalSpacing="0dp"
+                android:listSelector="@drawable/white_to_font"
+                android:numColumns="4"
+                android:scrollbars="none"
+                android:verticalSpacing="0dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

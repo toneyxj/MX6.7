@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:paddingBottom="14dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.dangdang.zframework.view.DDImageView
+            android:id="@+id/read_dmn_nitem_notecolor"
+            android:layout_width="12dip"
+            android:layout_height="12dip"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/read_note_drawline_color_red"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="24dip"
+            android:layout_marginRight="8dip"
+            />
+
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/read_dmn_nitem_addtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/read_dmn_nitem_notecolor"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:singleLine="true"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_18dp"/>
+
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/read_dmn_nitem_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="15dp"
+            android:ellipsize="end"
+            android:gravity="right"
+            android:singleLine="true"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_18dp"/>
+
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/read_dmn_nitem_note_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/read_dmn_nitem_addtime"
+            android:layout_marginLeft="44dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:lineSpacingMultiplier="1.5"
+            android:maxLines="2"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_16dp"/>
+    </RelativeLayout>
+
+    <com.dangdang.zframework.view.DDTextView
+        android:id="@+id/read_dmn_nitem_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/read_note_list_comment_bg"
+        android:gravity="left|center_vertical"
+        android:padding="9dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/moxi_text_size_16dp"/>
+
+</LinearLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="11dp">
+
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@mipmap/back"
+            android:drawablePadding="10dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="应用"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/title_left_size" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="列表事项"
+            android:textColor="@color/colorBlack"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/title_size"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/current_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGray"
+        android:gravity="center"
+        android:paddingBottom="12dp"
+        android:paddingTop="12dp"
+        android:text="今天 2016年09月05日"
+        android:textColor="@color/colorWihte"
+        android:textSize="@dimen/moxi_text_size_24"
+        android:textStyle="bold" />
+    <com.mx.mxbase.view.LinerlayoutInter
+        android:id="@+id/move_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <com.mx.mxbase.view.NoListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:listSelector="@color/colorWihte"
+            android:divider="@color/colorWihte"
+            android:dividerHeight="0dp"/>
+    </com.mx.mxbase.view.LinerlayoutInter>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/last_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_to_font"
+            android:padding="10dp"
+            android:src="@mipmap/write_left" />
+
+        <TextView
+            android:id="@+id/show_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:text="1/1"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/page_index_size" />
+
+        <ImageButton
+            android:id="@+id/next_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_to_font"
+            android:padding="10dp"
+            android:src="@mipmap/write_right" />
+    </LinearLayout>
+</LinearLayout>

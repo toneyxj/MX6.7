@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="hot_tags_color1">#FF6C6C</color>
+    <color name="hot_tags_color2">#93D5EE</color>
+    <color name="hot_tags_color3">#8BE1B0</color>
+    <color name="hot_tags_color4">#D89FE4</color>
+    <color name="hot_tags_color5">#FF95C4</color>
+    <color name="hot_tags_color6">#FFCC83</color>
+    <color name="hot_tags_color7">#6CAAFF</color>
+
+    <integer-array name="hot_tags_colors">
+        <item>@color/hot_tags_color1</item>
+        <item>@color/hot_tags_color2</item>
+        <item>@color/hot_tags_color3</item>
+        <item>@color/hot_tags_color4</item>
+        <item>@color/hot_tags_color5</item>
+        <item>@color/hot_tags_color6</item>
+        <item>@color/hot_tags_color7</item>tag
+    </integer-array>
+
+    <integer-array name="tag_ids">
+        <item>42</item>
+        <item>53</item>
+        <item>50</item>
+        <item>24</item>
+        <item>52</item>
+        <item>35</item>
+        <item>34</item>
+        <item>29</item>
+        <item>63</item>
+        <item>461459</item>
+        <item>19</item>
+        <item>55</item>
+        <item>30</item>
+        <item>4</item>
+        <item>38</item>
+        <item>7</item>
+    </integer-array>
+
+    <string-array name="tag_names">
+        <item>想成功</item>
+        <item>爱小说</item>
+        <item>管理学</item>
+        <item>文学</item>
+        <item>青春文学</item>
+        <item>谈艺术</item>
+        <item>爱历史</item>
+        <item>想健康</item>
+        <item>心理学</item>
+        <item>爱读书</item>
+        <item>家有儿女</item>
+        <item>吃货美食</item>
+        <item>在路上</item>
+        <item>古代言情</item>
+        <item>两性关系</item>
+        <item>玄幻武侠</item>
+    </string-array>
+
+    <integer-array name="tag_ids_test">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>42</item>
+        <item>43</item>
+    </integer-array>
+
+    <string-array name="tag_names_test">
+        <item>美食</item>
+        <item>时尚</item>
+        <item>感情</item>
+        <item>医学</item>
+        <item>两性关系</item>
+    </string-array>
+</resources>

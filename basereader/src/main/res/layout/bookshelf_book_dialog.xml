@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:gravity="center"
+    android:minWidth="220dp"
+    android:background="@drawable/round_corner_bg_exit">
+
+	    <com.dangdang.zframework.view.DDTextView 
+	        android:id="@+id/bookshelf_book_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="50dp"
+	        android:singleLine="true"
+	        android:ellipsize="end"
+	        android:gravity="center"
+	        android:textSize="18dp"
+	        android:textColor="@color/text_gray_333333"/>
+    
+	    <View 
+			android:layout_width="match_parent"
+			android:layout_height="1dp"
+			android:background="#888888"/>
+	    
+	    <com.dangdang.zframework.view.DDTextView 
+	        android:id="@+id/bookshelf_book_delete"
+	        android:layout_width="match_parent"
+	        android:layout_height="40dp"
+	        android:layout_marginTop="10dp"
+	        android:textSize="16dp"
+            android:text="@string/delete"
+	        android:textColor="@color/text_gray_333333"
+	        android:gravity="center"
+	        android:background="@drawable/dialog_white_btn_selector"/>
+	    
+	    <com.dangdang.zframework.view.DDTextView 
+	        android:id="@+id/bookshelf_book_retype"
+	        android:layout_width="match_parent"
+	        android:layout_height="40dp"
+	        android:layout_marginTop="10dp"
+	        android:textSize="16dp"
+	        android:textColor="@color/text_gray_333333"
+	        android:gravity="center"
+	        android:background="@drawable/dialog_white_btn_selector"/>
+
+</LinearLayout>

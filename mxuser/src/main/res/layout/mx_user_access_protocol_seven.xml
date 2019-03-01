@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="2dp"
+        android:text="          ② 如果用户发现自己的个人信息泄密，尤其是海尔教育账户及密码发生泄露，请用户立即联络海尔教育客服，以便海尔教育采取相应措施。\n          Cookie的使用： \n          ① 通过海尔教育所设Cookie所取得的有关信息，将适用本政策；\n          ② 在海尔教育上发布广告的公司通过广告在用户计算机上设定的Cookies，将按其自己的隐私权政策使用；\n          ③ 编辑和删除个人信息的权限： 用户可以点击“我的课堂”对用户的个人信息进行编辑和删除，除非海尔教育另有规定； \n          ④ 政策修改：海尔教育保留对本隐私权政策作出不定时修改的权利。"
+        android:textSize="@dimen/moxi_text_size_22" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="2dp"
+        android:text="九、法律与管辖"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/moxi_text_size_24"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="2dp"
+        android:text="          本用户协议根据现行中华人民共和国法律法规制定。如发生协议条款与中华人民共和国法律法规相抵触时，则这些条款将完全按法律法规的规定重新解释，本用户协议的其它条款仍对海尔教育和用户具有法律约束力。因本用户协议而发生的任何争议应向对北京市海淀区有管辖权的人民法院提起诉讼。 "
+        android:textSize="@dimen/moxi_text_size_22" />
+</LinearLayout>

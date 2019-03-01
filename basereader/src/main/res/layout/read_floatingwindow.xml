@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@color/transparent"
+              android:gravity="center_horizontal"
+              android:orientation="horizontal">
+    <!--reader_note_arrow_down_empty-->
+    <LinearLayout
+        android:id="@+id/read_fw_bglayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/di_white_bian_font_line1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dip"
+            android:layout_marginTop="6dip"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:id="@+id/pop_width"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+                    <com.dangdang.zframework.view.DDTextView
+                        android:id="@+id/read_check_dir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="16dp"
+                        android:paddingRight="36dp"
+                        android:paddingLeft="36dp"
+                        android:paddingBottom="16dp"
+                        android:text="@string/checkdir"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size_19"/>
+
+
+                    <View
+                        android:id="@+id/read_fw_zerodivide"
+                        android:layout_width="1dip"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlack"/>
+
+                    <!--<com.dangdang.zframework.view.DDTextView-->
+                        <!--android:id="@+id/read_fw_drawline"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center"-->
+                        <!--android:paddingTop="16dp"-->
+                        <!--android:paddingRight="36dp"-->
+                        <!--android:paddingLeft="36dp"-->
+                        <!--android:paddingBottom="16dp"-->
+                        <!--android:text="@string/draw_line"-->
+                        <!--android:textColor="@color/colorBlack"-->
+                        <!--android:textSize="@dimen/text_size_19"/>-->
+
+
+                    <com.dangdang.zframework.view.DDTextView
+                        android:id="@+id/read_fw_note"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="16dp"
+                        android:paddingRight="36dp"
+                        android:paddingLeft="36dp"
+                        android:paddingBottom="16dp"
+                        android:text="@string/booknote"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size_19"/>
+                    <View
+                        android:layout_width="@dimen/line"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlack"
+                        />
+                    <com.dangdang.zframework.view.DDTextView
+                        android:id="@+id/read_fw_copy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="16dp"
+                        android:paddingRight="36dp"
+                        android:paddingLeft="36dp"
+                        android:paddingBottom="16dp"
+                        android:text="@string/reader_copy"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size_19"/>
+                    <View
+                        android:layout_width="@dimen/line"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlack"
+                        />
+                    <com.dangdang.zframework.view.DDTextView
+                        android:id="@+id/read_fw_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="16dp"
+                        android:paddingRight="36dp"
+                        android:paddingLeft="36dp"
+                        android:paddingBottom="16dp"
+                        android:text="@string/share"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size_19"/>
+
+                    <View
+                        android:id="@+id/read_fw_firstdivide"
+                        android:layout_width="@dimen/line"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBlack"
+                        />
+
+                    <com.dangdang.zframework.view.DDTextView
+                        android:id="@+id/read_fw_drawline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="16dp"
+                        android:paddingRight="36dp"
+                        android:paddingLeft="36dp"
+                        android:paddingBottom="16dp"
+                        android:text="@string/delete"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/text_size_19"/>
+
+
+                </LinearLayout>
+            </ScrollView>
+
+            <View
+                android:id="@+id/read_ciba"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line"
+                android:visibility="gone"
+                android:background="@color/colorBlack"
+                />
+            <com.mx.mxbase.view.MxTextView
+                android:id="@+id/ciba_hanzi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:lines="5"
+                android:layout_marginBottom="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:textSize="@dimen/moxi_text_size_22"/>
+            <View
+                android:id="@+id/read_fw_seperator"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line"
+                android:background="@color/colorWihte"
+                android:visibility="gone"
+                />
+
+            <ScrollView
+                android:id="@+id/read_fw_drawline_colors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <com.dangdang.zframework.view.DDImageView
+                        android:id="@+id/read_fw_drawline_color_yellow"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:contentDescription="黄色"
+                        android:src="@drawable/read_note_drawline_color_yellow_config"
+                        />
+
+                    <com.dangdang.zframework.view.DDImageView
+                        android:id="@+id/read_fw_drawline_color_green"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:contentDescription="绿色"
+                        android:src="@drawable/read_note_drawline_color_green_config"
+                        />
+
+                    <com.dangdang.zframework.view.DDImageView
+                        android:id="@+id/read_fw_drawline_color_blue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:contentDescription="蓝色"
+                        android:src="@drawable/read_note_drawline_color_blue_config"
+                        />
+
+                    <com.dangdang.zframework.view.DDImageView
+                        android:id="@+id/read_fw_drawline_color_pink"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:contentDescription="粉色"
+                        android:src="@drawable/read_note_drawline_color_pink_config"
+                        />
+
+                    <com.dangdang.zframework.view.DDImageView
+                        android:id="@+id/read_fw_drawline_color_red"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:contentDescription="红色"
+                        android:src="@drawable/read_note_drawline_color_red_config"
+                        />
+
+                    <com.dangdang.zframework.view.DDTextView
+                        android:id="@+id/read_fw_delete"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/reader_delete"
+                        android:textColor="#F4F4F4"
+                        android:textSize="14dp"/>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

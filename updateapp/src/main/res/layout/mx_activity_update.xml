@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorWihte"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/mx_base_title_layout" />
+
+    <LinearLayout
+        android:id="@+id/ll_update_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="设备型号：TopsirH68"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_22" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:id="@+id/img_update_from_net"
+            android:layout_height="40dp"
+            android:src="@mipmap/mx_img_update_from_net" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ll_update_info"
+        android:src="@mipmap/mx_img_update_logo" />
+</RelativeLayout>

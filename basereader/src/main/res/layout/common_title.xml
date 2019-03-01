@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_rl"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/title_bar_height"
+    android:background="@color/title_bg">
+
+    <com.dangdang.zframework.view.DDImageView
+        android:id="@+id/common_back"
+        android:layout_width="44dp"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/back"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:scaleType="centerInside"
+        android:src="@drawable/arrow_left_white" />
+
+    <RelativeLayout
+        android:id="@+id/common_left_menu"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+
+        <com.dangdang.zframework.view.DDImageView
+            android:id="@+id/common_menu_left_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:scaleType="centerInside" />
+
+        <com.dangdang.zframework.view.DDImageView
+            android:id="@+id/common_left_menu_btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/common_menu_left_btn"
+            android:paddingBottom="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_horizontal_margin"
+            android:scaleType="centerInside" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/common_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/common_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/common_menu"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true">
+
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/common_menu_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="right|center_vertical"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+
+        <com.dangdang.zframework.view.DDImageView
+            android:id="@+id/common_menu_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_horizontal_margin"
+            android:scaleType="centerInside" />
+
+        <com.dangdang.zframework.view.DDImageView
+            android:id="@+id/common_menu_btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/common_menu_btn"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:scaleType="centerInside"
+            android:visibility="visible"
+            android:layout_alignWithParentIfMissing="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <!-- 透明边框绿色填充的圆形按钮 -->
+    <solid android:color="@color/colorWihte"
+        />
+<stroke android:color="@color/colorBlack"
+   android:width="2dp" />
+
+    <corners android:radius="20dp" />
+</shape>

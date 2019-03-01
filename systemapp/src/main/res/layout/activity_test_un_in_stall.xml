@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_test_un_in_stall"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.moxi.systemapp.activity.TestUnInStallActivity">
+
+    <EditText
+        android:id="@+id/install_edite"
+        android:layout_width="match_parent"
+        android:text="/storage/emulated/0/wr1.apk"
+        android:layout_height="wrap_content" />
+    <Button
+        android:text="安装"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="40dp"
+        android:id="@+id/install"/>
+    <EditText
+        android:id="@+id/uninstall_edite"
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
+        android:text="com.moxi.writeNote"
+        android:layout_height="wrap_content" />
+    <Button
+        android:text="卸载"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="46dp"
+        android:layout_marginStart="46dp"
+        android:id="@+id/uninstall" />
+</LinearLayout>

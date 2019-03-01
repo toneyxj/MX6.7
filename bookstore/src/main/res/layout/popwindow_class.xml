@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:padding="10dp"
+    android:background="@drawable/moxi_shape_gray_rect_100"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:background="@drawable/white_to_font"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/tv_book_store_all_book"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="全部图书"
+            android:background="@drawable/white_to_font"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_24"/>
+        <ImageView
+            android:id="@+id/img_book_search_all_book"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@id/tv_book_store_all_book"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/img_moxi_left_arror"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:background="@drawable/white_to_font"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/tv_book_store_dangdang_book"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="当当书库"
+            android:background="@drawable/white_to_font"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_24"/>
+        <ImageView
+            android:id="@+id/img_book_search_dangdang_book"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@id/tv_book_store_dangdang_book"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/img_moxi_left_arror"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_font_item_container"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:clickable="true" >
+
+    <LinearLayout
+        android:id="@+id/fragment_font_item_name_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginLeft="18dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/fragment_font_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:gravity="left|center_vertical"
+            android:maxWidth="200dip"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <com.dangdang.zframework.view.DDImageView
+            android:id="@+id/fragment_font_item_name_img"
+            android:layout_width="87dip"
+            android:contentDescription="字体示例图片"
+            android:layout_height="23dip"
+            android:layout_gravity="left|center_vertical"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fragment_font_item_name_parent"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingBottom="3dp" >
+
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/fragment_font_item_filesize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:textColor="@color/black"
+            android:textSize="9dp"
+            android:visibility="gone" />
+
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/fragment_font_item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:textColor="@color/black"
+            android:textSize="9dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/fragment_font_item_right_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="17dp"
+        android:gravity="center_vertical|right" >
+
+        <RadioButton
+            android:id="@+id/fragment_font_item_radiobtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="是否设置为当前字体"
+            android:button="@drawable/font_radio_selector"
+            android:checked="false"
+            android:gravity="center" />
+
+        <com.dangdang.zframework.view.DDImageView
+            android:id="@+id/fragment_font_item_buy_btn"
+            android:layout_width="44dp"
+            android:layout_height="24dp"
+            android:background="@drawable/font_buy"
+            android:enabled="true"
+            android:contentDescription="购买字体"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/fragment_font_item_download_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <com.dangdang.zframework.view.DDTextView
+                android:id="@+id/fragment_font_item_download_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minWidth="35dp"
+                android:textColor="@color/gray"
+                android:textSize="14dp" />
+
+            <com.dangdang.zframework.view.DDImageView
+                android:id="@+id/fragment_font_item_download_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="下载字体"
+                android:src="@drawable/font_download" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@color/white_bg_split_line_gray_e6e6e6" />
+
+</RelativeLayout>

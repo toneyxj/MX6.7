@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/reader_text_search_result_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp" >
+
+    <com.dangdang.zframework.view.DDTextView
+        android:id="@+id/reader_text_search_result_item_chapter_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textSize="14dp"
+        android:textColor="@color/black" />
+
+    <com.dangdang.zframework.view.DDTextView
+        android:id="@+id/reader_text_search_result_item_content_tv"
+        android:layout_width="fill_parent"
+        android:textSize="14dp"
+        android:layout_marginTop="4dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_gray_666666" />
+
+    <com.dangdang.zframework.view.DDImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="10dp"
+        android:background="@color/search_split_line_gray_cfcfcf" />
+
+</LinearLayout>

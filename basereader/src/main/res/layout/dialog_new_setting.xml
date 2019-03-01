@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/back_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="11dp">
+
+        <TextView
+            android:id="@+id/show_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/white_to_font"
+            android:drawableLeft="@mipmap/back"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp"
+            android:text="返回"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_22" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/white_to_font"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_22" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/page_index"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/white_to_font"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="分享"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_22" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/title_layout"
+        android:background="@color/colorBlack" />
+
+    <View
+        android:id="@+id/onclick_dismiss"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_below="@+id/title_layout" />
+    <!--设置主界面-->
+    <LinearLayout
+        android:id="@+id/main_setting_layout"
+        android:layout_width="600dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/di_white_bian_font"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_above="@+id/setting_main_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-2dp"
+            android:background="@drawable/di_white_bian_font">
+
+            <TextView
+                android:id="@+id/select_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="字体选项"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/moxi_text_size_22" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/setting_yemei" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/setting_main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            android:layout_centerInParent="true"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="40dp">
+            <!-- 字体设置 -->
+            <LinearLayout
+                android:id="@+id/font_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+                <com.mx.mxbase.view.LinerlayoutInter
+                    android:id="@+id/font_slide"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.mx.mxbase.view.NoGridView
+                        android:id="@+id/grid_fonts_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:horizontalSpacing="10dp"
+                        android:listSelector="@drawable/white_to_font"
+                        android:numColumns="2"
+                        android:verticalSpacing="16dp" />
+                </com.mx.mxbase.view.LinerlayoutInter>
+
+                <RadioGroup
+                    android:id="@+id/radio_font"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="50dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/bottom_1"
+                        style="@style/setting_font_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:drawableBottom="@drawable/seting_font_size1" />
+
+                    <RadioButton
+                        android:id="@+id/bottom_2"
+                        style="@style/setting_font_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawableBottom="@drawable/seting_font_size2" />
+
+                    <RadioButton
+                        android:id="@+id/bottom_3"
+                        style="@style/setting_font_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawableBottom="@drawable/seting_font_size3" />
+
+                    <RadioButton
+                        android:id="@+id/bottom_4"
+                        style="@style/setting_font_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawableBottom="@drawable/seting_font_size4" />
+
+                    <RadioButton
+                        android:id="@+id/bottom_5"
+                        style="@style/setting_font_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawableBottom="@drawable/seting_font_size5" />
+
+                    <RadioButton
+                        android:id="@+id/bottom_6"
+                        style="@style/setting_font_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawableBottom="@drawable/seting_font_size6" />
+
+                    <RadioButton
+                        android:id="@+id/bottom_7"
+                        style="@style/setting_font_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawableBottom="@drawable/seting_font_size7" />
+
+                    <RadioButton
+                        android:id="@+id/bottom_8"
+                        style="@style/setting_font_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawableBottom="@drawable/seting_font_size8" />
+
+                    <RadioButton
+                        android:id="@+id/bottom_9"
+                        style="@style/setting_font_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawableBottom="@drawable/seting_font_size9" />
+                </RadioGroup>
+            </LinearLayout>
+            <!-- 页面设置 -->
+            <LinearLayout
+                android:id="@+id/page_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="行间距"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/moxi_text_size_20" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="页边距"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/moxi_text_size_20" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/line_min"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/coner_white"
+                        android:padding="6dp"
+                        android:src="@drawable/linespa1" />
+
+
+                    <ImageView
+                        android:id="@+id/line_middle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/coner_white"
+                        android:padding="6dp"
+                        android:src="@drawable/linespa2" />
+
+                    <ImageView
+                        android:id="@+id/line_max"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/coner_white"
+                        android:padding="6dp"
+                        android:src="@drawable/linespa3" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/page_min"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/coner_white"
+                        android:padding="6dp"
+                        android:src="@drawable/gauge3" />
+
+
+                    <ImageView
+                        android:id="@+id/page_middle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/coner_white"
+                        android:padding="6dp"
+                        android:src="@drawable/gauge2" />
+
+                    <ImageView
+                        android:id="@+id/page_max"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/coner_white"
+                        android:padding="6dp"
+                        android:src="@drawable/gauge1" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="屏幕显示方向"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/moxi_text_size_20" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/screen_ver"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/coner_white"
+                        android:padding="6dp"
+                        android:src="@drawable/vertical_screen" />
+
+
+                    <ImageView
+                        android:id="@+id/screen_hor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/coner_white"
+                        android:padding="6dp"
+                        android:src="@drawable/landscape" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 阅读进度 -->
+            <LinearLayout
+                android:id="@+id/progress_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/progress_click_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/progress_select_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:src="@drawable/select_non" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="进度百分比"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/moxi_text_size_20" />
+
+                        <TextView
+                            android:id="@+id/read_progress_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="100%\t全书完毕"
+                            android:textColor="@color/colorGray"
+                            android:textSize="@dimen/moxi_text_size_16" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/progress_click_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/progress_select_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:src="@drawable/select_non" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="阅读页数"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/moxi_text_size_20" />
+
+                        <TextView
+                            android:id="@+id/read_page_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="33页\t全书100页"
+                            android:textColor="@color/colorGray"
+                            android:textSize="@dimen/moxi_text_size_16" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/progress_click_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/progress_select_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:src="@drawable/select_non" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="跳转页数"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/moxi_text_size_20" />
+
+                        <TextView
+                            android:id="@+id/read_tiaozhaung_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="33页\剩余67页"
+                            android:textColor="@color/colorGray"
+                            android:textSize="@dimen/moxi_text_size_16" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/progress_click_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/progress_select_four"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:src="@drawable/select_non" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="无"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/moxi_text_size_20" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="100%\t全书完毕"
+                            android:textColor="@color/colorGray"
+                            android:textSize="@dimen/moxi_text_size_16"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <!--滑动切换界面-progress-->
+    <LinearLayout
+        android:id="@+id/progress_show_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/line_bottom"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_above="@+id/bottom_layout"
+            android:background="@color/colorBlack" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/chapter_last"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:padding="8dp"
+                android:text="上一章"
+                android:background="@drawable/white_to_font"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/moxi_text_size_20" />
+
+            <com.dangdang.reader.view.DDProgressView
+                android:id="@+id/progress_view"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/chapter_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="8dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/white_to_font"
+                android:text="下一章"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/moxi_text_size_20" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/progress_hitn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_18" />
+    </LinearLayout>
+    <!--底部显示设置-->
+    <View
+        android:id="@+id/line_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/bottom_layout"
+        android:background="@color/colorBlack" />
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_white"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="12dp">
+
+            <TextView
+                android:id="@+id/show_directory"
+                style="@style/setting_bottom"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/setting_directory"
+                android:text="回到目录" />
+            <!--<View-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_weight="1"/>-->
+            <TextView
+                android:id="@+id/show_font"
+                style="@style/setting_bottom"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/setting_font"
+                android:text="字体选项" />
+
+            <TextView
+                android:id="@+id/show_page"
+                style="@style/setting_bottom"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/setting_page"
+                android:text="页面设置" />
+
+            <TextView
+                android:id="@+id/show_progress"
+                style="@style/setting_bottom"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/setting_progress"
+                android:text="阅读进度" />
+            <!--<View-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_weight="1"/>-->
+            <TextView
+                android:id="@+id/show_setting"
+                style="@style/setting_bottom"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/shot_screen"
+                android:text="截屏" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/setting_select_index"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/setting_select_state"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

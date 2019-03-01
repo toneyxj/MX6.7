@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.moxi.bookstore.activity.MyActivity">
+<!--1-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height">
+            <RelativeLayout
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:clickable="true"
+                android:onClick="cartList">
+
+                <ImageView
+                    android:id="@+id/iv1"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/carlist_ico"
+                    android:layout_toLeftOf="@id/tv"/>
+
+                <TextView
+                    android:id="@+id/tv"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:paddingRight="33dp"
+                    style="@style/book_title"
+                    android:text="购物车"
+                    android:layout_alignBottom="@+id/iv1"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/back_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:paddingLeft="20dp"
+                android:onClick="goBack">
+                <ImageView
+                    android:id="@+id/iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/mx_img_back"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/title"
+                    style="@style/book_title"
+                    android:text="我的账户"
+                    android:lines="1"
+                    android:maxWidth="400dp"
+                    android:ellipsize="end"
+                    android:paddingLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/iv"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:paddingLeft="20dp"
+            android:visibility="visible">
+            <ImageView
+                android:id="@+id/ico_iv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_wallet"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:textSize="@dimen/moxi_text_size_24"
+                android:textColor="@color/colorBlack"
+                android:layout_toRightOf="@id/ico_iv"
+                android:layout_marginLeft="10dp"
+                android:paddingRight="20dp"
+                android:clickable="true"
+                android:onClick="goAcount"
+                android:gravity="center_vertical"
+                android:text=" 账户余额" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/emty1_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="没有历史记录"
+            style="@style/title_text"
+            android:gravity="center"
+            android:visibility="gone"/>
+
+        <!--history-->
+        <LinearLayout
+            android:id="@+id/item_ly"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <ImageView
+                android:id="@+id/book_ico"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@mipmap/error"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:paddingBottom="5dp"
+                android:paddingRight="20dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="20dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/book_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:text="book title"
+                    style="@style/book_title"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="4dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="33dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/author_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            style="@style/book_author"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:text="作者: 钱钟书">
+                        </TextView>
+                        <TextView
+                            android:id="@+id/time_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            style="@style/book_author"
+                            android:text="下载时间: 2016-06-11">
+                        </TextView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="33dp"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/publischer_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            style="@style/book_author"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:text="出版社: 人民出版社">
+                        </TextView>
+                        <TextView
+                            android:id="@+id/pubTime_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            style="@style/book_author"
+                            android:text="出版年月: 2010-01">
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/price_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        style="@style/book_author"
+                        android:text="进度:"/>
+                    <TextView
+                        android:id="@+id/progress_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        style="@style/book_author"
+                        android:text="10.00%"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btns_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="5dp">
+                    <TextView
+                        android:id="@+id/btn1_tv"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/shape_detail_btn_bg"
+                        android:text="继续阅读"
+                        android:textColor="@color/colorWihte"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:onClick="keepRead"
+                        android:textSize="@dimen/moxi_text_size_24"/>
+
+                    <TextView
+                        android:id="@+id/btn2_tv"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/shape_detail_btn_bg"
+                        android:text="阅读历史"
+                        android:textColor="@color/colorWihte"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:onClick="readHistory"
+                        android:layout_toRightOf="@id/btn1_tv"
+                        android:layout_marginLeft="40dp"
+                        android:textSize="@dimen/moxi_text_size_24"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--Acount-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+            <ProgressBar
+                android:id="@+id/acount_group_pb"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <include layout="@layout/tryagine_layout"
+                    android:id="@+id/acount_reflash"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/acount_group_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/acount_ico"
+                android:layout_width="250dp"
+                android:layout_height="210dp"
+                android:padding="10dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/acount_ico"
+                android:layout_marginRight="20dp"/>
+            <LinearLayout
+                android:id="@+id/balence_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/acount_ico"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/mainbalence_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:textSize="@dimen/moxi_text_size_22"
+                    android:text="金铃铛 : 0 "/>
+                <TextView
+                    android:id="@+id/subbalence_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:textSize="@dimen/moxi_text_size_22"
+                    android:text="银铃铛 : 0"/>
+
+
+            <Button
+                android:id="@+id/charge_btn"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:text="充值"
+                android:layout_marginTop="20dp"
+                android:textSize="@dimen/moxi_text_size_24dp"
+                android:textColor="@color/white"
+                android:onClick="goCharge"
+                android:background="@drawable/shape_detail_btn_bg"/>
+            </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+<!--2-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:id="@+id/like_top_rl"
+            android:layout_width="match_parent"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:layout_height="70dp">
+            <TextView
+                android:id="@+id/store_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                style="@style/book_title"
+                android:text="已收藏 ( 0 )"/>
+            <TextView
+                android:id="@+id/more_like_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                style="@style/book_title"
+                android:layout_alignParentRight="true"
+                android:text="全部  "
+                android:onClick="goMoreLiked"
+                android:clickable="true"
+                android:drawableRight="@mipmap/mx_img_more"/>
+        </RelativeLayout>
+        <ProgressBar
+            android:id="@+id/like_group_pb"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"/>
+        <RelativeLayout
+            android:layout_below="@id/like_top_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/like_reflash"
+            android:visibility="gone">
+            <include layout="@layout/tryagine_layout" />
+        </RelativeLayout>
+
+        <GridView
+            android:id="@+id/like_gv"
+            android:layout_below="@id/like_top_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="4"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+<!--3-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <RelativeLayout
+            android:id="@+id/buy_top_rl"
+            android:layout_width="match_parent"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:layout_height="70dp">
+            <TextView
+                android:id="@+id/bought_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                style="@style/book_title"
+                android:text="已购买 ( 0 )"/>
+            <TextView
+                android:id="@+id/more_buy_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                style="@style/book_title"
+                android:layout_alignParentRight="true"
+                android:text="全部  "
+                android:onClick="goMoreBuyed"
+                android:clickable="true"
+                android:drawableRight="@mipmap/mx_img_more"/>
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/buy_group_pb"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"/>
+        <RelativeLayout
+            android:layout_below="@id/buy_top_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buy_reflash"
+            android:visibility="gone">
+            <include layout="@layout/tryagine_layout" />
+        </RelativeLayout>
+
+        <GridView
+            android:id="@+id/buy_gv"
+            android:layout_below="@id/buy_top_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="4"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</LinearLayout>

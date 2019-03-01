@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWihte"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/title_height">
+
+        <TextView
+            android:id="@+id/back_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:drawableLeft="@mipmap/mx_img_back"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="返回"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/title_left_size" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:visibility="invisible"
+            android:layout_marginLeft="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:id="@+id/search_file_progress" />
+
+        <EditText
+            android:id="@+id/keyword_ed"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/arc_big_di_white_bian_font"
+            android:drawableLeft="@mipmap/mx_img_read_library_search"
+            android:drawablePadding="5dp"
+            android:hint="搜索文件"
+            android:maxLength="8"
+            android:inputType="text"
+            android:paddingBottom="8dp"
+            android:lines="1"
+            android:paddingLeft="16dp"
+            android:paddingRight="8dp"
+            android:paddingTop="8dp"
+            android:textColorHint="@color/colorGray"
+            android:textSize="@dimen/title_right_size" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorBlack" />
+
+    <com.mx.mxbase.view.SildeFrameLayout
+        android:id="@+id/silde_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <GridView
+            android:id="@+id/grid_items"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:horizontalSpacing="30dp"
+            android:listSelector="@color/transparent"
+            android:numColumns="5"
+            android:verticalSpacing="30dp" />
+    </com.mx.mxbase.view.SildeFrameLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/last_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_to_font"
+            android:padding="10dp"
+            android:src="@mipmap/write_left" />
+
+        <TextView
+            android:id="@+id/show_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:text="1/1"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/page_index_size" />
+
+        <ImageButton
+            android:id="@+id/next_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_to_font"
+            android:padding="10dp"
+            android:src="@mipmap/write_right" />
+    </LinearLayout>
+</LinearLayout>

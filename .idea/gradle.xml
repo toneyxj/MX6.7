@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/basereader" />
+            <option value="$PROJECT_DIR$/bijiLib" />
+            <option value="$PROJECT_DIR$/bookreader" />
+            <option value="$PROJECT_DIR$/bookstore" />
+            <option value="$PROJECT_DIR$/calendar" />
+            <option value="$PROJECT_DIR$/exmas1006" />
+            <option value="$PROJECT_DIR$/filemanager" />
+            <option value="$PROJECT_DIR$/framework_plugin_uneditable" />
+            <option value="$PROJECT_DIR$/haierc" />
+            <option value="$PROJECT_DIR$/handwritinglibs" />
+            <option value="$PROJECT_DIR$/handwritten" />
+            <option value="$PROJECT_DIR$/mxbase" />
+            <option value="$PROJECT_DIR$/mxuser" />
+            <option value="$PROJECT_DIR$/remotefilemanager" />
+            <option value="$PROJECT_DIR$/systemapp" />
+            <option value="$PROJECT_DIR$/timetable" />
+            <option value="$PROJECT_DIR$/update" />
+            <option value="$PROJECT_DIR$/updateapp" />
+            <option value="$PROJECT_DIR$/wechatshare" />
+            <option value="$PROJECT_DIR$/writenote" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

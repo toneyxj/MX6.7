@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="350dp">
+    <ImageView
+        android:id="@+id/img_recycler_item_book_type"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+
+        android:layout_centerInParent="true"/>
+    <!--android:src="@mipmap/file_epub"-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/moxi_shape_blace_light"
+        android:padding="6dp">
+        <TextView
+            android:id="@+id/tv_recycler_item_book_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:textColor="@color/colorWihte"
+            android:singleLine="true"
+            android:layout_marginTop="3dp"
+            android:textSize="@dimen/moxi_text_size_22" />
+        <TextView
+            android:id="@+id/tv_recycler_item_book_type_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:textColor="@color/colorWihte"
+            android:singleLine="true"
+            android:textSize="@dimen/moxi_text_size_20" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/tui_jian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:src="@mipmap/tui_jian"/>
+</RelativeLayout>

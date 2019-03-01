@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="80dp" >
+
+    <com.dangdang.zframework.view.DDTextView
+        android:id="@+id/reader_preview_item_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/reader_preview_toolbar_item_height"
+        android:layout_alignParentLeft="true"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="14dp" />
+
+</RelativeLayout>

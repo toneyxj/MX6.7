@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:keepScreenOn="true"
+    tools:context="com.moxi.bookstore.activity.PayActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height">
+        <RelativeLayout
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:onClick="cartList">
+            <TextView
+                android:id="@+id/tv"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="35dp"
+                style="@style/book_title"
+                android:text="购物车" />
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/carlist_ico"
+                android:layout_toLeftOf="@id/tv"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/back_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:paddingLeft="20dp"
+            android:onClick="goBack">
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/mx_img_back"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/title"
+                style="@style/book_title"
+                android:text="返回"
+                android:singleLine="true"
+                android:maxWidth="400dp"
+                android:ellipsize="end"
+                android:paddingLeft="10dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.moxi.bookstore.view.NoWebView
+            android:id="@+id/QR_code_wv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none|vertical" />
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="50dp"
+            android:background="@color/colorWihte">
+            <include layout="@layout/error_reflash_layout"
+                android:id="@+id/error_body"
+                android:visibility="gone"/>
+            <RelativeLayout
+                android:id="@+id/body_rl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/bookName_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="70dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    style="@style/book_title"
+                    android:gravity="center"
+                    android:text="bookname"/>
+                <TextView
+                    android:id="@+id/orderid_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_below="@id/bookName_tv"
+                    style="@style/book_title"
+                    android:gravity="center"
+                    android:text="bookname"/>
+                <ImageView
+                    android:id="@+id/QR_code_iv"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:onClick="qrReflash"
+                    android:layout_below="@id/orderid_tv"
+                    android:layout_centerHorizontal="true"/>
+                <TextView
+                    android:id="@+id/price_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="10dp"
+                    style="@style/book_title"
+                    android:gravity="center"
+                    android:layout_below="@id/QR_code_iv"
+                    android:text="price"/>
+                <TextView
+                    android:id="@+id/prefprice_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:textSize="@dimen/moxi_text_size_20"
+                    android:gravity="center"
+                    android:layout_below="@id/price_tv"
+                    android:text="price"/>
+                <RelativeLayout
+                    android:id="@+id/bottom_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/prefprice_tv">
+                    <ImageView
+                        android:id="@+id/iv2"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@mipmap/scanner"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/iv2">
+                        <TextView
+                            android:id="@+id/scantype_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/moxi_text_size_24"
+                            android:text="打开手机微信"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="bottom"
+                            android:textSize="@dimen/moxi_text_size_24"
+                            android:text="扫一扫支付"/>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/timer_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    style="@style/title_text"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/bottom_rl" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    style="@style/title_text"
+                    android:text="完成扫描请返回提交支付结果"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/timer_tv" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+
+</LinearLayout>

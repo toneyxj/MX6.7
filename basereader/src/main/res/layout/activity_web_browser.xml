@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.dangdang.reader.activity.WebBrowserActivity">
+
+    <RelativeLayout
+        android:id="@+id/web_browser_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/jw_color_blank"
+        android:gravity="center_vertical">
+
+        <com.dangdang.zframework.view.DDButton
+            android:id="@+id/web_browser_btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:contentDescription="关闭"
+            android:background="@drawable/browser_close"/>
+
+        <com.dangdang.zframework.view.DDButton
+            android:id="@+id/web_browser_btn_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/browser_refresh"
+            android:layout_marginRight="20dp"
+            android:contentDescription="刷新"
+            android:layout_toLeftOf="@+id/web_browser_btn_back"/>
+
+        <com.dangdang.zframework.view.DDButton
+            android:id="@+id/web_browser_btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/reader_text_search_pre_iv"
+            android:layout_marginRight="20dp"
+            android:contentDescription="后退"
+            android:layout_toLeftOf="@+id/web_browser_btn_forward"/>
+
+        <com.dangdang.zframework.view.DDButton
+            android:id="@+id/web_browser_btn_forward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/reader_text_search_next_iv"
+            android:layout_marginRight="20dp"
+            android:contentDescription="前进"
+            android:layout_toLeftOf="@+id/web_browser_btn_more"/>
+
+        <com.dangdang.zframework.view.DDButton
+            android:id="@+id/web_browser_btn_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/browser_more"
+            android:layout_alignParentRight="true"
+            android:contentDescription="更多"
+            android:layout_marginRight="20dp"/>
+    </RelativeLayout>
+
+    <com.dangdang.zframework.view.DDWebView
+        android:id="@+id/web_browser_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/web_browser_toolbar"/>
+</RelativeLayout>

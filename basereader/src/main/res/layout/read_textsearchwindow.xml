@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="180dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/reader_text_search_bg"
+    android:orientation="horizontal" >
+
+    <com.dangdang.zframework.view.DDImageView
+        android:id="@+id/reader_text_search_pre_imageview"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:scaleType="center"
+        android:contentDescription="上一个"
+        android:src="@drawable/reader_text_search_pre_iv" />
+
+    <com.dangdang.zframework.view.DDImageView
+        android:id="@+id/reader_text_search_next_imageview"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:contentDescription="下一个"
+        android:scaleType="center"
+        android:src="@drawable/reader_text_search_next_iv" />
+
+    <com.dangdang.zframework.view.DDImageView
+        android:id="@+id/reader_text_search_imageview"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:scaleType="center"
+        android:contentDescription="搜索"
+        android:src="@drawable/bookstore_search" />
+
+    <com.dangdang.zframework.view.DDImageView
+        android:id="@+id/reader_text_search_close_imageview"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:scaleType="center"
+        android:contentDescription="关闭搜索"
+        android:src="@drawable/reader_text_search_close_iv" />
+
+</LinearLayout>

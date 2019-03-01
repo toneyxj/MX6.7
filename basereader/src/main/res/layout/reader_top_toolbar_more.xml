@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:visibility="gone"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <com.dangdang.zframework.view.DDImageView
+        android:id="@+id/read_top_more_share"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="9dp"
+        android:scaleType="center"
+        android:contentDescription="分享"
+        android:src="@drawable/share_bgblack" />
+    <com.dangdang.zframework.view.DDImageView
+        android:id="@+id/read_top_more_stoptraining"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="9dp"
+        android:scaleType="center"
+        android:contentDescription="结束训练"
+        android:src="@drawable/read_top_more_stop" />
+
+</LinearLayout>

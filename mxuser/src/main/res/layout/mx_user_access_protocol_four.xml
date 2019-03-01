@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="2dp"
+        android:text="形式的翻录、复制或从事其他任何违反著作权法等相关法律、法规的活动。对侵犯海尔教育知识产权的个人和组织，青岛海尔教育科技有限公司和作品的著作权人将依法追究其民事或刑事责任。\n         海尔教育享有对用户网上活动的监督和指导权，对凡是从事网上非法活动的用户，有权终止所有服务。 许可使用权。海尔教育对用户在网上发表的供学习交流的作品，享有独家的出版、发行和复制的权利。用户以此授予海尔教育及其关联公司独家的、全球通用的、永久的、免费的许可使用权利 (并有权在多个层面对该权利进行再授权)，使海尔教育及其关联公司有权(全部或部份地) 使用、复制、修订、改写、发布、翻译、分发、执行和展示用户的全部资料数据（包括但不限于注册资料、交易行为数据及全部展示于网站的各类信息）或制作其派生作品，和/或以现在已知或日后开发的任何形式、媒体或技术，将上述信息纳入其它作品内；\n         海尔教育会在用户的设备上取用海尔教育的cookies。 海尔教育允许那些在海尔教育网页上发布广告的公司到用户计算机上设定或取用 cookies 。 在用户登录时获取数据，海尔教育使用cookies可为用户提供个性化服务。 如果拒绝所有 cookies，用户将不能使用需要登录的海尔教育产品及服务内容。 用户协议的修改和完善 \n        1、海尔教育将根据互联网的发展和法律、法规的变化，在认为必要时可以单方面修改用户协议。\n         2、本用户协议一旦发生变动，将会在重要页面上提示修改内容。如果不同意所改动的内容，用户可以主动放弃获得的网络服务。如果用户继续享用设备上的服务，则视为接受用户协议的变动。当发生争议时，应以最新用户协议的内容为准。 \n        海尔教育有权根据实际情况，调整Topsir电纸书上的教育网络资源信息。海尔教育将最大限度的提高和保护用户使用Topsir电纸书上网络教育资源信息。"
+        android:textSize="@dimen/moxi_text_size_22" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="2dp"
+        android:text="六、服务的中断和终止"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/moxi_text_size_24"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="2dp"
+        android:text="        用户同意，在海尔教育未向用户收取服务费的情况下，海尔教育可自行全权决定以任何理由 (包括但不限于海尔教育认为用户已违反本协议的字面意义和精神，或以不符合本协议的字面意义和精神的方式行事，或用户在超过90天的时间内未以用户的账号及密码登录网站等) 终止用户的“服务”密码、账户 (或其任何部份) 或用户对“服务”的使用，并删除（不再保存）用户在使用“服务”中提交的任何资料。同时海尔教育可自行全权决定，在发出通知或不发出通知的情况下，随时停止提供“服务”或其任何部份。账号终止后，海尔教育没有义务为用户保留原账号中或与之相关的任何信息，或转发任何未曾阅读或发送的信息给用户或第三方。"
+        android:textSize="@dimen/moxi_text_size_22" />
+</LinearLayout>

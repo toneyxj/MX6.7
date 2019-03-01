@@ -1,0 +1,66 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">14dp</dimen>
+    <dimen name="activity_vertical_margin">20dp</dimen>
+    <dimen name="title_bar_height">48dp</dimen>
+    <dimen name="divider_height">2dp</dimen>
+    <dimen name="cover_width_normal">88dip</dimen>
+    <dimen name="cover_height_normal">124dip</dimen>
+    <dimen name="cover_shadow_width_normal">98dip</dimen>
+    <dimen name="cover_shadow_height_normal">134dip</dimen>
+    <dimen name="cover_shadow_width_94">98dip</dimen>
+    <dimen name="cover_shadow_height_130">134dip</dimen>
+    <dimen name="cover_width_small_35">39dip</dimen>
+    <dimen name="cover_height_small_50">54dip</dimen>
+    <dimen name="cover_shadow_width_small_45">49dip</dimen>
+    <dimen name="cover_shadow_height_small_60">64dip</dimen>
+    <dimen name="cover_width_small">53dip</dimen>
+    <dimen name="cover_height_small">74dip</dimen>
+    <dimen name="cover_shadow_width_small">63dip</dimen>
+    <dimen name="cover_shadow_height_small">84dip</dimen>
+    <dimen name="action_bar_width">54dip</dimen>
+    <dimen name="action_bar_height">54dip</dimen>
+    <dimen name="reader_top_toolbar_height">54dp</dimen>
+    <dimen name="reader_font_hint_height">34dp</dimen>
+    <dimen name="reader_bottom_toolbar_height">133dp</dimen>
+    <dimen name="reader_detail_toolbar_height">297dp</dimen>
+    <dimen name="reader_preview_toolbar_height">119dp</dimen>
+    <dimen name="reader_preview_toolbar_top">39dp</dimen>
+    <dimen name="reader_preview_toolbar_item_height">49dp</dimen>
+    <dimen name="title_fsize">23dp</dimen>
+    <!-- 标题文字 -->
+    <dimen name="button_fsize">22dp</dimen>
+    <!-- 按钮文字 -->
+    <dimen name="content_fsize">18dp</dimen>
+    <dimen name="article_content_font_size">18dp</dimen>
+    <!-- 内容文字 -->
+
+    <dimen name="padding_tag_horizontal">15dp</dimen>
+    <dimen name="padding_tag_vertical">2dp</dimen>
+    <dimen name="padding_tag_vertical_bottom">3dp</dimen>
+    <dimen name="margin_title">14dp</dimen>
+    <dimen name="margin_picture">9dp</dimen>
+    <dimen name="height_article_single_pic">244dp</dimen>
+    <dimen name="width_arcticle_pic">139dp</dimen>
+    <dimen name="height_arcticle_pic">139dp</dimen>
+    <dimen name="text_size_digest">18dp</dimen>
+    <dimen name="width_three_pic">120dp</dimen>
+    <dimen name="height_three_pic">120dp</dimen>
+    <dimen name="article_padding_left">19dp</dimen>
+    <dimen name="article_padding_right">19dp</dimen>
+    <dimen name="article_padding_top">19dp</dimen>
+    <dimen name="article_padding_bottom">9dp</dimen>
+
+    <!--字体-->
+    <dimen name="text_size_19">24dp</dimen>
+    <dimen name="text_size_16">20dp</dimen>
+    <dimen name="text_size_14">18dp</dimen>
+    <dimen name="text_size_13">17dp</dimen>
+    <dimen name="text_size_12">16dp</dimen>
+    <dimen name="text_size_10">14dp</dimen>
+
+    <dimen name="bar_host_popup_width">68dp</dimen>
+    <dimen name="bar_host_popup_height">27dp</dimen>
+    <dimen name="divider">5dp</dimen>
+</resources>

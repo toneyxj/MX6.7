@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_bind_base"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/mx_base_title_layout" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="60dp"
+        android:src="@mipmap/img_mx_dd_logo" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@mipmap/mx_img_input_bg"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:src="@mipmap/mx_img_login_username" />
+
+        <TextView
+            android:id="@+id/tv_dd_username"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:phoneNumber="true"
+            android:singleLine="true"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_22" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/mx_img_input_bg"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+    </ImageView>
+
+    <RelativeLayout
+        android:id="@+id/rl_dd_unbind"
+        android:layout_width="496dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/white_to_font">
+
+        <TextView
+            android:id="@+id/tv_unbind_dd_username"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:background="@drawable/moxi_shape_black_corner_40"
+            android:gravity="center"
+            android:text="解绑当当账号"
+            android:textColor="@color/colorWihte"
+            android:textSize="@dimen/moxi_text_size_26" />
+    </RelativeLayout>
+</LinearLayout>

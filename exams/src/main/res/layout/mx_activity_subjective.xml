@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/mx_base_title_layout" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorBlue" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_shot_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_top"
+        android:layout_marginBottom="131dp"
+        android:background="#ffffffff"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_home_work_done"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="131dp" />
+
+        <com.mx.exams.view.PaintInvalidateRectView
+            android:id="@+id/pirv_home_work_achace"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_page_count"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="40dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_home_work_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:padding="10dp"
+            android:src="@mipmap/mx_img_page_left" />
+
+        <TextView
+            android:id="@+id/tv_home_work_page_count"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="3/3"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_24" />
+
+        <ImageView
+            android:id="@+id/img_home_work_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:padding="10dp"
+            android:src="@mipmap/mx_img_page_right" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_zhan_wei"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_above="@id/ll_bottom_page_count"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_submit_view"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_above="@id/ll_bottom_page_count"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/selet_paint"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/bottom_1"
+                style="@style/prictise_bottom_radiogroup"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/pricitse_paint_one"
+                android:gravity="center_vertical" />
+
+            <RadioButton
+                android:id="@+id/bottom_2"
+                style="@style/prictise_bottom_radiogroup"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:checked="true"
+                android:drawableLeft="@drawable/pricitse_paint_two"
+                android:gravity="center_vertical" />
+
+            <RadioButton
+                android:id="@+id/bottom_3"
+                style="@style/prictise_bottom_radiogroup"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/pricitse_paint_three"
+                android:gravity="center_vertical" />
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/rubber_draft"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/white_to_font"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:src="@mipmap/rubber" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/draft_show"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/moxi_shape_black_corner_35"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="@color/colorWihte"
+            android:textSize="@dimen/moxi_text_size_18" />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWihte">
+
+    <include
+        android:id="@+id/include_layout"
+        layout="@layout/mx_base_title_layout"></include>
+
+    <ImageView
+        android:id="@+id/img_line_black"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/include_layout"
+        android:background="@color/colorBlack" />
+
+    <ListView
+        android:id="@+id/list_view_paper_index"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_line_black"
+        android:layout_margin="20dp"
+        android:divider="@drawable/line_shape"
+        android:listSelector="#00000000"></ListView>
+</RelativeLayout>

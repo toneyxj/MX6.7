@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.moxi.bookstore">
+
+    <!-- moxibs -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <!-- 往sdcard中写入数据的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 在sdcard中创建/删除文件的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <application
+        android:name=".BookstoreApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/img_new_main_wssc"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar">
+        <activity
+            android:name=".activity.bookManager.MXBookStoreActivity"
+            android:exported="true"
+            android:label="首页"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.bookManager.MXBookDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.bookManager.MXNetBookListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.bookManager.MXStacksActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".activity.AllCatetoryActivity"
+            android:exported="true"
+            android:label="所有分类"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChanelActivity"
+            android:label="分类频道"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.EbookDetailActivity"
+            android:label="电子书详情"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="activity.EbookDetailActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".dialog.PageSkipActivity"
+            android:theme="@style/AlertDialogStyle" />
+        <activity
+            android:name=".activity.SearchBookActivity"
+            android:label="搜索"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyEbookLibActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CartActivity"
+            android:label="购物车"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyActivity"
+            android:label="我的账户"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RecentlyActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <provider
+            android:name=".provider.BookProvider"
+            android:authorities="com.moxi.bookstore.provider" />
+        <provider
+            android:name=".provider.PublicKeyProvicer"
+            android:authorities="com.moxi.bookstore.provider.Key"
+            android:exported="true" />
+        <provider
+            android:name=".provider.RecentlyProvider"
+            android:authorities="com.moxi.bookstore.provider.RecentlyProvider"
+            android:exported="true" />
+
+        <activity
+            android:name=".activity.MoreActivity"
+            android:label="更多"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PayActivity"
+            android:label="支付"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Test"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.OrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AcountActivity"
+            android:label="账户余额"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChargeActivity"
+            android:label="充值"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BalencePayActivity"
+            android:screenOrientation="portrait" />
+
+        <receiver android:name=".utils.RefureshBookInodrmationBrodcastrecever">
+            <intent-filter>
+                <action android:name="RefureshBookInodrmationBrodcastrecever" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activity.PayActivityWithAliy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.OnlieBookCityActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.RankingListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LeaseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.LeaseCategoryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.GetVipActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activity.JinShanCiBaActivity"
+            android:exported="true"
+            android:theme="@style/AlertDialogStyle"
+            android:launchMode="singleInstance"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity android:name=".activity.TestActivity"/>
+    </application>
+
+</manifest>

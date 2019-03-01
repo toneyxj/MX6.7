@@ -1,0 +1,115 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="title_text" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/white_to_font</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/moxi_text_size_24</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+    <style name="sort_text" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/white_to_font</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/color_normal</item>
+        <item name="android:textSize">@dimen/moxi_text_size_20</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+    <style name="nonpading_text" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/white_to_font</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/moxi_text_size_18</item>
+    </style>
+    <style name="book_title">
+        <item name="android:textSize">@dimen/title_left_size</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+    <style name="book_title_right">
+        <item name="android:textSize">@dimen/title_right_size</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+    <style name="book_price">
+        <item name="android:textSize">@dimen/moxi_text_size_22dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+    <style name="book_author">
+        <item name="android:textSize">@dimen/book_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/author_grey</item>
+    </style>
+    <style name="online_book_classfiy">
+        <item name="android:textSize">@dimen/moxi_text_size_24dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/white_to_font</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+<!--dialogTheme-->
+    <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+
+    <style name="myProgressDialog" parent="@style/CustomDialog">
+       <!-- <item name="android:windowBackground">@android:color/transparent</item>-->
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!--自定义dialog背景全透明无边框theme -->
+    <style name="MyDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!--背景颜色及和透明程度-->
+        <item name="android:background">#FFFFFF</item>
+        <!--是否去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否去除边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <!--dialogTheme-->
+
+    <style name="radiobutton_ranking">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">@drawable/radio_button_text_color</item>
+        <item name="android:textSize">@dimen/moxi_text_size_24dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/radi_button_backgroud</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:button">@null</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+    </style>
+</resources>

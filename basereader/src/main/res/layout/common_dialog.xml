@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" 
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:padding="15dp"
+    android:background="@drawable/round_corner_bg_exit" > 
+    <LinearLayout
+        android:id="@+id/upgrade_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+       	android:layout_marginBottom="20dp"
+        android:gravity="center">
+
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/indent_buy_tip_title"
+            android:textColor="#333333"
+            android:textSize="@dimen/title_fsize"/>
+        
+        <View 
+			android:layout_width="match_parent"
+			android:layout_height="1dp"
+			android:background="#888888"
+			android:layout_marginTop="15dip"
+            android:layout_marginBottom="15dip"/>
+ 
+        <LinearLayout
+            android:id="@+id/upgrade_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.dangdang.zframework.view.DDTextView
+                android:id="@+id/dialog_content_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="16"
+                android:textColor="#666666"
+                android:textSize="18dp"/>
+			<com.dangdang.zframework.view.DDTextView
+                android:id="@+id/muti_dialog_content_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="16"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                android:textSize="18dp"/>
+            
+            <com.dangdang.zframework.view.DDEditText
+	            android:id="@+id/dialog_content_edit"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:maxLength="16"
+	            android:singleLine="true"
+	            android:gravity="top"
+            	android:hint="@string/please_input"
+	            android:textSize="14dp" 
+	            android:padding="10dp"
+	            android:textColor="#333333"
+	            android:textColorHint="#666666"
+	            android:background="@drawable/edit_bg"
+	            android:visibility="gone"/>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/checkbox_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:gravity="center_vertical">
+            
+            <com.dangdang.zframework.view.DDImageView 
+                android:id="@+id/checkbox_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/txt_delete_default"
+                android:layout_gravity="right"/>
+            <com.dangdang.zframework.view.DDTextView 
+                android:id="@+id/checkbox_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:text="@string/delete_book_in_group"
+                android:gravity="left"/>
+            
+        </LinearLayout>
+            
+    </LinearLayout>
+ 	
+	<LinearLayout
+        android:id="@+id/upgrade_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <com.dangdang.zframework.view.DDButton
+            android:id="@+id/make_cancle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/dialog_white_btn_selector"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="#333333"
+            android:textSize="@dimen/button_fsize" 
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"/>
+
+        <com.dangdang.zframework.view.DDButton
+            android:id="@+id/make_sure"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/dialog_white_btn_selector"
+            android:gravity="center"
+            android:text="@string/Ensure"
+            android:textColor="#F15456"
+            android:textSize="@dimen/button_fsize" 
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

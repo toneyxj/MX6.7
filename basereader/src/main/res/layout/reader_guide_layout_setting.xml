@@ -1,0 +1,18 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/read_guide_light_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#bd000000"
+    android:clickable="true">
+
+    <com.dangdang.zframework.view.DDImageView
+        android:id="@+id/read_guide_setting_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="22dp"
+        android:contentDescription="字号、背景、亮度调节点这里~"
+        android:src="@drawable/tishi11" />
+
+</RelativeLayout>

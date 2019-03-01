@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/dialog_exit_read_cancel_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/dialog_exit_read_root_ll"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:id="@+id/dialog_exit_read_root_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="20dip" >
+
+        <com.dangdang.zframework.view.DDTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dip"
+            android:text="是否添加到书架？"
+            android:textColor="@color/black"
+            android:textSize="18dip" />
+
+        <com.dangdang.zframework.view.DDButton
+            android:id="@+id/dialog_exit_read_ok_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_corner_dadada"
+            android:layout_marginTop="16dip"
+            android:textColor="@color/red_f15353"
+            android:padding="12dip"
+            android:text="确定"
+            android:textSize="16dip" />
+
+        <com.dangdang.zframework.view.DDButton
+            android:id="@+id/dialog_exit_read_cancel_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dip"
+            android:padding="12dip"
+            android:background="@drawable/shape_corner_dadada"
+            android:text="取消"
+            android:textSize="16dip" />
+    </LinearLayout>
+
+</RelativeLayout>

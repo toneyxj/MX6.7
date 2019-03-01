@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="fill_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:background="@color/title_bg"
+        android:orientation="horizontal">
+
+        <com.dangdang.zframework.view.DDImageView
+            android:id="@+id/reader_textsearchresult_dismiss_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:contentDescription="返回"
+            android:scaleType="centerInside"
+            android:src="@drawable/arrow_left_white"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_toLeftOf="@+id/reader_textsearchresult_search_iv">
+
+                <com.dangdang.zframework.view.DDEditText
+                    android:id="@+id/reader_textsearchresult_et"
+                    android:layout_width="fill_parent"
+                    android:layout_height="29dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/round_rect_gray565e6b"
+                    android:gravity="center_vertical"
+                    android:imeOptions="actionSearch"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="25dp"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:windowSoftInputMode="adjustResize"/>
+
+                <com.dangdang.zframework.view.DDImageView
+                    android:id="@+id/reader_textsearchresult__clear_edit_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="15dip"
+                    android:scaleType="center"
+                    android:src="@drawable/reader_textsearchresult_delete_input"
+                    android:visibility="invisible"/>
+            </RelativeLayout>
+
+            <com.dangdang.zframework.view.DDImageView
+                android:id="@+id/reader_textsearchresult_search_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:contentDescription="搜索"
+                android:scaleType="centerInside"
+                android:src="@drawable/bookstore_search"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_f5f5f5"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="15dp">
+
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/reader_textsearchresult_status_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/text_gray_666666"
+            android:textSize="12dp"/>
+
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/reader_textsearchresult_count_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/reader_textsearchresult_status_tv"
+            android:text="sdfsdf"
+            android:textColor="@color/text_gray_666666"
+            android:textSize="12dp"/>
+
+        <com.dangdang.zframework.view.DDButton
+            android:id="@+id/reader_text_search_result_wiki_bt"
+            android:layout_width="64dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/reader_search_bt"
+            android:text="必应"
+            android:textSize="12dp"/>
+
+        <com.dangdang.zframework.view.DDButton
+            android:id="@+id/reader_text_search_result_baidu_bt"
+            android:layout_width="64dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/reader_text_search_result_wiki_bt"
+            android:background="@drawable/reader_search_bt"
+            android:text="百度"
+            android:textSize="12dp"/>
+    </RelativeLayout>
+
+    <com.dangdang.zframework.view.DDImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_e5e5e5"/>
+
+    <FrameLayout
+        android:id="@+id/reader_text_search_result_container_fl"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/reader_text_search_result_nodata_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:text="@string/reader_text_search_result_nodata"
+            android:textColor="@color/white"
+            android:visibility="invisible"/>
+    </FrameLayout>
+
+</LinearLayout>

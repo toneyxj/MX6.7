@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_ranking_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height">
+
+        <RelativeLayout
+            android:id="@+id/back_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:onClick="goBack"
+            android:paddingLeft="20dp">
+
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/mx_img_back" />
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/book_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv"
+                android:paddingLeft="10dp"
+                android:text="网上书城" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/channel_tv"
+            style="@style/book_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:paddingRight="30dp"
+            android:text="channel" />
+
+        <RelativeLayout
+            android:id="@+id/search_rl"
+            android:layout_width="@dimen/search_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_search_bg"
+            android:clickable="true"
+            android:onClick="searchBook">
+
+            <TextView
+                android:id="@+id/tv"
+                style="@style/book_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="35dp"
+                android:text="搜索图书" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/tv"
+                android:src="@mipmap/mx_img_read_library_search" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/deliver_grey"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/filtrate_category"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:textSize="@dimen/moxi_text_size_20dp"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:background="@drawable/white_to_font"
+            android:text="全部"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/body_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <com.moxi.bookstore.view.HSlidableListView
+            android:id="@+id/booklist_lv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:listSelector="@drawable/white_to_font"
+            android:divider="@color/transparent"
+            android:layout_weight="1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_50"
+            android:background="@color/colorWihte">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/last_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_to_font"
+                    android:padding="10dp"
+                    android:src="@mipmap/write_left" />
+
+                <TextView
+                    android:id="@+id/courent_page_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1/1"
+                    android:textStyle="bold"
+                    android:padding="12dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/page_index_size" />
+
+                <ImageButton
+                    android:id="@+id/next_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_to_font"
+                    android:padding="10dp"
+                    android:src="@mipmap/write_right" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/error_body"
+        layout="@layout/error_reflash_layout" />
+
+</LinearLayout>

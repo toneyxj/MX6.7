@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_onlie_book_city"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height">
+
+        <RelativeLayout
+            android:id="@+id/back_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:onClick="goBack"
+            android:paddingLeft="20dp">
+
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/mx_img_back" />
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/book_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv"
+                android:paddingLeft="10dp"
+                android:text="首页" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/my_acont_tv"
+            style="@style/book_title_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:onClick="goMyActivity"
+            android:text="我的账户" />
+
+        <TextView
+            style="@style/book_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:onClick="goMyActivity"
+            android:text="网上书城" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/line" />
+
+    <LinearLayout
+        android:id="@+id/search_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_50"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/shape_search_bg_di_grey"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="5dp"
+            android:src="@mipmap/mx_img_read_library_search" />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="搜索图书"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/moxi_text_size_20dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="2" />
+
+        <TextView
+            android:id="@+id/online_fl"
+            style="@style/online_book_classfiy"
+            android:drawableTop="@mipmap/online_book_fl"
+            android:text="分类" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/online_zy"
+            style="@style/online_book_classfiy"
+            android:drawableTop="@mipmap/online_book_zy"
+            android:text="租阅" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/online_cxs"
+            style="@style/online_book_classfiy"
+            android:drawableTop="@mipmap/online_book_cxb"
+            android:text="畅销书" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/online_xsb"
+            style="@style/online_book_classfiy"
+            android:drawableTop="@mipmap/online_book_xsb"
+            android:text="新书榜" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/online_rsb"
+            style="@style/online_book_classfiy"
+            android:drawableTop="@mipmap/online_book_rsb"
+            android:text="热搜榜" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="2" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/colorgray_e5" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="wrap_content">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/line" />
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/black_point"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textStyle="bold"
+                android:text="好书推荐"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/moxi_text_size_24dp" />
+
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="wrap_content">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/line" />
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/black_point"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/more_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="14dp"
+            android:gravity="center_vertical"
+            android:drawableRight="@mipmap/mx_img_more"
+            android:textColor="@color/colorBlack"
+            android:paddingTop="10dp"
+            android:visibility="gone"
+            android:drawablePadding="5dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="@dimen/moxi_text_size_20dp"
+            android:text="更多"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="14dp" />
+    </RelativeLayout>
+
+    <!--显示推荐书籍布局-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_weight="1">
+        <com.mx.mxbase.view.CustomRecyclerView
+            android:id="@+id/recycler_page_book_store"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:overScrollMode="never">
+        </com.mx.mxbase.view.CustomRecyclerView>
+        <RelativeLayout
+            android:id="@+id/emty_rl_net"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_not1"
+                android:layout_width="115dp"
+                android:layout_height="96dp"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/no_data_ico" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_not1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/arc_big_font_back"
+                android:paddingBottom="12dp"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:paddingTop="12dp"
+                android:textColor="@color/colorBlack"
+                android:text="推荐失败，请点击重试"
+                android:textSize="@dimen/moxi_text_size_20" />
+        </RelativeLayout>
+        <ProgressBar
+            android:id="@+id/progress_net_hitn"
+            android:layout_width="50dp"
+            android:layout_centerInParent="true"
+            android:layout_height="50dp" />
+    </RelativeLayout>
+</LinearLayout>

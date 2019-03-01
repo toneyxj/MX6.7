@@ -1,0 +1,16 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/read_guide_light_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true">
+
+    <com.dangdang.zframework.view.DDImageView
+        android:id="@+id/reader_guide_line_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="183dp"
+        android:contentDescription="长按选中文字后向下拖动快捷划线"
+        android:src="@drawable/tishi_29" />
+
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/error_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg_f5f5f5"
+    android:visibility="gone">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <!--错误提示图-->
+        <com.dangdang.zframework.view.DDImageView
+            android:id="@+id/prompt_icon_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="网络错误"
+            android:src="@drawable/icon_error_no_net" />
+
+        <!--错误提示语-->
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/prompt_msg_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/prompt_icon_iv"
+            android:layout_marginTop="5dip"
+            android:gravity="center"
+            android:lineSpacingExtra="4dip"
+            android:maxLines="2"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:text="@string/error_no_net"
+            android:textColor="@color/text_gray_666666"
+            android:textSize="14dip"/>
+
+        <!--错误刷新按钮-->
+        <com.dangdang.zframework.view.DDButton
+            android:id="@+id/prompt_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="27dip"
+            android:layout_below="@id/prompt_msg_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dip"
+            android:background="@drawable/round_rect_redff6b65"
+            android:text="@string/refresh"
+            android:textColor="@color/white"
+            android:textSize="14dip"
+            android:paddingLeft="19dip"
+            android:paddingRight="19dip"
+            android:visibility="visible"/>
+
+        <!--数据不存在或者下架的情况按钮-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/prompt_msg_tv"
+            android:layout_marginTop="14dip"
+            android:gravity="center"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin">
+            <com.dangdang.zframework.view.DDButton
+                android:id="@+id/left_btn"
+                android:layout_width="110dip"
+                android:layout_height="27dip"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/round_rect_yellowff9c3c"
+                android:text="按钮1"
+                android:textColor="@color/white"
+                android:textSize="14dip"
+                android:paddingLeft="19dip"
+                android:paddingRight="19dip"
+                android:singleLine="true"
+                android:visibility="gone"/>
+            <com.dangdang.zframework.view.DDButton
+                android:id="@+id/right_btn"
+                android:layout_width="110dip"
+                android:layout_height="27dip"
+                android:background="@drawable/round_rect_redff4e4e"
+                android:text="按钮2"
+                android:textColor="@color/white"
+                android:textSize="14dip"
+                android:paddingLeft="19dip"
+                android:paddingRight="19dip"
+                android:layout_marginLeft="10dip"
+                android:singleLine="true"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/img_recycler_item_first"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlack" />
+
+    <com.mx.timetable.view.WeekTitleView
+        android:id="@+id/wtv_recycler_item_week"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:textColor="@color/colorBlack" />
+
+    <TextView
+        android:id="@+id/tv_recycler_item_week"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/moxi_text_size_24dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlack" />
+</LinearLayout>

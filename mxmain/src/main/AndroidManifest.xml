@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mx.main">
+
+    <application
+        android:name=".application.MainApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar">
+        <activity
+            android:name=".activity.MXMainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MXSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MXStorageSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MXApplicationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MXUpdateActivity"
+            android:screenOrientation="portrait" />
+        <service android:name="android.mx.reader.aidl.MXILastReaderService">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.mx.aidl.LAST_READER"></action>
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

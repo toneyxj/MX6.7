@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/read_dirlayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.dangdang.zframework.view.DDTextView
+        android:id="@+id/name_title"
+        android:layout_width="fill_parent"
+        android:layout_height="47dp"
+        android:layout_marginLeft="25dip"
+        android:layout_marginRight="25dip"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/moxi_text_size_20dp"/>
+
+    <com.dangdang.zframework.view.DDImageView
+        android:id="@+id/read_title_underline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/name_title"
+        android:layout_marginLeft="25dip"
+        android:layout_marginRight="25dip"
+        android:background="@drawable/horizontal_devider"/>
+    <com.mx.mxbase.view.SildeFrameLayout
+    android:id="@+id/slide_layout"
+    android:layout_width="match_parent"
+    android:layout_below="@+id/read_title_underline"
+    android:layout_height="match_parent">
+
+        <ListView
+        android:id="@+id/read_dmn_dir_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@null"
+        android:dividerHeight="0.0dip"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="true"
+        android:footerDividersEnabled="false"
+        android:listSelector="@color/transparent"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="vertical"
+        android:smoothScrollbar="true"
+        android:visibility="visible"/>
+</com.mx.mxbase.view.SildeFrameLayout>
+
+    <com.dangdang.zframework.view.DDTextView
+        android:id="@+id/read_dmn_dir_tiptxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="@string/dir_loading"
+        android:textColor="@color/read_text_depth_black"
+        android:textSize="@dimen/moxi_text_size_16"/>
+
+</RelativeLayout>

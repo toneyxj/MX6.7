@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="framelayout" type="id"/>
+    <item name="scrollview" type="id"/>
+    <item name="hot_tag" type="id"/>
+    <item name="tag_1" type="id"/>
+    <item name="tag_2" type="id"/>
+    <item name="tag_3" type="id"/>
+    <item name="title_bar" type="id"/>
+    <item name="linearlayout" type="id"/>
+    <item name="view_part_end_buy_tv" type="id"/>
+    <item type="id" name="tag_postion"></item>
+    <item type="id" name="tag_view"></item>
+</resources>

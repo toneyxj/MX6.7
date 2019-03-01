@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include_base_title"
+        layout="@layout/mx_base_title_layout"></include>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_page_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/white_to_font"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/img_page_left"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:src="@mipmap/mx_img_page_left" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_page_count"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_24" />
+
+        <LinearLayout
+            android:id="@+id/ll_page_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/white_to_font"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/img_page_right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:src="@mipmap/mx_img_page_right" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_bottom"
+        android:layout_below="@id/include_base_title"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:id="@+id/tv_user_access_protocol"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:lineSpacingMultiplier="1.5"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_22" />
+
+        <!--<include
+            android:id="@+id/include_desc_one"
+            layout="@layout/mx_user_access_protocol_one"
+            android:visibility="gone"></include>
+
+        <include
+            android:id="@+id/include_desc_two"
+            layout="@layout/mx_user_access_protocol_two"
+            android:visibility="gone"></include>
+
+        <include
+            android:id="@+id/include_desc_three"
+            layout="@layout/mx_user_access_protocol_three"
+            android:visibility="gone"></include>
+
+        <include
+            android:id="@+id/include_desc_four"
+            layout="@layout/mx_user_access_protocol_four"
+            android:visibility="gone"></include>
+
+        <include
+            android:id="@+id/include_desc_five"
+            layout="@layout/mx_user_access_protocol_five"
+            android:visibility="gone"></include>
+
+        <include
+            android:id="@+id/include_desc_six"
+            layout="@layout/mx_user_access_protocol_six"
+            android:visibility="gone"></include>
+
+        <include
+            android:id="@+id/include_desc_seven"
+            layout="@layout/mx_user_access_protocol_seven"
+            android:visibility="gone"></include>-->
+    </RelativeLayout>
+</RelativeLayout>

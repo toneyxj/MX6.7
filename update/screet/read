@@ -1,0 +1,1 @@
+java -jar SignApk.jar platform.x509.pem  platform.pk8 update-debug.apk auto-install.apk 

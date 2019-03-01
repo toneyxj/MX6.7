@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/mx_base_title_layout" />
+
+    <RelativeLayout
+        android:id="@+id/system"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title">
+
+        <RelativeLayout
+            android:id="@+id/system_rel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#d2d2d2">
+
+            <ImageView
+                android:id="@+id/system_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="7dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="7dp"
+                android:src="@mipmap/system_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/system_img"
+                android:text="系统"
+                android:textColor="#000000"
+                android:textSize="24dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/yinsi_rel"
+            android:layout_width="679dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/system_rel"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/dianyuan_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="显示"
+                android:textColor="#000000"
+                android:textSize="24dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/oon_line"></View>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bluetooth_rel"
+            android:layout_width="679dp"
+            android:layout_height="65dp"
+            android:visibility="gone"
+            android:layout_below="@+id/yinsi_rel"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/bluetooth_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="蓝牙"
+                android:textColor="#000000"
+                android:textSize="24dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/oon_line"></View>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_yingsi_tv"
+            android:layout_width="679dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/bluetooth_rel"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/yingsi_tv"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:gravity="center_vertical"
+                android:text="备份和重置"
+                android:textColor="#000000"
+                android:textSize="24dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/oon_line"></View>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/kuozhan2_rel"
+            android:layout_width="679dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/rl_yingsi_tv"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/app_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="应用程序"
+                android:textColor="#000000"
+                android:textSize="24dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/oon_line"></View>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/system">
+
+        <RelativeLayout
+            android:id="@+id/about_rel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#d2d2d2">
+
+            <ImageView
+                android:id="@+id/about_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="7dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="7dp"
+                android:src="@mipmap/other" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/about_img"
+                android:text="关于"
+                android:textColor="#000000"
+                android:textSize="24dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="679dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/about_rel"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/about_shebei"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:gravity="center_vertical"
+                android:text="设备状态"
+                android:textColor="#000000"
+                android:textSize="24dp"></TextView>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/about_shebei"
+                android:background="@drawable/oon_line"></View>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

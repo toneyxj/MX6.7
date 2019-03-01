@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dangdang.reader.dread.view.toolbar.TopToolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="invisible"
+    android:background="@color/read_toolbar_bg" >
+<!--com.dangdang.reader.dread.view.toolbar.TopToolbar-->
+    <com.dangdang.zframework.view.DDImageView
+        android:id="@+id/read_top_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="7dp"
+        android:contentDescription="退出阅读"
+        android:src="@drawable/reader_toolbar_top_back" />
+
+    <com.dangdang.zframework.view.DDTextView
+        android:id="@+id/read_top_download"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/read_top_back"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:background="@drawable/reader_top_buy"
+        android:gravity="center"
+        android:text="免费下载当当读书"
+        android:textColor="#FFFE605F"
+        android:textSize="14dp"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="right"
+        >
+
+        <com.dangdang.zframework.view.DDImageView
+            android:id="@+id/read_top_search"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:contentDescription="搜索"
+            android:scaleType="center"
+            android:src="@drawable/reader_toolbar_top_search" />
+
+        <com.dangdang.zframework.view.DDImageView
+            android:id="@+id/read_top_mark_setting"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:scaleType="center"
+            android:contentDescription="书签"
+            android:src="@drawable/reader_toolbar_top_bookmark_selector" />
+    </LinearLayout>
+
+</com.dangdang.reader.dread.view.toolbar.TopToolbar>

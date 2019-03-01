@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.moxi.updateapp.MXDownloadActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@mipmap/back_down">
+
+        <RelativeLayout
+            android:id="@+id/tiilt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp">
+
+            <ImageView
+                android:id="@+id/insicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/update_isn" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/insicon"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="正在下载，请稍后"
+                android:textSize="25sp" />
+
+        </RelativeLayout>
+
+        <com.moxi.updateapp.view.ProgressView
+            android:id="@+id/progess"
+            android:layout_width="500dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_below="@+id/tiilt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp" />
+        <TextView
+            android:id="@+id/download_hitn"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progess"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:textSize="25sp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="imageview" type="id"/>
+    <item name="textview" type="id"/>
+    <item name="gridview" type="id"/>
+    <item name="scrollview" type="id"/>
+    
+    <item name="load_more_layout" type="id"/>
+    <item name="load_more_progress" type="id"/>
+    <item name="load_more" type="id"/>
+    <item name="loading_bottom" type="id"/>
+    <item name="swipe" type="id"/>
+    
+</resources>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/read_toolbar_bg"
+    android:paddingBottom="10dip"
+    android:paddingLeft="15dip"
+    android:paddingRight="15dip"
+    android:paddingTop="10dip" >
+
+    <!-- com.dangdang.zframework.view.DDTextView -->
+
+    <RelativeLayout
+        android:id="@+id/read_dict_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/read_dict_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:maxEms="7"
+            android:singleLine="true"
+            android:text="@string/reader_dict"
+            android:textColor="@color/blue_2390ec"
+            android:textSize="20dp"
+            android:visibility="visible" />
+
+        <com.dangdang.zframework.view.DDImageView
+            android:id="@+id/read_dict_e"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/read_dict_top_right"
+            android:paddingLeft="6dip"
+            android:paddingRight="6dip"
+            android:src="@drawable/dict_note" />
+
+        <LinearLayout
+            android:id="@+id/read_dict_top_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+           	android:layout_marginLeft="10dip" >
+
+            <LinearLayout
+                android:id="@+id/read_dict_top_olayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:visibility="gone" >
+
+                <com.dangdang.zframework.view.DDImageView
+                    android:id="@+id/read_dict_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="6dip"
+                    android:paddingRight="6dip"
+                    android:contentDescription="返回"
+                    android:layout_marginRight="15dip"
+                    android:src="@drawable/reader_dict_back" />
+
+                <com.dangdang.zframework.view.DDTextView
+                    android:id="@+id/read_dict_youdao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dip"
+                    android:background="@drawable/read_dict_youdao"
+                    android:gravity="center_vertical"
+                    android:textColor="#F4F4F4"
+                    android:textSize="16dp"
+                    android:visibility="visible" />
+                <!-- android:text="@string/youdao" -->
+
+                <com.dangdang.zframework.view.DDTextView
+                    android:id="@+id/read_dict_baidu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/read_dict_baidu"
+                    android:gravity="center_vertical"
+                    android:textColor="#F4F4F4"
+                    android:textSize="16dp"
+                    android:visibility="visible" />
+                <!-- android:text="@string/baidu" -->
+
+            </LinearLayout>
+
+            <com.dangdang.zframework.view.DDTextView
+                android:id="@+id/read_dict_online"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dict_online"
+                android:gravity="center_vertical"
+                android:paddingLeft="6dip"
+                android:textColor="#F4F4F4"
+                android:textSize="16dp"
+                android:visibility="visible" />
+            <!-- android:text="@string/online_dict" -->
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/read_dict_text_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="86dip"
+        android:layout_below="@+id/read_dict_top"
+        android:layout_marginTop="5dip"
+        android:scrollbars="vertical" >
+
+        <ScrollView
+            android:id="@+id/read_dict_text_sv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.dangdang.zframework.view.DDTextView
+                android:id="@+id/read_dict_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minLines="4"
+                android:text="@string/companyname"
+                android:textColor="#F4F4F4"
+                android:textSize="15dp"
+                android:visibility="visible" />
+        </ScrollView>
+    </LinearLayout>
+
+    <com.dangdang.zframework.view.DDTextView
+        android:id="@+id/read_dict_allresult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/read_dict_text_scroll"
+        android:layout_marginTop="10dip"
+        android:gravity="center_vertical"
+        android:text="@string/all_search_result"
+        android:textColor="@color/blue_2390ec"
+        android:textSize="15dp"
+        android:visibility="gone" />
+
+    <com.dangdang.zframework.view.DDTextView
+        android:id="@+id/read_dict_youdaotip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/read_dict_text_scroll"
+        android:layout_marginTop="10dip"
+        android:gravity="center_vertical"
+        android:text="@string/youdao_support"
+        android:textColor="#F4F4F4"
+        android:textSize="15dp"
+        android:visibility="gone" />
+
+</RelativeLayout>

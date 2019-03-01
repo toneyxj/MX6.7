@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/show_title"
+            style="@style/title_text"
+            android:text="书架" />
+
+        <TextView
+            android:id="@+id/book_store"
+            style="@style/title_text"
+            android:text="书城" />
+
+        <TextView
+            android:id="@+id/my_information"
+            style="@style/title_text"
+            android:text="我的" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/search"
+            style="@style/title_text"
+            android:text="搜索" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/colorBlack" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            style="@style/title_text"
+            android:text="列表模式" />
+
+        <TextView
+            style="@style/title_text"
+            android:text="云书架" />
+
+        <TextView
+            style="@style/title_text"
+            android:text="整理" />
+
+        <TextView
+            style="@style/title_text"
+            android:text="排序" />
+
+
+    </LinearLayout>
+
+    <com.moxi.bookstore.view.MyrecycleView
+        android:id="@+id/recyclerview_layout"
+        android:layout_width="match_parent"
+        android:overScrollMode="never"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_50">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/last_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_to_font"
+                android:padding="10dp"
+                android:src="@mipmap/write_left" />
+
+            <TextView
+                android:id="@+id/show_index"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:text="1/1"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/page_index_size" />
+
+            <ImageButton
+                android:id="@+id/next_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_to_font"
+                android:padding="10dp"
+                android:src="@mipmap/write_right" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/nonpading_text"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:text="共30页" />
+    </RelativeLayout>
+</LinearLayout>

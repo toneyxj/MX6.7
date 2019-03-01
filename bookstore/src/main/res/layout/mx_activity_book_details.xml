@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <LinearLayout
+            android:id="@+id/ll_book_details_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="6dp"
+                android:src="@mipmap/mx_img_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:gravity="center"
+                android:text="网上书城"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/moxi_text_size_24" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="书籍详情"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_24" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorBlack" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <ImageView
+                android:id="@+id/img_book_details_cover"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@mipmap/ic_launcher"
+                android:layout_margin="20dp"
+                android:layout_weight="2"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="@color/colorWihte"
+                android:orientation="vertical"
+                android:paddingLeft="30dp"
+                android:paddingTop="20dp">
+
+                <TextView
+                    android:id="@+id/tv_book_details_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="无声告白"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/moxi_text_size_26" />
+
+                <TextView
+                    android:id="@+id/tv_book_details_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="作者:［美］卡巴斯基"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/moxi_text_size_22" />
+
+                <TextView
+                    android:id="@+id/tv_book_details_original_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="原作名:［中］噶耳机"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/moxi_text_size_22" />
+
+                <TextView
+                    android:id="@+id/tv_book_details_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="价格:$14.5"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/moxi_text_size_22" />
+
+                <TextView
+                    android:id="@+id/tv_book_details_type_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="分类:小说"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/moxi_text_size_22" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal"
+                    android:paddingRight="20dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_book_details_download"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@drawable/moxi_shape_grayish_corner_35"
+                        android:gravity="center"
+                        android:text="点击下载"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/moxi_text_size_22" />
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/tv_book_details_buy"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@drawable/moxi_shape_grayish_corner_35"
+                        android:gravity="center"
+                        android:text="点击购买"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/moxi_text_size_22" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="20dp"
+            android:layout_weight="3"
+            android:background="@color/colorWihte"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:text="内容简介："
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/moxi_text_size_26"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_book_details_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无简介"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/moxi_text_size_26" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

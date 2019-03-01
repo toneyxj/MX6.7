@@ -1,0 +1,57 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>TOPSIR无线传书</title>
+    <link rel="stylesheet" type="text/css"
+          href="http://120.25.193.163/WifiFileManger/css/desktop.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="http://120.25.193.163/WifiFileManger/js/easyui/themes/default/easyui.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="http://120.25.193.163/WifiFileManger/js/easyui/themes/icon.css"/>
+    <link rel="stylesheet" href="http://120.25.193.163/WifiFileManger/css/smartMenu.css"
+          type="text/css"/>
+    <script type="text/javascript"
+            src="http://120.25.193.163/WifiFileManger/js/easyui/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="http://120.25.193.163/WifiFileManger/js/easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript"
+            src="http://120.25.193.163/WifiFileManger/js/jquery-smartMenu.js"></script>
+    <script type="text/javascript"
+            src="http://120.25.193.163/WifiFileManger/js/deskFile.js">
+    </script>
+</head>
+<body>
+<div id="contentDiv">
+<div id="titlBar">
+    <div class="title">TOPSIR无线传书</div>
+    <div class="updirBut"><span>上传文件夹</span></div>
+    <div class="upfileBut"><span>上传文件</span></div>
+    <div class="sdcarBut"><span>SD卡文件</span></div>
+    <div class="deskBut"><span>本地文件</span></div>
+    <div class="backupDir"><span>返回上一级</span></div>
+</div>
+<input type="file" name="uploadfile" class="file"
+       multiple="multiple"
+       id="uploadfile" style="filter:alpha(opacity=0);opacity:0;width: 0;height: 0;"
+       onchange="fileInit(this.value);"/>
+<input type="file" name="uploaddir" class="file"
+       webkitdirectory directory
+       id="uploaddir" style="filter:alpha(opacity=0);opacity:0;width: 0;height: 0;"
+       onchange="dirInit(this.value);"/>
+<input type="hidden" id="filePath" value=""/>
+<div id="x-desktop">
+    <dl id="x-shortcuts">
+    </dl>
+</div>
+</div>
+<div id="dlg_fileinfo" class="easyui-dialog" closed="true"
+     closable="true" modal="true"
+     style="width: 400px; height: 200px; padding: 10px 10px">
+    <div>
+        <div id="prosbar" class="easyui-progressbar" style="width: 350px;"></div>
+        <div id="time"></div>
+    </div>
+    <div id="fileList">div</div>
+</div>
+</body>
+</html>

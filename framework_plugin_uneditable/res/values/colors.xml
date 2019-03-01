@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="title_bg">#282C33</color>
+    <color name="book_store_bt_buy_off">#FF5A55</color>
+    <color name="background">#F1F1F1</color>
+    <color name="navpage">#FFE1E8EB</color>
+    <color name="dark_yellow">#F99700</color>
+    <color name="black">#141414</color>
+    <color name="payblack">#323232</color>
+    <color name="payyellow">#f18f1b</color>
+    <color name="transparent">#00000000</color>
+    <color name="red">#FF0000</color>
+    <color name="light_red">#FF5A55</color>
+    <color name="white">#ffffff</color>
+    <color name="loading_transbg">#80666666</color>
+    <color name="new_green">#2eb6aa</color>
+    <color name="scan_blue">#4c90f9</color>
+    <color name="new_yellow">#f18e1a</color>
+    <color name="new_black">#5c5c5f</color>
+    <color name="new_glay">#707070</color>
+    <color name="new_blue">#79acfb</color>
+    <color name="list_focus">#dadada</color>
+    <color name="hint_color">#cccccc</color>
+    <color name="type_list_bg">#c9c9c9</color>
+    <color name="type_title_bg">#adadad</color>
+    <color name="transparent2">#5000</color>
+    <color name="pdf_display_mode_selected">#009e7e</color>
+	
+    <color name="small_loading_transbg">#BF000000</color>
+    <color name="pdf_display_mode_text_unselect">#9a9a9a</color>
+    <color name="pdf_display_mode_text_selected">#ffffff</color>
+    <color name="new_basic_bg">#FFECECEC</color>
+    <color name="jw_color_blank">#FF000000</color>
+    <color name="text_num_gray">#333</color>
+    <!-- @addby jiangw end -->
+    <color name="shelf_menu_bg">#F8ffffff</color>
+    <!-- add by liguangkui，used for QRCode -->
+    <color name="personal_orders_devider">#C2C2C2</color>
+    <color name="personal_item_default">#FFFFFF</color>
+    <color name="read_set_select">#FDFBF8</color>
+    <color name="gray">#ACACAC</color>
+    <color name="gray_727983">#727983</color>
+    <color name="gray_detail">#969696</color>
+    <color name="gray_press">#d9d9d9</color>
+    <color name="gray_383a45">#383a45</color>
+    <color name="light_gray_detail">#dcdcdc</color>
+    <color name="a">#323232</color>
+    <color name="b">#646464</color>
+    <color name="c">#969696</color>
+    <color name="d">#ebebeb</color>
+    <color name="e">#fafafa</color>
+    <color name="f">#f7f7f7</color>
+    <color name="new_red">#ff5a55</color>
+    <color name="book_store_title_default">#98c1bc</color>
+
+    <!-- reader -->
+	<color name="list_dmn_devider">#C2C2C2</color>
+	<color name="read_note_content_color">#653a10</color>
+	<color name="read_dir_mark_note_stroke_color">#c8c8c8</color>
+	<color name="read_top_menu_bg_color">#90000000</color>
+	<color name="read_setting_top_bg">#e6e6e6</color>
+    <color name="read_dir_text_default_color">#6f6f6f</color>
+    <color name="read_dir_text_lock_color">#999896</color>
+    <color name="read_text_depth_black">#000000</color>
+    <color name="read_text_light_black">#646464</color>
+    <color name="read_text_light_green">#ff01a08b</color>
+    <color name="read_text_light_orange">#ff9600</color>
+    <color name="reader_new_menu_bg">#e5e5e5</color>
+    <color name="reader_comment_list_bg">#fffafafa</color>
+    <color name="yellow_press_bg">#ffb237</color>
+    <color name="ff323232">#ff323232</color>
+    <color name="scan_select_bg">#f5f5f5</color>
+    <color name="busy_indicator">#C0202020</color>
+    <color name="wifi_bg">#dddddd</color>
+    <color name="reader_battery">#8c8c8c</color>
+    <color name="reader_headfoot_color">#8c8c8c</color>
+
+    <drawable name="blank">#00ffffff</drawable>
+    
+    <!-- 财付通支付 -->
+     <!-- 输入框hint色值 -->
+    <color name="com_tenpay_form_edit_hint">#cccccc</color>
+
+    <!-- 财付通返回按钮的背景色 -->
+    <color name="com_tenpay_back_btn_bg_pressed">#2694cf</color>
+
+    <!-- 银行列表项的背景色 -->
+    <color name="com_tenpay_list_item_pressed">#84d2ef</color>
+
+    <!-- 提示信息区的背景色 -->
+    <color name="com_tenpay_info_bg">#f8f8f8</color>
+
+    <!-- 提示信息区的文字色 -->
+    <color name="com_tenpay_info_text">#333333</color>
+
+    <!-- 金额颜色 -->
+    <color name="com_tenpay_money_text">#ee5400</color>
+
+    <!-- 表单标题颜色  -->   
+    <color name="com_tenpay_form_title">#33b5e5</color>
+
+     <!-- 垂直分隔线色值  -->
+    <color name="com_tenpay_info_vertical_divider">#cccccc</color>
+    
+     <!-- 水平分隔线色值  -->
+    <color name="com_tenpay_info_horizontal_divider">#e5e5e5</color>
+    
+     <!-- 提交按钮不可用  -->
+    <color name="com_tenpay_submit_button_disable">#c4cacb</color>
+    
+     <!-- 提交按钮可用  -->
+    <color name="com_tenpay_submit_button_enable">#ef7c2f</color>   
+    
+    <!-- 书评 -->
+    <color name="book_review_title_b_color">#646464</color>
+    <color name="book_review_title_a_color">#323232</color>
+    <color name="book_review_title_d_color">#c8c8c8</color>
+    <color name="book_review_title_e_color">#e9e9e9</color>
+    <color name="book_review_title_c_color">#969696</color>
+    <color name="book_review_listview_bg_color">#ebebeb</color>
+    <color name="book_review_more_listview_container_bg_color">#f7f7f7</color>
+    <color name="book_review_select_color">#b7ffea</color>
+    <color name="book_review_reply_dialog_edit_bg">#26ffffff</color>
+
+    <drawable name="book_review_hot_listitem_bg_drawable">#ebebeb</drawable>
+    <drawable name="book_review_master_listitem_bg_drawable">#ffffff</drawable>
+    
+    <color name="read_greencolor">#2eb6aa</color>
+    <color name="read_toolbar_bg">#ff242424</color>
+    <color name="read_toolbar_preview_bg">#ff1e1e1e</color>
+    <color name="read_toolbar_line">#ff494949</color>
+    <color name="read_toolbar_disable_mask">#ff323232</color>
+    <!-- 个人中心 -->
+    <color name="personal_history_bg">#efeff0</color>
+    <color name="personal_list_item_press_bg">#D9D9D9</color>
+    <color name="personal_update_head_portrait_popup_menu_bg">#DE000000</color>
+</resources>

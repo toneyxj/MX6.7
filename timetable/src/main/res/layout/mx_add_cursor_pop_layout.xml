@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_parent_new_add_course"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rectangle"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorBlack"
+        android:gravity="center"
+        android:text="添加课程"
+        android:textColor="@color/colorWihte"
+        android:textSize="@dimen/moxi_text_size_24" />
+
+    <com.mx.timetable.view.MaxByteLengthEditText
+        android:id="@+id/et_course_name"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:background="@drawable/moxi_shape_white_corner_40"
+        android:hint="请输入课程名称"
+        android:lines="1"
+        android:maxLength="8"
+        android:paddingLeft="20dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/rectangle">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_new_add_course"
+            android:layout_width="match_parent"
+            android:layout_height="202dp"
+            android:layout_margin="1dp"
+            android:overScrollMode="never"></android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle">
+
+        <TextView
+            android:id="@+id/tv_course_sure"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/white_to_font"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_24" />
+    </RelativeLayout>
+</LinearLayout>

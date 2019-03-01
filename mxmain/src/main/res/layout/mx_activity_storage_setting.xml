@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/img_storage_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@mipmap/mx_img_back" />
+
+        <TextView
+            android:id="@+id/tv_storage_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/img_storage_back"
+            android:gravity="center"
+            android:text="存储设置"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_24" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorBlack" />
+
+    <com.mx.main.view.DonutProgress
+        android:id="@+id/donut_progress_storage"
+        android:layout_width="380dp"
+        android:layout_height="380dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        custom:donut_finished_color="@color/colorBlack"
+        custom:donut_finished_stroke_width="32dp"
+        custom:donut_inner_bottom_text="4.13GB/16GB"
+        custom:donut_inner_bottom_text_color="@color/colorBlack"
+        custom:donut_inner_bottom_text_size="@dimen/moxi_text_size_16"
+        custom:donut_max="1600"
+        custom:donut_progress="293"
+        custom:donut_text="已占用/总容量"
+        custom:donut_text_color="@color/colorBlack"
+        custom:donut_text_size="16sp"
+        custom:donut_unfinished_stroke_width="32dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/moxi_shape_grayish_corner_35"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="已占用"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/moxi_text_size_22" />
+
+            <TextView
+                android:id="@+id/tv_storage_already_use"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="4.13GB"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/moxi_text_size_22" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="2dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorBlack" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="未占用"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/moxi_text_size_22" />
+
+            <TextView
+                android:id="@+id/tv_storage_already_empty"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="11.87GB"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/moxi_text_size_22" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="2dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorBlack" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="总容量"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/moxi_text_size_22" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="16.0GB"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/moxi_text_size_22" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

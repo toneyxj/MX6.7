@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height">
+
+        <LinearLayout
+            android:id="@+id/ll_stacks_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dp"
+                android:src="@mipmap/mx_img_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:gravity="center"
+                android:visibility="invisible"
+                android:text="图书馆"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/title_left_size" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_boos_stacks_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="全部图书"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/title_size" />
+
+        <EditText
+            android:id="@+id/et_stacks_search"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@id/ll_book_store_total"
+            android:background="@drawable/moxi_shape_gray_corner"
+            android:drawableLeft="@mipmap/mx_img_read_library_search"
+            android:hint="搜索图书"
+            android:imeOptions="actionDone"
+            android:paddingLeft="10dp"
+            android:visibility="invisible"
+            android:paddingRight="10dp"
+            android:singleLine="true" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="5dp"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true">
+            <ImageView
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:src="@mipmap/allbook_search"/>
+            <ImageView
+                android:id="@+id/refuresh"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:src="@mipmap/allbook_refuresh"/>
+            <ImageView
+                android:id="@+id/book_type"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:src="@mipmap/allbook_type"/>
+            <ImageView
+                android:id="@+id/sort_type"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:src="@mipmap/allbook_sort"/>
+            <ImageView
+                android:id="@+id/file_show_style"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:src="@mipmap/file_show_style_one"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorBlack" />
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_marginTop="10dp">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/ll_book_stacks_tongbu"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@drawable/white_to_font"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:layout_marginLeft="6dp"-->
+                    <!--android:src="@mipmap/img_moxi_book_tongbu" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_marginLeft="8dp"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="同步书籍"-->
+                    <!--android:textColor="@color/colorBlack"-->
+                    <!--android:textSize="@dimen/moxi_text_size_24" />-->
+            <!--</LinearLayout>-->
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/rl_change_pai_lie"-->
+                <!--android:layout_width="80dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginLeft="40dp"-->
+                <!--android:background="@drawable/white_to_font">-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/img_pai_lie"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:src="@mipmap/file_show_style_one" />-->
+            <!--</RelativeLayout>-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/ll_book_store_all_sort_type"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/rl_stacks_class"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@drawable/white_to_font">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_stacks_class"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:text="全部图书"-->
+                    <!--android:textColor="@color/colorBlack"-->
+                    <!--android:textSize="@dimen/moxi_text_size_24" />-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_toRightOf="@id/tv_stacks_class"-->
+                    <!--android:src="@mipmap/img_moxi_down_arror" />-->
+
+            <!--</RelativeLayout>-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="40dp"-->
+                <!--android:layout_height="match_parent" />-->
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/rl_stacks_sort"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginRight="50dp"-->
+                <!--android:background="@drawable/white_to_font">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_stacks_sort"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:text="最近"-->
+                    <!--android:textColor="@color/colorBlack"-->
+                    <!--android:textSize="@dimen/moxi_text_size_24" />-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_toRightOf="@id/tv_stacks_sort"-->
+                    <!--android:src="@mipmap/img_moxi_down_arror" />-->
+
+            <!--</RelativeLayout>-->
+        <!--</LinearLayout>-->
+    <!--</RelativeLayout>-->
+
+    <com.mx.mxbase.view.SildeFrameLayout
+        android:id="@+id/move_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.mx.mxbase.view.CustomRecyclerView
+            android:id="@+id/recycler_stacks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none"></com.mx.mxbase.view.CustomRecyclerView>
+    </com.mx.mxbase.view.SildeFrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorWihte">
+
+        <TextView
+            android:id="@+id/tv_stacks_total_count"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_22" />
+
+        <TextView
+            android:id="@+id/tv_stacks_page_index"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:gravity="center"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_22" />
+    </RelativeLayout>
+</LinearLayout>

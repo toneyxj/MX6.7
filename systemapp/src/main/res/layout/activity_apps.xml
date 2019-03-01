@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mx.mxbase.view.MultiOntouchFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWihte"
+        android:orientation="vertical">
+
+        <com.mx.mxbase.view.SildeFrameLayout
+            android:id="@+id/silde_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <GridView
+                android:id="@+id/back_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:horizontalSpacing="40dp"
+                android:layout_marginTop="60dp"
+                android:listSelector="@drawable/white_to_font"
+                android:numColumns="4"
+                android:scrollbars="none"
+                android:verticalSpacing="60dp" />
+        </com.mx.mxbase.view.SildeFrameLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/last_page"
+                    android:layout_width="@dimen/bottom_off_page"
+                    android:layout_height="@dimen/bottom_off_page"
+                    android:background="@drawable/white_to_font"
+                    android:padding="12dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/write_left" />
+
+                <TextView
+                    android:id="@+id/show_index"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:textStyle="bold"
+                    android:text="1/2"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/moxi_text_size_26" />
+
+                <ImageButton
+                    android:id="@+id/next_page"
+                    android:layout_width="@dimen/bottom_off_page"
+                    android:layout_height="@dimen/bottom_off_page"
+                    android:background="@drawable/white_to_font"
+                    android:padding="12dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/write_right" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</com.mx.mxbase.view.MultiOntouchFrameLayout>

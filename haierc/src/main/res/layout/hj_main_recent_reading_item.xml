@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_to_font">
+
+    <LinearLayout
+        android:id="@+id/ll_recent_reading_desc"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_new_main_recent_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:lines="2"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_20" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:lines="1"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_20"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ll_recent_reading_desc"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape_rect_bg"
+        android:padding="1dp">
+
+        <ImageView
+            android:id="@+id/img_new_main_recent"
+            android:layout_width="wrap_content"
+            android:scaleType="fitXY"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

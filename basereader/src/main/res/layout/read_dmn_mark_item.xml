@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="14dp" >
+
+    <com.dangdang.zframework.view.DDTextView
+        android:id="@+id/read_dmn_mitem_addtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="15dp"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:singleLine="true"
+        android:textColor="@color/read_note_content_color"
+        android:textSize="12dp" />
+
+    <com.dangdang.zframework.view.DDTextView
+        android:id="@+id/read_dmn_mitem_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="15dp"
+        android:ellipsize="end"
+        android:gravity="right"
+        android:singleLine="true"
+        android:textColor="@color/read_note_content_color"
+        android:textSize="12dp" />
+
+    <com.dangdang.zframework.view.DDTextView
+        android:id="@+id/read_dmn_mitem_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/read_dmn_mitem_addtime"
+        android:layout_marginLeft="44dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:lineSpacingMultiplier="1.5"
+        android:maxLines="2"
+        android:textColor="@color/read_text_light_black"
+        android:textSize="12dp" />
+
+</RelativeLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_select_data"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="11dp">
+        <TextView
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="50dp"
+            android:drawableLeft="@mipmap/back"
+            android:text="应用"
+            android:textSize="@dimen/title_left_size"
+            android:drawablePadding="10dp"
+            android:textColor="@color/colorBlack"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/white_to_font"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="日历"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/title_size"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/more_motification"
+            android:layout_width="@dimen/height_50"
+            android:layout_height="@dimen/height_50"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/more_event"
+            android:background="@drawable/white_to_font" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorGray"/>
+    <TextView
+        android:id="@+id/next_year_month"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorWihte"
+        android:gravity="center"
+        android:text="2016年09月"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/moxi_text_size_26"
+        android:textStyle="bold" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorGray"/>
+    <com.mx.mxbase.view.NoGridView
+        android:id="@+id/grid_select_Time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:listSelector="@color/transparent"
+        android:numColumns="3"
+        android:scrollbars="none" />
+    <Button
+        android:id="@+id/insure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="确定"
+        android:textColor="@color/colorWihte"
+        android:textSize="20sp"
+        android:layout_marginTop="200dp"
+        android:paddingLeft="26dp"
+        android:paddingRight="26dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@drawable/arc_di_black"
+        />
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="5dp">
+
+    <TextView
+        android:id="@+id/hitn_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开通租阅权限，免费读好书"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/moxi_text_size_20dp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/get_vip"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:background="@drawable/shape_detail_btn_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="立即开通"
+        android:textColor="@color/colorWihte"
+        android:textSize="@dimen/moxi_text_size_20dp" />
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_corner_bg_black"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dip" >
+
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/sync_mobile_tip"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_fsize" />
+
+        <LinearLayout
+            android:id="@+id/check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/dialog_title"
+            android:layout_below="@+id/dialog_title"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" >
+
+            <com.dangdang.zframework.view.DDImageView
+                android:id="@+id/check_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="选中状态"
+                android:src="@drawable/txt_delete_default" />
+
+            <com.dangdang.zframework.view.DDTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/sync_no_more_tip"
+                android:textColor="#646464"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/upgrade_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:gravity="center" >
+
+        <com.dangdang.zframework.view.DDButton
+            android:id="@+id/make_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="1dp"
+            android:background="@drawable/exit_left_btn_selector"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/white"
+            android:textSize="@dimen/button_fsize" />
+
+        <com.dangdang.zframework.view.DDButton
+            android:id="@+id/make_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/exit_right_btn_selector"
+            android:gravity="center"
+            android:text="@string/Ensure"
+            android:textColor="@color/white"
+            android:textSize="@dimen/button_fsize" />
+    </LinearLayout>
+
+</LinearLayout>

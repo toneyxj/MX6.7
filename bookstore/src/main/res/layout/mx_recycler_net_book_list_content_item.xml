@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="270dp"
+    android:layout_margin="10dp"
+    android:background="@drawable/moxi_shape_gray_rect">
+    <ImageView
+        android:id="@+id/img_net_book_list_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/ic_launcher"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorBlack"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tv_net_book_list_content_name"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="书名"
+            android:textColor="@color/colorWihte"
+            android:textSize="@dimen/moxi_text_size_24" />
+
+        <TextView
+            android:id="@+id/tv_net_book_list_content_author"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="作者"
+            android:textColor="@color/colorWihte"
+            android:textSize="@dimen/moxi_text_size_20" />
+    </LinearLayout>
+</RelativeLayout>

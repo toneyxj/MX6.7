@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWihte">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@mipmap/no_data_ico"/>
+        <TextView
+            android:id="@+id/reflash_tv"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:layout_marginLeft="40dp"
+            android:text="刷新"
+            android:textColor="@color/colorBlack"
+            android:gravity="center"
+            android:background="@drawable/selector_reflash_bg"
+            android:textSize="21sp"/>
+    </LinearLayout>
+
+</RelativeLayout>

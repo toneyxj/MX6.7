@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height">
+
+        <RelativeLayout
+            android:id="@+id/back_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:onClick="goBack"
+            android:paddingLeft="20dp">
+
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/mx_img_back" />
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/book_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv"
+                android:paddingLeft="10dp"
+                android:text="租阅" />
+
+        </RelativeLayout>
+
+        <TextView
+            style="@style/book_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:text="购买VIP" />
+
+        <RelativeLayout
+            android:id="@+id/search_rl"
+            android:layout_width="@dimen/search_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_search_bg"
+            android:clickable="true"
+            android:onClick="searchBook"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv"
+                style="@style/book_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="35dp"
+                android:text="搜索图书" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/tv"
+                android:src="@mipmap/mx_img_read_library_search" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.mx.mxbase.view.SlideLinerlayout
+            android:id="@+id/silder_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/body_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="[租阅特权]"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="32dp"
+                    android:textStyle="bold" />
+
+                <com.mx.mxbase.view.NoListView
+                    android:id="@+id/vip_privilege"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:divider="@color/transparent"
+                    android:listSelector="@color/transparent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="50dp"
+                    android:text="[租阅套餐]"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="32dp"
+                    android:textStyle="bold" />
+
+                <com.mx.mxbase.view.NoListView
+                    android:id="@+id/vip_meal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:divider="@color/transparent"
+                    android:listSelector="@color/transparent" />
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/get_vip"
+                    android:layout_width="200dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/shape_detail_btn_bg"
+                    android:text="购买"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/moxi_text_size_22dp" />
+            </LinearLayout>
+        </com.mx.mxbase.view.SlideLinerlayout>
+
+        <include
+            android:id="@+id/error_body"
+            layout="@layout/error_reflash_layout"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

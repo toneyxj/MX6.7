@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_rect_white"
+        android:layout_centerInParent="true">
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="您的设备目前使用的不是wifi网络\n是否继续下载？"
+            android:textColor="@color/text_black_000000"
+            android:textSize="16dip"
+            android:layout_marginTop="15dip"
+            android:lineSpacingExtra="5dip"
+            android:gravity="center"/>
+        <LinearLayout
+            android:layout_below="@+id/title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="12dip"
+            android:paddingRight="12dip"
+            android:paddingTop="20dip"
+            android:paddingBottom="15dip">
+            <com.dangdang.zframework.view.DDTextView
+                android:id="@+id/left_tv"
+                android:layout_width="0dip"
+                android:layout_height="40dip"
+                android:layout_weight="1"
+                android:text="@string/cancel"
+                android:textColor="@color/text_gray_333333"
+                android:textSize="14dip"
+                android:layout_marginTop="10dip"
+                android:gravity="center"
+                android:background="@drawable/round_rect_graycd2d2d2_stroke_white_solid"/>
+            <com.dangdang.zframework.view.DDTextView
+                android:id="@+id/right_tv"
+                android:layout_width="0dip"
+                android:layout_height="40dip"
+                android:layout_weight="1"
+                android:text="@string/Ensure"
+                android:textColor="@color/red_ff4e4e"
+                android:textSize="14dip"
+                android:layout_marginTop="10dip"
+                android:gravity="center"
+                android:background="@drawable/round_rect_graycd2d2d2_stroke_white_solid"
+                android:layout_marginLeft="11dip"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

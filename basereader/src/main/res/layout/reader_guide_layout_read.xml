@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/read_guide_light_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#bd000000"
+                android:clickable="false">
+
+    <com.dangdang.zframework.view.DDImageView
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="点击中间，调出菜单，调节字号，亮度北京"
+        android:background="@color/read_top_menu_bg_color"/>
+
+    <com.dangdang.zframework.view.DDTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="31dp"
+        android:text="@string/read_guide_prev_page"
+        android:contentDescription="屏幕左侧点击上一页"
+        android:textColor="@color/white"
+        android:textSize="18dp"/>
+
+    <com.dangdang.zframework.view.DDTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="31dp"
+        android:text="@string/read_guide_next_page"
+        android:contentDescription="屏幕右侧点击下一页"
+        android:textColor="@color/white"
+        android:textSize="18dp"/>
+
+    <LinearLayout
+        android:id="@+id/reader_guide_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <com.dangdang.zframework.view.DDTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/read_guide_center_1"
+            android:textColor="@color/white"
+            android:textSize="18dp"/>
+
+        <com.dangdang.zframework.view.DDTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:text="@string/read_guide_center_2"
+            android:textColor="@color/white"
+            android:textSize="18dp"/>
+
+        <com.dangdang.zframework.view.DDTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="29dp"
+            android:text="@string/read_guide_center_3"
+            android:textColor="@color/white"
+            android:textSize="18dp"/>
+
+        <com.dangdang.zframework.view.DDTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:text="@string/read_guide_center_4"
+            android:textColor="@color/white"
+            android:textSize="18dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/guide_close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <com.dangdang.zframework.view.DDImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tishi_17"
+            android:contentDescription= "@string/got_it"
+            android:layout_gravity="center_vertical"/>
+
+        <com.dangdang.zframework.view.DDTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="3dp"
+            android:text="@string/got_it"
+            android:textColor="@color/white"
+            android:textSize="18dp"/>
+    </LinearLayout>
+</RelativeLayout>

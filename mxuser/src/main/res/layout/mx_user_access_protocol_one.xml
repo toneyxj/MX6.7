@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="2dp"
+        android:text="一、说明"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/moxi_text_size_24"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="2dp"
+        android:text="        本用户协议双方为青岛海尔教育科技有限公司（下称“海尔教育”）与购买并使用Topsir电纸书的个人或者组织，本用户协议具有合同效力。\n        本用户协议内容包括协议正文及所有海尔教育已经发布的或将来可能发布的各类规则。所有规则为协议不可分割的一部分，与协议正文具有同等法律效力。\n         在本用户协议中没有以“规则”字样表示的链接文字所指示的文件不属于本用户协议的组成部分，而是其它内容的协议或有关参考数据，与本协议没有法律上的直接关系。\n         用户在使用海尔教育提供的各项服务的同时，承诺接受并遵守各项相关规则的规定。海尔教育有权根据需要不时地制定、修改本协议或各类规则，如本协议有任何变更，海尔教育将在网站上刊载公告，通知予用户。如用户不同意相关变更，必须停止使用“服务”。经修订的协议一经在海尔教育网公布后，立即自动生效。各类规则会在发布后生效，亦成为本协议的一部分。登录或继续使用“服务”将表示用户接受经修订的协议。除另行明确声明外，任何使“服务”范围扩大或功能增强的新内容均受本协议约束。\n         用户确认本用户协议后，本用户协议即在用户和海尔教育之间产生法律效力。请用户务必在注册之前认真阅读全部用户协议内容，如有任何疑问，可向海尔教育咨询。 1)无论用户事实上是否在注册之前认真阅读了本用户协议，只要用户点击协议正本下方的“确认”按钮并按照海尔教育注册程序成功注册为用户，用户的行为仍然表示其同意并签署了本用户协议。 2)本协议不涉及用户与海尔教育其它用户之间因网络教育而产生的法律关系及法律纠纷。  "
+        android:textSize="@dimen/moxi_text_size_22" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="2dp"
+        android:text="二、定义"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/moxi_text_size_24"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="2dp"
+        android:text="        用户及用户注册：用户必须是具备完全民事行为能力的自然人。无民事行为能力人、限制民事行为能力人应该在监护人的指导下注册为海尔教育用户，其与海尔教育之间的用户协议转换为监护人与海尔教育的协议，若因此产生的法律纠纷由监护人承担。用户注册是指用户购买Topsir电纸书后在设备首页点击注册，并按要求填写相关信息并确认同意履行相关用户协议的过程。用户因进行交易、获取有偿服务或接触海尔教育网络资源平台服务器而发生的所有应纳税赋，以及一切硬件、软件、服务及其它方面的费用均由用户负责支付。Topsir电纸书仅作为网络教育培训设备。"
+        android:textSize="@dimen/moxi_text_size_22" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="2dp"
+        android:text="三、用户权利和义务"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/moxi_text_size_24"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="2dp"
+        android:text="        所有用户必须遵循："
+        android:textSize="@dimen/moxi_text_size_22" />
+</LinearLayout>

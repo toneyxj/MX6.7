@@ -1,0 +1,15 @@
+<resources>
+
+    <string name="app_name">DangFramework</string>
+    <!-- 下拉刷新提示问题 -->
+    <string name="pull_to_refresh_refreshing_label">我在用力加载耶…</string>
+    <string name="pull_to_refresh_pull_label">下拉人家就能刷新耶！</string>
+    <string name="pull_to_refresh_release_label">释放人家就能刷新哟~</string>
+    <string name="listview_footer_loading">为您努力加载中</string>
+    <string name="listview_footer_loaded">已加载完毕</string>
+    <string name="listview_footer_load_fail">数据请求失败</string>
+
+    <string name="pull_up_to_refresh_pull_label">上拉加载更多！</string>
+    <string name="pull_up_to_refresh_release_label">释放就能加载更多哟~</string>
+    
+</resources>

@@ -1,0 +1,251 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:paddingLeft="16dp"
+        android:paddingRight="11dp">
+
+        <TextView
+            android:id="@+id/show_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/white_to_font"
+            android:drawableLeft="@mipmap/back"
+            android:drawablePadding="10dp"
+            android:text="返回"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_20" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/white_to_font"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:visibility="invisible"
+            android:text="@string/manager"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_18" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/setting_style"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:drawableLeft="@drawable/setting"
+            android:paddingRight="20dp"
+            android:background="@drawable/white_to_font"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_18" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorBlack" />
+    <FrameLayout
+        android:id="@+id/reader_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.dangdang.zframework.view.DDImageView
+                android:id="@+id/read_tts_guide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="听书"
+                android:src="@drawable/reader_toolbar_tts_icon"
+                android:visibility="gone" />
+
+            <com.dangdang.reader.dread.view.ReaderLayout
+                android:id="@+id/reader_layout_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/main"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:id="@+id/read_widget_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:id="@+id/read_back_tobookshelf_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone">
+
+                        <com.dangdang.zframework.view.DDButton
+                            android:id="@+id/read_back_tobookshelf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="150dip"
+                            android:background="@drawable/daoru"
+                            android:paddingBottom="10dip"
+                            android:paddingLeft="25dip"
+                            android:paddingRight="25dip"
+                            android:paddingTop="10dip"
+                            android:text="@string/back_to_book_shelf"
+                            android:textColor="@color/white"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/black"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/read_bottommenu_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="3dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="15dip">
+
+                        <com.dangdang.zframework.view.DDTextView
+                            android:id="@+id/read_bottom_hide_exit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="8dp"
+                            android:drawableTop="@drawable/read_bottom_hide_exit_bg"
+                            android:gravity="center_horizontal"
+                            android:text="返回"
+                            android:textColor="@color/white" />
+
+                        <com.dangdang.zframework.view.DDTextView
+                            android:id="@+id/read_bottom_hide_review"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="8dp"
+                            android:drawableTop="@drawable/read_bottom_hide_book_review_bg"
+                            android:gravity="center_horizontal"
+                            android:text="书吧"
+                            android:textColor="@color/white" />
+
+                        <com.dangdang.zframework.view.DDTextView
+                            android:id="@+id/read_bottom_hide_share"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="8dp"
+                            android:drawableTop="@drawable/read_bottom_hide_share_bg"
+                            android:gravity="center_horizontal"
+                            android:text="分享"
+                            android:textColor="@color/white" />
+
+                        <com.dangdang.zframework.view.DDTextView
+                            android:id="@+id/read_bottom_hide_book_detail"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawablePadding="8dp"
+                            android:drawableTop="@drawable/read_bottom_hide_book_detail_bg"
+                            android:gravity="center_horizontal"
+                            android:text="书籍详情"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.dangdang.reader.dread.view.ReaderLayout>
+        </FrameLayout>
+
+
+        <com.dangdang.reader.dread.view.BookMarkOperateView
+            android:id="@+id/book_mark_operate_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/download_ddreader_layout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/bg_download_ddreader"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="gone">
+            <!-- android:background="#fefefe"-->
+
+            <com.dangdang.zframework.view.DDImageView
+                android:id="@+id/delete_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/reader_textsearchresult_delete_input" />
+
+            <com.dangdang.zframework.view.DDImageView
+                android:id="@+id/icon_iv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:layout_toRightOf="@id/delete_iv"
+                android:src="@drawable/icon_yinliu" />
+
+            <com.dangdang.zframework.view.DDTextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/icon_iv"
+                android:text="当当读书"
+                android:textColor="@color/text_gray_333333"
+                android:textSize="16dp" />
+
+            <com.dangdang.zframework.view.DDTextView
+                android:id="@+id/desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name"
+                android:layout_toRightOf="@id/icon_iv"
+                android:text="更多精彩等你来读！"
+                android:textColor="@color/text_gray_666666"
+                android:textSize="14dp" />
+
+            <com.dangdang.zframework.view.DDTextView
+                android:id="@+id/download_tv"
+                android:layout_width="75dp"
+                android:layout_height="33dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_download_ddreader_btn"
+                android:gravity="center"
+                android:text="免费下载"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+    </FrameLayout>
+</LinearLayout>

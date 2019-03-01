@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:reader="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:paddingTop="20dip"
+              android:background="#ffffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/view_part_end_top_ll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip">
+
+            <View
+                android:id="@+id/view_part_end_top_left"
+                android:layout_width="0dip"
+                android:layout_height="0.5dip"
+                android:layout_weight="1"
+                android:background="@color/gray_d2d2d2"/>
+
+            <com.dangdang.zframework.view.DDTextView
+                android:id="@+id/view_part_end_top_tips_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:gravity="center"
+                android:text="阅读结束"
+                android:textColor="@color/text_gray_999999"
+                android:textSize="19dp"/>
+
+            <View
+                android:id="@+id/reader_end_top_right"
+                android:layout_width="0dip"
+                android:layout_height="0.5dip"
+                android:layout_weight="1"
+                android:background="@color/gray_d2d2d2"/>
+
+        </LinearLayout>
+
+        <com.dangdang.zframework.view.DDImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            android:contentDescription="阅读结束"
+            android:src="@drawable/read_end_pic"/>
+
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/reader_end_tips_tv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="去书吧和小伙伴们一起分享阅读的乐趣吧"
+            android:textColor="@color/text_gray_333333"
+            android:textSize="14dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            >
+
+            <com.dangdang.zframework.view.DDTextView
+                android:id="@+id/reader_end_mulu"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:layout_marginTop="20dp"
+                android:padding="5dp"
+                android:background="@drawable/round_rect_red_stroke"
+                android:text="返回目录"
+                android:textColor="@color/red"
+                android:textSize="18dp"/>
+
+            <com.dangdang.zframework.view.DDTextView
+                android:id="@+id/reader_end_download"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:padding="5dp"
+                android:background="@drawable/round_rect_red_fill"
+                android:text="前往购买"
+                android:textColor="@color/white"
+                android:textSize="18dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

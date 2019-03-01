@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="2dp"
+        android:text="        此外，用户同意，海尔教育不就终止用户接入“服务”而对用户或任何第三者承担任何责任。\n         如用户向海尔教育提出注销Topsir电纸书注册用户身份时，经海尔教育审核同意，由海尔教育注销该注册用户，用户即解除与海尔教育的用户协议关系。但注销该用户账号后，海尔教育仍保留下列权利：\n          ① 用户注销后，海尔教育有权保留该用户的注册数据及以前的行为记录； \n          ② 用户注销后，如用户在注销前在Topsir电纸书上存在违法行为或违反合同的行为，海尔教育仍可行使本用户协议所规定的权利。\n          在下列情况下，海尔教育可以通过注销用户的方式终止服务： \n          ① 在用户违反本用户协议相关规定时，海尔教育有权终止向该用户提供服务。海尔教育将在中断服务时通知用户。但如该用户在被海尔教育终止提供服务后，再一次直接或间接或以他人名义注册为海尔教育用户的，海尔教育有权再次单方面终止向该用户提供服务； \n          ② 如海尔教育通过用户提供的信息与用户联系时，发现用户在注册时填写的电子邮箱已不存在或无法接收电子邮件的，经海尔教育以其它联系方式通知用户更改，而用户仍未能提供新的电子邮箱地址的，海尔教育有权终止向该用户提供服务； \n          ③ 一旦海尔教育发现用户注册数据中主要内容是虚假的，海尔教育有权随时终止向该用户提供服务； \n          ④ 用户协议终止或更新时，用户明示不愿接受新的用户协议的； \n          ⑤ 它海尔教育认为需终止服务的情况。"
+        android:textSize="@dimen/moxi_text_size_22" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="2dp"
+        android:text="七、责任范围"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/moxi_text_size_24"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="2dp"
+        android:text="          用户明确理解和同意，海尔教育不对因下述任一情况而导致的任何损害赔偿承担责任，包括但不限于利润、商誉、使用、数据等方面的损失或其它无形损失的损害赔偿 (无论海尔教育是否已被告知该等损害赔偿的可能性)： \n          （1）使用或未能使用的第三方服务； \n          （2）第三方未经批准的接入或第三方更改用户的传输数据或数据； \n          （3）第三方对“服务”的声明或关于“服务”的行为；或非因海尔教育的原因而引起的与“服务”有关的任何其它事宜，包括疏忽； \n          （4）用户明确理解并同意，如因其违反有关法律或者本协议之规定，使海尔教育遭受任何损失，受到任何第三方的索赔，或任何行政管理部门的处罚，用户应对海尔教育提供补偿，包括合理的律师费用等。\n          担保责任 \n          海尔教育不担保其服务一定能够满足用户的要求，也不担保其服务不会因各种客观原因中断。海尔教育拒绝提供担保，由用户自己承担系统受损或资料丢失"
+        android:textSize="@dimen/moxi_text_size_22" />
+</LinearLayout>

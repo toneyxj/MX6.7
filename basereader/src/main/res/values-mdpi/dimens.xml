@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+    <dimen name="shake_btn_marginbottom">30dp</dimen>
+    <dimen name="shake_margintop">80dp</dimen>
+
+</resources>

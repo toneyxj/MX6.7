@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="2dp"
+        android:text="四、关于当当网上购买书籍及优惠券的使用说明"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/moxi_text_size_24"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="2dp"
+        android:text="        1、用户在设备上首次注册并登陆后，可以在网上书城中可以对书籍进行浏览，试读和购买，原则上当当书城上的优惠活动都会同步到Topsir电子书设备上，优惠以何种形式进行由当当网决定；\n
+        2、优惠活动中的折扣仅供用户在当当网上购买图书用，不包含上网电话费、上网信息费等。\n
+　   3、相应的优惠活动如果您享用了，不能做任何形式的退换，用户自己应对此承担全部责任。\n
+　   4、用户如果购买图书，须遵守以下规则：\n
+　       - 只能购买适用于本设备阅读格式的图书；不适用本阅读设备的，用户无权阅读和购买；"
+        android:textSize="@dimen/moxi_text_size_22" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="2dp"
+        android:text="五、海尔教育的权利和义务"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/moxi_text_size_24"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="2dp"
+        android:text="        海尔教育有义务在现有技术上维护Topsir电纸书的正常使用，并努力提升和改进技术，使用户在Topsir电纸书上的各种活动得以顺利进行；\n         对用户在注册使用Topsir电纸书中所遇到的与注册或交易有关的问题及反映的情况，海尔教育应及时作出回复；\n         对于用户在Topsir电纸书上的不当行为或其它任何海尔教育认为应当终止服务的情况，海尔教育有权随时作出删除相关信息、终止服务提供等处理，而无须征得用户的同意； 海尔教育应本着诚实信用的原则向用户提供远程教育服务资源，不得随意中断或停止提供该项服务。但由于不可抗力或者其它非人为因素造成的服务的中断或停止，海尔教育不承担任何相应的责任。\n        Topsir电纸书上以任何形式表现的作品（包括但不限于文字、软件、声音、图片、录像、表格、电子邮件等）的著作权，由作品的著作权人和青岛海尔教育科技有限公司共同享有，用户未经许可，不得擅自对Topsir电纸书上包括内置的图书资源、网上购买后下载的图书、免费下载的试题在内的任何信息资源进行任何"
+        android:textSize="@dimen/moxi_text_size_22" />
+</LinearLayout>

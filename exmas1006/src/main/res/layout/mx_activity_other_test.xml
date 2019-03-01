@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include_test_title"
+        layout="@layout/mx_base_title_layout" />
+
+    <com.moxi.nexams.view.CustomScrollView
+        android:id="@+id/custom_all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/include_test_title"
+        android:layout_margin="20dp"
+        android:background="@color/colorWihte"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_little_test_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/moxi_text_size_22" />
+
+                <TextView
+                    android:id="@+id/tv_little_test_main_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/moxi_text_size_20" />
+
+                <TextView
+                    android:id="@+id/tv_little_test_main_analysis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/moxi_text_size_20"/>
+            </LinearLayout>
+
+            <com.moxi.nexams.view.PaintInvalidateRectView
+                android:id="@+id/paint_invalidate_rectview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+    </com.moxi.nexams.view.CustomScrollView>
+</LinearLayout>

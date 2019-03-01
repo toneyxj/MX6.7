@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dangdang.reader.dread.core.epub.CustomFramLayout android:id="@+id/gallery_fl"
+                                                      xmlns:android="http://schemas.android.com/apk/res/android"
+                                                      android:layout_width="match_parent"
+                                                      android:layout_height="match_parent">
+
+    <com.dangdang.reader.dread.core.epub.GestrueControlGalleryView
+        android:id="@+id/gallery"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:id="@+id/reader_image_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#70000000"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp">
+
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/reader_image_desc"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+            android:maxLines="5"
+            android:paddingLeft="20dp"
+            android:scrollbars="vertical"
+            android:textColor="@color/white"
+            android:textSize="14dp"/>
+
+        <com.dangdang.zframework.view.DDImageView
+            android:id="@+id/reader_image_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:scaleType="center"
+            android:contentDescription="下载保存"
+            android:src="@drawable/reader_toolbar_download"
+            android:visibility="visible"/>
+    </LinearLayout>
+
+</com.dangdang.reader.dread.core.epub.CustomFramLayout>

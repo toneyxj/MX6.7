@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.1'
+    signingConfigs {
+        release {
+            storeFile file('F:/MX/Key.jks')
+            keyAlias 'archer'
+            keyPassword '111111'
+            storePassword '111111'
+        }
+    }
+    defaultConfig {
+        applicationId "com.moxi.bookreader"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 107
+        versionName "ZXTopsirH68_1.0.7"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile project(':mxbase')
+    compile files('libs/http-download-manager-1.2.1.jar')
+//    compile(name: 'OnyxAndroidSDK-release', ext: 'aar')
+}

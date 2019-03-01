@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dangdang.zframework.view.DDTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="4dip"
+    android:paddingBottom="4dip"
+    android:text="@string/animation_shift"
+    android:background="@drawable/read_menu_selectiontext_selector"
+    android:textSize="16dp"
+    android:textColor="@color/white_black_selector"
+    android:gravity="center">
+    
+
+</com.dangdang.zframework.view.DDTextView>

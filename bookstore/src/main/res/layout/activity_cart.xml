@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWihte"
+    tools:context="com.moxi.bookstore.activity.ChanelActivity">
+
+    <RelativeLayout
+        android:id="@+id/top_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height">
+
+        <RelativeLayout
+            android:id="@+id/back_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:onClick="goBack"
+            android:paddingLeft="20dp">
+
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/mx_img_back" />
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/book_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv"
+                android:paddingLeft="10dp"
+                android:text="购物车（0）" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:id="@+id/edit_tv"
+                style="@style/book_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="45dp"
+                android:clickable="true"
+                android:onClick="editCart"
+                android:text="编辑" />
+            <TextView
+                android:id="@+id/edit_end_tv"
+                style="@style/book_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/shape_detail_btn_bg"
+                android:layout_marginRight="45dp"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="editCart"
+                android:textColor="@color/colorWihte"
+                android:text="编辑" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <com.moxi.bookstore.view.HSlidableListView
+        android:id="@+id/booklist_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_rl"
+        android:layout_below="@+id/top_rl" />
+
+    <LinearLayout
+        android:id="@+id/bottom_rl"
+        android:layout_width="match_parent"
+        android:layout_height="136dip"
+        android:background="#eeeeee"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="23dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="  全选"
+            android:textSize="@dimen/moxi_text_size_24dp"
+            android:id="@+id/checkBox"
+            android:textColor="@color/colorBlack"
+            android:button="@drawable/check_box"
+            android:onClick="allCheck"
+            android:checked="false" />
+        <LinearLayout
+            android:id="@+id/edit_ll"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/price"
+                android:textSize="@dimen/moxi_text_size_26dp"
+                android:textColor="@color/colorBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="总计￥：0" />
+
+            <TextView
+                android:textSize="@dimen/moxi_text_size_26dp"
+                android:textColor="@color/colorBlack"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/sumbit_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_detail_btn_bg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="sumbit"
+                android:text="结算"
+                android:textColor="@color/colorWihte"
+                android:textSize="@dimen/book_content" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/addfavor_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dip"
+            android:background="@drawable/shape_detail_btn_bg"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="addFavor"
+            android:text="收藏"
+            android:textColor="@color/colorWihte"
+            android:textSize="@dimen/book_content" />
+
+        <TextView
+            android:id="@+id/del_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_detail_btn_bg"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="delFromCart"
+            android:text="删除"
+            android:textColor="@color/colorWihte"
+            android:textSize="@dimen/book_content" />
+    </LinearLayout>
+</RelativeLayout>

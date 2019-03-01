@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MX6.7.iml" filepath="$PROJECT_DIR$/MX6.7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basereader/basereader.iml" filepath="$PROJECT_DIR$/basereader/basereader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bijiLib/bijiLib.iml" filepath="$PROJECT_DIR$/bijiLib/bijiLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bookreader/bookreader.iml" filepath="$PROJECT_DIR$/bookreader/bookreader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bookstore/bookstore.iml" filepath="$PROJECT_DIR$/bookstore/bookstore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/calendar/calendar.iml" filepath="$PROJECT_DIR$/calendar/calendar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exmas1006/exmas1006.iml" filepath="$PROJECT_DIR$/exmas1006/exmas1006.iml" />
+      <module fileurl="file://$PROJECT_DIR$/filemanager/filemanager.iml" filepath="$PROJECT_DIR$/filemanager/filemanager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/framework_plugin_uneditable/framework_plugin_uneditable.iml" filepath="$PROJECT_DIR$/framework_plugin_uneditable/framework_plugin_uneditable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/haierc/haierc.iml" filepath="$PROJECT_DIR$/haierc/haierc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/handwritinglibs/handwritinglibs.iml" filepath="$PROJECT_DIR$/handwritinglibs/handwritinglibs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/handwritten/handwritten.iml" filepath="$PROJECT_DIR$/handwritten/handwritten.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mxbase/mxbase.iml" filepath="$PROJECT_DIR$/mxbase/mxbase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mxuser/mxuser.iml" filepath="$PROJECT_DIR$/mxuser/mxuser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/remotefilemanager/remotefilemanager.iml" filepath="$PROJECT_DIR$/remotefilemanager/remotefilemanager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/systemapp/systemapp.iml" filepath="$PROJECT_DIR$/systemapp/systemapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/timetable/timetable.iml" filepath="$PROJECT_DIR$/timetable/timetable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/update/update.iml" filepath="$PROJECT_DIR$/update/update.iml" />
+      <module fileurl="file://$PROJECT_DIR$/updateapp/updateapp.iml" filepath="$PROJECT_DIR$/updateapp/updateapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wechatshare/wechatshare.iml" filepath="$PROJECT_DIR$/wechatshare/wechatshare.iml" />
+      <module fileurl="file://$PROJECT_DIR$/writenote/writenote.iml" filepath="$PROJECT_DIR$/writenote/writenote.iml" />
+    </modules>
+  </component>
+</project>

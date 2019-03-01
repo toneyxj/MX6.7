@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.moxi.calendar">
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    //开机广播
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <application
+        android:name=".ThisApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/img_new_main_rl"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AddNewEventActivity"
+            android:screenOrientation="portrait"/>
+
+        <receiver
+            android:name=".TimeBrodcast"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_TICK" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".ListEventActivity"
+            android:screenOrientation="portrait"/>
+
+        <service
+            android:name=".LocationService"
+            android:enabled="true"
+            android:process=":location">
+            <intent-filter android:priority="1000">
+                <action android:name="com.calendar.myservice" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_TICK" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="com.moxi.calendar.destroy" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".utils.StartUpBrodcast">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".SelectDataActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".AlarmClockActivity"
+            android:screenOrientation="portrait"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:taskAffinity=""
+            android:theme="@android:style/Theme.Wallpaper.NoTitleBar" />
+        <receiver
+            android:name=".brodCast.NotifyClockRecever"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="1000">
+                <action android:name="com.moxi.calendar.NotifyClockRecever" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/reader_note_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="225dip" 
+    android:paddingLeft="15dip"
+    android:paddingRight="15dip">
+
+    <FrameLayout
+        android:id="@+id/reader_note_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/reader_note_tip" 
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="17dip"
+            android:paddingLeft="17dip"
+            android:paddingRight="17dip"
+            android:paddingTop="10dip" 
+            android:gravity="center_vertical">
+
+            <com.dangdang.zframework.view.DDImageView
+                android:id="@+id/reader_playstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/read_media_playstart" 
+                android:layout_marginRight="15dip"
+                android:contentDescription="播放/暂停"
+                android:layout_centerVertical="true"/>
+
+            <SeekBar
+                android:id="@+id/reader_playprogress"
+                android:layout_toRightOf="@+id/reader_playstatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="2dp"
+                android:minHeight="2dp"
+                android:progressDrawable="@drawable/read_bottom_progress_dir"
+                android:thumb="@drawable/reader_bottom_progress_thumb"
+                android:thumbOffset="9dp" />
+            
+            <com.dangdang.zframework.view.DDTextView android:id="@+id/reader_playstatus_text"
+                android:layout_toRightOf="@+id/reader_playstatus"
+                android:layout_below="@+id/reader_playprogress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="15dip"
+                android:text="@string/player_loading"/>
+            
+            
+            <com.dangdang.zframework.view.DDTextView android:id="@+id/reader_playprgstext"
+                android:layout_below="@+id/reader_playprogress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="15dip"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <com.dangdang.zframework.view.DDImageView
+        android:id="@+id/reader_note_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/reader_note_arrow_down"
+        android:visibility="visible" />
+
+</RelativeLayout>

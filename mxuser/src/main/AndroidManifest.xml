@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mx.user">
+
+    <application
+        android:name=".application.UserApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar">
+        <!--用户登录-->
+        <activity
+            android:name=".activity.MXLoginActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--修改用户信息-->
+        <activity
+            android:name=".activity.MXEditInfomationActivity"
+            android:screenOrientation="portrait" />
+        <!--用户注册-->
+        <activity
+            android:name=".activity.MXRegisterActivity"
+            android:screenOrientation="portrait" />
+        <!--用户中心-->
+        <activity
+            android:name=".activity.MXUserCenterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!--找回密码-->
+        <activity
+            android:name=".activity.MXRecoveredPasswordActivity"
+            android:screenOrientation="portrait" />
+        <!--用户使用协议-->
+        <activity
+            android:name=".activity.UserAccessProtocolActivity"
+            android:screenOrientation="portrait"></activity>
+        <!--用户修改密码-->
+        <activity
+            android:name=".activity.ModifyPasswordActivity"
+            android:screenOrientation="portrait" />
+        <!--绑定当当账号-->
+        <activity
+            android:name=".activity.DDUserBindActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <!--解绑当当账号-->
+        <activity
+            android:name=".activity.DDUnbindActivity"
+            android:screenOrientation="portrait" />
+        <!--注册当当账号-->
+        <activity
+            android:name=".activity.RegisterDDUserNameActivity"
+            android:screenOrientation="portrait" />
+        <service android:name="android.mx.user.aidl.IMxUserSessionService">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.mx.aidl.GET_SESSION"></action>
+            </intent-filter>
+        </service>
+        <provider
+            android:name=".mxcontentprovider.MXUserContentProvider"
+            android:authorities="com.moxi.providers.MoxiUser"
+            android:exported="true" />
+    </application>
+
+</manifest>

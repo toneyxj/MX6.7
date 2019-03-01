@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="11dp">
+
+        <TextView
+            android:id="@+id/last_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@mipmap/back"
+            android:drawablePadding="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="2016年\t\t九月"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/title_left_size" />
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="新事件"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/title_size" />
+
+        <TextView
+            android:id="@+id/more_motification"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="编辑"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/title_right_size"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/arc_di_width_bian_font"
+        android:orientation="horizontal"
+        android:padding="1dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="名称："
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_22" />
+
+        <com.moxi.calendar.view.BaseEdite
+            android:id="@+id/input_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="请输入事件名"
+            android:paddingBottom="16dp"
+            android:maxLength="20"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorGray"
+            android:textSize="@dimen/moxi_text_size_22" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/arc_di_width_bian_font"
+        android:orientation="horizontal"
+        android:padding="1dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="时间："
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_22" />
+
+        <TextView
+            android:id="@+id/select_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="请选择提示时间"
+            android:paddingBottom="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorGray"
+            android:textSize="@dimen/moxi_text_size_22" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/arc_di_width_bian_font"
+        android:orientation="vertical"
+        android:padding="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:text="提醒：\t"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/moxi_text_size_22" />
+
+            <RadioGroup
+                android:id="@+id/select_is_notify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/select1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="16dp"
+                    android:text="否"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/moxi_text_size_22" />
+
+                <RadioButton
+                    android:id="@+id/select2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="16dp"
+                    android:text="是"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/moxi_text_size_22" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/select_notify_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <RadioButton
+                android:id="@+id/check1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
+                android:paddingRight="5dp"
+                android:paddingTop="16dp"
+                android:text="选中时间"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/moxi_text_size_22" />
+            <RadioButton
+                android:id="@+id/check2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
+                android:paddingRight="5dp"
+                android:paddingTop="16dp"
+                android:text="提前5分钟"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/moxi_text_size_22" />
+
+            <RadioButton
+                android:id="@+id/check3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
+                android:paddingRight="5dp"
+                android:paddingTop="16dp"
+                android:text="提前15分钟"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/moxi_text_size_22" />
+
+            <RadioButton
+                android:id="@+id/check4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
+                android:paddingRight="5dp"
+                android:paddingTop="16dp"
+                android:text="提前一小时"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/moxi_text_size_22" />
+
+            <RadioButton
+                android:id="@+id/check5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
+                android:paddingRight="5dp"
+                android:paddingTop="16dp"
+                android:text="提前一天"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/moxi_text_size_22" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/arc_di_width_bian_font"
+        android:orientation="horizontal"
+        android:padding="1dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:text="备注："
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_22" />
+
+        <com.moxi.calendar.view.BaseEdite
+            android:id="@+id/input_remark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="top"
+            android:hint="请输入事件备注"
+            android:lines="4"
+            android:maxLength="300"
+            android:paddingBottom="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorGray"
+            android:textSize="@dimen/moxi_text_size_22" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp">
+
+        <LinearLayout
+            android:id="@+id/updata_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/insure_update"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/arc_di_black"
+                android:text="确认"
+                android:textColor="@color/colorWihte"
+                android:textSize="@dimen/moxi_text_size_22" />
+
+            <Button
+                android:id="@+id/insure_delete"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:background="@drawable/arc_di_black"
+                android:text="删除"
+                android:textColor="@color/colorWihte"
+                android:textSize="@dimen/moxi_text_size_22" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/insure_add"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/arc_di_black"
+            android:text="确认添加"
+            android:textColor="@color/colorWihte"
+            android:textSize="@dimen/moxi_text_size_22" />
+    </FrameLayout>
+</LinearLayout>

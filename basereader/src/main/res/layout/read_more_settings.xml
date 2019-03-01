@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/activity_add_roster_title_ll"
+        layout="@layout/common_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/book_review_listview_bg_color">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.dangdang.zframework.view.DDImageView
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="#FFEBEBEB" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/read_more_settings_block_bg"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/read_more_settings_text_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:gravity="center_vertical">
+
+                    <com.dangdang.zframework.view.DDTextView
+                        android:id="@+id/read_more_settings_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="19dp"
+                        android:layout_toLeftOf="@+id/read_more_settings_text_more"
+                        android:textColor="@color/read_dir_text_default_color"
+                        android:textSize="16dp" />
+
+                    <com.dangdang.zframework.view.DDTextView
+                        android:id="@+id/read_more_settings_text_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:text="@string/read_settings_more_fonts"
+                        android:textColor="@color/read_dir_text_default_color"
+                        android:textSize="16dp" />
+                </RelativeLayout>
+
+                <com.dangdang.zframework.view.DDImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="#ffe9e9e9" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:gravity="center_vertical">
+
+                    <com.dangdang.zframework.view.DDTextView
+                        android:id="@+id/read_more_settings_vol_key"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="19dp"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/read_set_volume"
+                        android:textColor="@color/read_dir_text_default_color"
+                        android:textSize="16dp" />
+
+                    <com.dangdang.reader.view.SlipPButton
+                        android:id="@+id/SlipButton_volumn"
+                        android:layout_width="75dip"
+                        android:layout_height="33dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:focusable="true" />
+                </RelativeLayout>
+
+                <com.dangdang.zframework.view.DDImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="#ffe9e9e9" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:gravity="center_vertical">
+
+                    <com.dangdang.zframework.view.DDTextView
+                        android:id="@+id/read_more_settings_fulltxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="19dp"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/read_full_mode"
+                        android:textColor="@color/read_dir_text_default_color"
+                        android:textSize="16dp" />
+
+                    <com.dangdang.reader.view.SlipPButton
+                        android:id="@+id/SlipButton_isFull"
+                        android:layout_width="75dip"
+                        android:layout_height="33dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:focusable="true" />
+                </RelativeLayout>
+
+                <com.dangdang.zframework.view.DDImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="#ffe9e9e9" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:gravity="center_vertical">
+
+                    <com.dangdang.zframework.view.DDTextView
+                        android:id="@+id/read_more_settings_fn_convert"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="19dp"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/chinese_convert"
+                        android:textColor="@color/read_dir_text_default_color"
+                        android:textSize="16dp" />
+
+                    <com.dangdang.reader.view.SlipPButton
+                        android:id="@+id/SlipButton_is_convert"
+                        android:layout_width="75dip"
+                        android:layout_height="33dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:focusable="true" />
+                </RelativeLayout>
+
+                <com.dangdang.zframework.view.DDImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="#ffe9e9e9"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
+
+                    <com.dangdang.zframework.view.DDTextView
+                        android:id="@+id/read_more_settings_sync"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="19dp"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/read_settings_sync"
+                        android:textColor="@color/read_dir_text_default_color"
+                        android:textSize="16dp" />
+
+                    <com.dangdang.reader.view.SlipPButton
+                        android:id="@+id/SlipButton_sync"
+                        android:layout_width="75dip"
+                        android:layout_height="33dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:focusable="true" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <com.dangdang.zframework.view.DDImageView
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="#FFEBEBEB" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/read_more_settings_block_bg"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="104dp">
+
+                        <com.dangdang.zframework.view.DDTextView
+                            android:id="@+id/read_more_settings_sleep"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/read_turn_off_light"
+                            android:textColor="@color/read_dir_text_default_color"
+                            android:textSize="16dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:orientation="horizontal">
+
+                            <com.dangdang.zframework.view.DDButton
+                                android:id="@+id/read_more_settings_sleep_btn1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/read_more_settings_button_bg_left"
+                                android:text="@string/read_turn_off_light_2"
+                                android:textColor="@color/read_dir_text_default_color" />
+
+                            <com.dangdang.zframework.view.DDButton
+                                android:id="@+id/read_more_settings_sleep_btn2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/read_more_settings_button_bg_mid"
+                                android:text="@string/read_turn_off_light_5"
+                                android:textColor="@color/read_dir_text_default_color" />
+
+                            <com.dangdang.zframework.view.DDImageView
+                                android:layout_width="1px"
+                                android:layout_height="match_parent"
+                                android:background="@color/gray_detail" />
+
+                            <com.dangdang.zframework.view.DDButton
+                                android:id="@+id/read_more_settings_sleep_btn3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/read_more_settings_button_bg_mid"
+                                android:text="@string/read_turn_off_light_10"
+                                android:textColor="@color/read_dir_text_default_color" />
+
+                            <com.dangdang.zframework.view.DDButton
+                                android:id="@+id/read_more_settings_sleep_btn4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/read_more_settings_button_bg_right"
+                                android:text="@string/read_turn_off_light_forever"
+                                android:textColor="@color/read_dir_text_default_color" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <com.dangdang.zframework.view.DDImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:background="#ffe9e9e9" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="104dp">
+
+                        <com.dangdang.zframework.view.DDTextView
+                            android:id="@+id/read_more_settings_flip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/animation_type"
+                            android:textColor="@color/read_dir_text_default_color"
+                            android:textSize="16dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:orientation="horizontal">
+
+                            <com.dangdang.zframework.view.DDButton
+                                android:id="@+id/read_more_settings_flip_btn1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/read_more_settings_button_bg_left"
+                                android:text="@string/animation_shift"
+                                android:textColor="@color/read_dir_text_default_color" />
+
+                            <com.dangdang.zframework.view.DDButton
+                                android:id="@+id/read_more_settings_flip_btn2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/read_more_settings_button_bg_mid"
+                                android:text="@string/animation_slide"
+                                android:textColor="@color/read_dir_text_default_color" />
+
+                            <com.dangdang.zframework.view.DDButton
+                                android:id="@+id/read_more_settings_flip_btn3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/read_more_settings_button_bg_right"
+                                android:text="@string/animation_none"
+                                android:textColor="@color/read_dir_text_default_color" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <com.dangdang.zframework.view.DDImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:background="#ffe9e9e9" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="104dp">
+
+                        <com.dangdang.zframework.view.DDTextView
+                            android:id="@+id/read_more_settings_pageturn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/pageturn_mode"
+                            android:textColor="@color/read_dir_text_default_color"
+                            android:textSize="16dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:orientation="horizontal">
+
+                            <com.dangdang.zframework.view.DDButton
+                                android:id="@+id/read_more_settings_pageturn_default"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/read_more_settings_button_bg_left"
+                                android:text="@string/pageturn_default"
+                                android:textColor="@color/read_setting_selector" />
+
+                            <com.dangdang.zframework.view.DDButton
+                                android:id="@+id/read_more_settings_pageturn_single"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/read_more_settings_button_bg_right"
+                                android:text="@string/pageturn_singleh"
+                                android:textColor="@color/read_setting_selector" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <com.dangdang.zframework.view.DDImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:background="#ffe9e9e9" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="104dp">
+
+                        <com.dangdang.zframework.view.DDTextView
+                            android:id="@+id/read_more_settings_deep_night"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/read_settings_deep_night_mode"
+                            android:textColor="@color/read_dir_text_default_color"
+                            android:textSize="16dp" />
+
+                        <LinearLayout
+                            android:id="@+id/deep_night_mode_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <com.dangdang.zframework.view.DDImageView
+                                android:id="@+id/deep_night_mode_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:contentDescription="夜间模式A"
+                                android:src="@drawable/deep_night_1" />
+
+                            <com.dangdang.zframework.view.DDImageView
+                                android:id="@+id/deep_night_mode_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:contentDescription="夜间模式B"
+                                android:src="@drawable/deep_night_2" />
+
+                            <com.dangdang.zframework.view.DDImageView
+                                android:id="@+id/deep_night_mode_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:contentDescription="夜间模式C"
+                                android:src="@drawable/deep_night_3" />
+
+                            <com.dangdang.zframework.view.DDImageView
+                                android:id="@+id/deep_night_mode_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:contentDescription="夜间模式D"
+                                android:src="@drawable/deep_night_4" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <com.dangdang.zframework.view.DDImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:background="#ffe9e9e9" />
+
+                    <RelativeLayout
+                        android:id="@+id/read_more_settings_spacing"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:gravity="center_vertical">
+
+                        <com.dangdang.zframework.view.DDTextView
+                            android:id="@+id/read_more_settings_spacingtxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/custom_format"
+                            android:textColor="@color/read_dir_text_default_color"
+                            android:textSize="16dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:orientation="horizontal">
+
+                            <com.dangdang.zframework.view.DDTextView
+                                android:id="@+id/read_more_settings_spacingtip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="19dp"
+                                android:layout_marginTop="16dp"
+                                android:text="@string/char_rightarrow"
+                                android:textColor="@color/read_dir_text_default_color"
+                                android:textSize="16dp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/read_more_settings_pageturn_tip"
+                    android:layout_width="180dp"
+                    android:layout_height="240dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.dangdang.zframework.view.DDTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/blue_64aae6"
+                            android:gravity="center"
+                            android:text="上一页"
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+
+                        <com.dangdang.zframework.view.DDTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/blue_2390ec"
+                            android:gravity="center"
+                            android:text="菜单"
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+
+                        <com.dangdang.zframework.view.DDTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/blue_64aae6"
+                            android:gravity="center"
+                            android:text="下一页"
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <com.dangdang.zframework.view.DDTextView
+                        android:id="@+id/read_more_settings_pageturn_tip_bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/blue_2390ec"
+                        android:gravity="center"
+                        android:text="下一页"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+                </RelativeLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWihte"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_write_home_work_type"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:text="一、选择题"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/moxi_text_size_22"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_write_home_work_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minHeight="40dp"
+        android:text="1.x是任意有理数，则2|x|+x的值是(   )"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/moxi_text_size_22" />
+
+    <RadioGroup
+        android:id="@+id/radio_group_write_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <RadioButton
+            android:id="@+id/radio_answer_1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWihte"
+            android:button="@null"
+            android:drawableLeft="@drawable/mx_selector_menu"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:minHeight="40dp"
+            android:text="A"
+            android:textColor="@color/colorBlack"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radio_answer_2"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWihte"
+            android:button="@null"
+            android:drawableLeft="@drawable/mx_selector_menu"
+            android:drawablePadding="10dp"
+            android:minHeight="40dp"
+            android:text="B"
+            android:textColor="@color/colorBlack"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radio_answer_3"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWihte"
+            android:button="@null"
+            android:drawableLeft="@drawable/mx_selector_menu"
+            android:drawablePadding="10dp"
+            android:minHeight="40dp"
+            android:text="C"
+            android:textColor="@color/colorBlack"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radio_answer_4"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWihte"
+            android:button="@null"
+            android:drawableLeft="@drawable/mx_selector_menu"
+            android:drawablePadding="10dp"
+            android:minHeight="40dp"
+            android:text="D"
+            android:textColor="@color/colorBlack"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/moxi_shape_dash_gray_1dp" />
+</LinearLayout>

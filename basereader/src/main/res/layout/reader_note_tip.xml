@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/reader_note_root_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/reader_note_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/reader_note_tip">
+
+        <ScrollView
+            android:id="@+id/reader_scrollview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fadingEdge="none"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:scrollbars="none">
+
+            <com.dangdang.zframework.view.DDTextView
+                android:id="@+id/reader_note_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:singleLine="false"
+                android:text=""
+                android:textColor="@color/read_dir_mark_note_stroke_color"
+                android:textSize="16dp"/>
+
+        </ScrollView>
+    </FrameLayout>
+
+    <com.dangdang.zframework.view.DDImageView
+        android:id="@+id/reader_note_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:contentDescription="指示箭头"
+        android:src="@drawable/reader_note_arrow_down"
+        android:visibility="visible"/>
+</RelativeLayout>

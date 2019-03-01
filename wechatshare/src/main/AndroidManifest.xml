@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.moxi.wechatshare">
+
+    <application>
+        <activity android:name=".ShareActivity"
+            android:theme="@style/AlertDialogStyle"></activity>
+    </application>
+
+</manifest>

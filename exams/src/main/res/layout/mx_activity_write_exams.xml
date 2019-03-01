@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mx.exams.view.SlideLinerlayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/slide_liner_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/mx_base_title_layout" />
+
+    <com.mx.exams.view.NoListView
+        android:id="@+id/no_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:listSelector="@android:color/transparent"
+        android:padding="20dp"></com.mx.exams.view.NoListView>
+</com.mx.exams.view.SlideLinerlayout>

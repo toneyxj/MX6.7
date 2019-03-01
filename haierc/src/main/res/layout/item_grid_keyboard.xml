@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_keyboard_keys"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_80dp"
+        android:textColor="@color/colorBlack"
+        android:background="@drawable/selector_keyboard_key_bg"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="@dimen/moxi_text_size_26" />
+
+</LinearLayout>

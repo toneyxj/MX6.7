@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/mx_base_title_layout" />
+
+    <RelativeLayout
+        android:id="@+id/rl_one_button_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWihte">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_page_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/white_to_font"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/moxi_shape_black_corner_35"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="5dp"
+                    android:text="上一题"
+                    android:textColor="@color/colorWihte"
+                    android:textSize="@dimen/moxi_text_size_24" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_page_count"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="10/20"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/moxi_text_size_24" />
+
+            <LinearLayout
+                android:id="@+id/ll_page_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/white_to_font"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/moxi_shape_black_corner_35"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="5dp"
+                    android:text="下一题"
+                    android:textColor="@color/colorWihte"
+                    android:textSize="@dimen/moxi_text_size_24" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.moxi.nexams.view.CustomScrollView
+        android:id="@+id/customScrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_one_button_bottom"
+        android:layout_below="@id/include"
+        android:fillViewport="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/slide_chose_liner_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="80dp"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tv_chose_exams_title_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/moxi_text_size_22"></TextView>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_option"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"></android.support.v7.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/tv_chose_exams_analysis_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/moxi_text_size_22" />
+            </LinearLayout>
+
+            <com.moxi.nexams.view.PaintInvalidateRectView
+                android:id="@+id/paint_invalidate_rectview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </com.moxi.nexams.view.CustomScrollView>
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/round_corner_bg_black"
+              android:orientation="vertical"
+              android:paddingLeft="10dp"
+              android:paddingRight="10dp"
+              android:paddingTop="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/button_fsize"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="30dp">
+
+        <com.dangdang.zframework.view.DDButton
+            android:id="@+id/font_no_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="1dp"
+            android:background="@drawable/exit_left_btn_selector"
+            android:text="@string/toolbar_font_hint_dialog_cancel"
+            android:textColor="@color/white"
+            android:textSize="16dp"/>
+
+        <com.dangdang.zframework.view.DDButton
+            android:id="@+id/font_auto_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/exit_right_btn_selector"
+            android:text="@string/toolbar_font_hint_dialog_confirm"
+            android:textColor="@color/white"
+            android:textSize="16dp"/>
+    </LinearLayout>
+
+</LinearLayout>

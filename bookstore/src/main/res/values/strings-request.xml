@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="request_fail">数据请求失败</string>
+    <string name="request_overtime">数据请求超时</string>
+    <string name="request_no_network">网络未连接！请检查网络</string>
+    <string name="request_unknown">未知错误</string>
+    <string name="download">下载</string>
+    <string name="reloading">重新加载</string>
+    <string name="part_of_the_authority">权限未完全赋予</string>
+    <string name="data_loding">加载中...</string>
+
+</resources>

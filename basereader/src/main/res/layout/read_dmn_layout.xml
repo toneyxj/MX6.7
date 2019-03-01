@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dangdang.reader.dread.view.ReaderRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/read_dmn_rootlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dread.DirectoryMarkNoteActivity">
+
+    <LinearLayout
+        android:id="@+id/read_dmn_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_50"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.dangdang.zframework.view.DDImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/directory"
+                android:layout_alignLeft="@+id/read_dmn_dir"
+                android:src="@drawable/dmn_tab_dir_selector" />
+
+            <com.dangdang.zframework.view.DDTextView
+                android:id="@+id/read_dmn_dir"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:lines="1"
+                android:paddingLeft="17dip"
+                android:text="@string/directory"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:textSize="@dimen/moxi_text_size_20dp" />
+        </RelativeLayout>
+
+        <com.dangdang.zframework.view.DDImageView
+            android:layout_width="1px"
+            android:layout_height="26dp"
+            android:layout_gravity="center_vertical"
+            android:background="#d2d2d2" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_weight="1">
+
+            <com.dangdang.zframework.view.DDImageView
+                android:layout_width="wrap_content"
+                android:contentDescription="@string/bookmark"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignLeft="@+id/read_dmn_mark"
+                android:src="@drawable/dmn_tab_bookmark_selector" />
+
+            <com.dangdang.zframework.view.DDTextView
+                android:id="@+id/read_dmn_mark"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:lines="1"
+                android:paddingLeft="17dip"
+                android:text="@string/bookmark"
+                android:textColor="@color/reader_dnm_tab_selector"
+                android:textSize="@dimen/moxi_text_size_20dp" />
+        </RelativeLayout>
+
+        <com.dangdang.zframework.view.DDImageView
+            android:id="@+id/read_dmn_note_line"
+            android:layout_width="1px"
+            android:layout_height="26dp"
+            android:layout_gravity="center_vertical"
+            android:background="#d2d2d2" />
+
+        <RelativeLayout
+            android:id="@+id/read_dmn_note_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.dangdang.zframework.view.DDImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/booknote"
+                android:layout_alignLeft="@+id/read_dmn_note"
+                android:src="@drawable/dmn_tab_notes_selector" />
+
+            <com.dangdang.zframework.view.DDTextView
+                android:id="@+id/read_dmn_note"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:lines="1"
+                android:paddingLeft="17dip"
+                android:text="@string/booknote"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:textSize="@dimen/moxi_text_size_20dp" />
+        </RelativeLayout>
+        <!--
+        <com.dangdang.zframework.view.DDImageView
+            android:layout_width="1px"
+            android:layout_height="26dp"
+            android:layout_gravity="center_vertical"
+            android:background="#d2d2d2" />
+
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/read_dmn_dic"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/dmn_tab_dic_selector"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:paddingLeft="14dip"
+            android:paddingRight="10dip"
+            android:text="@string/dictionary"
+            android:textColor="@color/reader_dnm_tab_selector"
+            android:textSize="16dp" />
+        -->
+    </LinearLayout>
+
+    <com.dangdang.zframework.view.DDImageView
+        android:id="@+id/read_dmn_split_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/read_dmn_top_layout"
+        android:background="@color/blue_2390ec" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/read_dmn_container"
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/read_dmn_split_line" />
+
+    <com.dangdang.zframework.view.DDImageView
+        android:id="@+id/read_dmn_back"
+        android:layout_width="wrap_content"
+        android:contentDescription="返回"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/dmn_back" />
+
+</com.dangdang.reader.dread.view.ReaderRelativeLayout>

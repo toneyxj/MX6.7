@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/read_greencolor"
+            android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.dangdang.zframework.view.DDImageView
+                android:id="@+id/dialog_buy_month_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:padding="15dip"
+                android:contentDescription="@string/back"
+                android:src="@drawable/dmn_back"/>
+
+            <com.dangdang.zframework.view.DDTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"
+                android:text="@string/buy_month_dialog_title"/>
+
+            <com.dangdang.zframework.view.DDImageView
+                android:id="@+id/dialog_buy_month_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dmn_back"
+                android:layout_centerVertical="true"
+                android:padding="15dip"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/black"/>
+
+        <LinearLayout
+            android:id="@+id/personal_monthly_pay_l_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/dialog_buy_month_select1"
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    android:gravity="center"
+                    android:layout_marginRight="11dp"
+                    android:background="@color/read_greencolor"
+                    android:orientation="horizontal">
+
+                    <com.dangdang.zframework.view.DDTextView
+                        android:id="@+id/dialog_buy_month_select1_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                    <com.dangdang.zframework.view.DDTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:paddingTop="8dp"
+                        android:textColor="@color/black"
+                        android:text="month_select_count"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <com.dangdang.zframework.view.DDTextView
+                    android:id="@+id/dialog_buy_month_select1_discount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="11dp"
+                    android:gravity="center"
+                    android:textSize="11dp"
+                    android:layout_marginTop="4dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/dialog_buy_month_select2"
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    android:gravity="center"
+                    android:background="@color/read_greencolor"
+                    android:orientation="horizontal">
+
+                    <com.dangdang.zframework.view.DDTextView
+                        android:id="@+id/dialog_buy_month_select2_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                    <com.dangdang.zframework.view.DDTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="@color/black"
+                        android:paddingTop="8dp"
+                        android:text="month_select_count"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <com.dangdang.zframework.view.DDTextView
+                    android:id="@+id/dialog_buy_month_select2_discount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="11dp"
+                    android:layout_marginTop="4dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/dialog_buy_month_select3"
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="11dp"
+                    android:background="@color/read_greencolor"
+                    android:orientation="horizontal">
+
+                    <com.dangdang.zframework.view.DDTextView
+                        android:id="@+id/dialog_buy_month_select3_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                    <com.dangdang.zframework.view.DDTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:paddingTop="8dp"
+                        android:textColor="@color/black"
+                        android:text="month_select_count"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <com.dangdang.zframework.view.DDTextView
+                    android:id="@+id/dialog_buy_month_select3_discount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11dp"
+                    android:gravity="center"
+                    android:textSize="11dp"
+                    android:layout_marginTop="4dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="21dp"
+            android:orientation="horizontal">
+
+            <com.dangdang.zframework.view.DDTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:text="@string/buy_dialog_buy_name"/>
+
+            <com.dangdang.zframework.view.DDTextView
+                android:id="@+id/dialog_buy_month_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/common_color_b"
+                android:textSize="14dp"
+                android:text=""/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="11dp"
+            android:orientation="horizontal">
+
+            <com.dangdang.zframework.view.DDTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:text="@string/buy_dialog_price"/>
+
+            <com.dangdang.zframework.view.DDTextView
+                android:id="@+id/dialog_buy_month_original_price"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginRight="8dp"
+                android:textSize="14dp"
+                android:textColor="@color/black"/>
+
+            <com.dangdang.zframework.view.DDTextView
+                android:id="@+id/dialog_buy_month_discount_price"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:text=""/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="11dp"
+            android:orientation="horizontal">
+
+            <com.dangdang.zframework.view.DDTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:textColor="@color/black"
+                android:text="@string/buy_dialog_balance"/>
+
+            <com.dangdang.zframework.view.DDTextView
+                android:id="@+id/dialog_buy_month_balance_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/common_color_b"
+                android:textSize="14dp"
+                android:text=""/>
+        </LinearLayout>
+
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/dialog_buy_month_not_enough"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:textSize="14dp"
+            android:textColor="@color/black"
+            android:text="@string/buy_dialog_buy_month_not_enough"
+            android:visibility="gone"/>
+
+        <com.dangdang.zframework.view.DDTextView
+            android:id="@+id/dialog_buy_month_buy_month"
+            android:layout_width="275dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/read_greencolor"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:padding="8dip"
+            android:text="@string/buy_dialog_buy_month"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dip"
+            android:background="@color/read_greencolor"
+            android:orientation="vertical">
+
+            <com.dangdang.zframework.view.DDTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColor="#ff646464"
+                android:text="@string/buy_dialog_tips_title"/>
+
+            <com.dangdang.zframework.view.DDTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="14dp"
+                android:textColor="@color/black"
+                android:text="@string/buy_month_dialog_tips1"/>
+
+            <com.dangdang.zframework.view.DDTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="14dp"
+                android:textColor="@color/black"
+                android:text="@string/buy_month_dialog_tips2"/>
+
+            <com.dangdang.zframework.view.DDTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="14dp"
+                android:textColor="@color/black"
+                android:text="@string/buy_month_dialog_tips3"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
