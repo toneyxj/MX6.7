@@ -2,7 +2,6 @@ package com.mx.exams.model;
 
 import org.litepal.crud.DataSupport;
 
-import java.io.File;
 import java.io.Serializable;
 
 /**

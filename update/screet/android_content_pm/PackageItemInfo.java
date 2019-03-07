@@ -17,7 +17,6 @@
 package android.content.pm;
 
 import android.content.res.XmlResourceParser;
-
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Parcel;

@@ -7,10 +7,8 @@ import android.database.sqlite.SQLiteDatabase;
 import com.mx.exams.R;
 import com.mx.exams.model.CourseModel;
 import com.mx.exams.model.OptionModel;
-import com.mx.exams.model.SyncExamsModel;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 /**

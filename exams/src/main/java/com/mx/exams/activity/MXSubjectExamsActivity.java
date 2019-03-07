@@ -1,7 +1,6 @@
 package com.mx.exams.activity;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Message;
@@ -14,7 +13,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.mx.exams.R;
-import com.mx.exams.cache.ACache;
 import com.mx.exams.model.ExamsDetails;
 import com.mx.exams.model.ExamsDetailsModel;
 import com.mx.exams.utils.MxgsaTagHandler;

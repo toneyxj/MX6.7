@@ -7,7 +7,6 @@ import android.os.Looper;
 import android.os.Message;
 import android.support.v4.util.LruCache;
 
-import com.mx.mxbase.constant.APPLog;
 import com.mx.mxbase.utils.FileSaveASY;
 import com.mx.mxbase.utils.ImageLoadUtils;
 import com.mx.mxbase.utils.StringUtils;

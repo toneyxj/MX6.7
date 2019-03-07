@@ -8,7 +8,6 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
 import com.moxi.haierexams.R;
 import com.moxi.haierexams.cache.ACache;
 import com.moxi.haierexams.model.ChoseExamsModel;

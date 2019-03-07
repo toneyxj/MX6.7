@@ -16,43 +16,42 @@
 
 package android.content.pm;
 
-import android.content.Context;
 import android.content.BroadcastReceiver;
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.ComponentName;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Resources;
 import android.content.res.XmlResourceParser;
 import android.os.Environment;
 import android.os.Handler;
-import android.util.Log;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.Xml;
 
-import java.util.Map;
+import com.android.internal.os.AtomicFile;
+import com.android.internal.util.FastXmlSerializer;
+import com.google.android.collect.Lists;
+import com.google.android.collect.Maps;
+
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
+import org.xmlpull.v1.XmlSerializer;
+
+import java.io.File;
+import java.io.FileDescriptor;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
-import java.util.ArrayList;
+import java.util.Map;
 import java.util.concurrent.atomic.AtomicReference;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.FileDescriptor;
-import java.io.PrintWriter;
-import java.io.IOException;
-import java.io.FileInputStream;
-
-import com.android.internal.os.AtomicFile;
-import com.android.internal.util.FastXmlSerializer;
-
-import com.google.android.collect.Maps;
-import com.google.android.collect.Lists;
-
-import org.xmlpull.v1.XmlPullParserException;
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlSerializer;
 
 /**
  * A cache of registered services. This cache

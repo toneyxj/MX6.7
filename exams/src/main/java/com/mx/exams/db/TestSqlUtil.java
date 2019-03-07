@@ -5,21 +5,11 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.mx.exams.model.ExamsDetails;
-import com.mx.mxbase.constant.Constant;
 import com.mx.mxbase.utils.ListUtils;
-import com.mx.mxbase.utils.MXUamManager;
-import com.mx.mxbase.utils.Toastor;
-import com.zhy.http.okhttp.OkHttpUtils;
-import com.zhy.http.okhttp.callback.StringCallback;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
-import okhttp3.Call;
 
 /**
  * Created by Archer on 16/11/10.

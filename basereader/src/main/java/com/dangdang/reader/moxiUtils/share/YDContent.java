@@ -1,7 +1,6 @@
 package com.dangdang.reader.moxiUtils.share;
 
 import com.dangdang.reader.dread.data.BookNoteDataWrapper;
-import com.moxi.biji.intf.ContentBuilderInterface;
 
 import java.util.List;
 
@@ -11,7 +10,6 @@ import java.util.List;
 
 public class YDContent implements ContentBuilderInterface<BookNoteDataWrapper> {
     @Override
-    public String getContent(List<BookNoteDataWrapper> list,Object bj) {
-        return null;
+    public void getContent(List<BookNoteDataWrapper> list,Object bj,ShareCallBack onShare) {
     }
 }

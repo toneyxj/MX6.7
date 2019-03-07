@@ -35,6 +35,7 @@ public class BookstoreApplication extends DDApplication {
         initMyApp();
 //        CrashHandler.getInstance().init(getApplicationContext());
         CrashReport.initCrashReport(getApplicationContext(), "4bd918ae08", APPLog.is);
+//        MultiDex.install(this);
 //        CrashHandler.getInstance().init(getContext());
     }
     public void setStuFlag(String flag){

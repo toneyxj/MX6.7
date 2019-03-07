@@ -55,17 +55,21 @@ public class ListDialog extends Dialog implements View.OnClickListener {
     private void addTexts(Context context){
         list_item.removeAllViews();
         int SHeight= DensityUtil.getScreenH(context);
-        int textSize=SHeight/20;
-        int height=SHeight/15;
+        int textSize=SHeight/45;
+        int height=SHeight/25;
         int i=0;
 
         for (String txt:hints) {
             TextView textView = new TextView(context);
             LinearLayout.LayoutParams params=new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             params.height=height;
+            params.leftMargin=height;
+            params.rightMargin=height;
+            textView.setLayoutParams(params);
             textView.setTextSize(textSize);
             textView.setTextColor(Color.BLACK);
             textView.setGravity(Gravity.CENTER);
+            textView.setBackgroundResource(R.drawable.white_to_font);
             textView.setTag(i);
             textView.setText(txt);
             textView.setOnClickListener(this);
@@ -118,6 +122,7 @@ public class ListDialog extends Dialog implements View.OnClickListener {
                 if (listener!=null){
                     listener.onClickItem(index);
                 }
+                this.dismiss();
             }catch (Exception e){
                 e.printStackTrace();
             }

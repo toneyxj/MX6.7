@@ -5,14 +5,12 @@ import android.content.SharedPreferences;
 import android.content.res.AssetManager;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.mx.exams.cache.Utils;
 import com.mx.mxbase.utils.Log;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.sql.Time;
 import java.util.HashMap;
 import java.util.Map;
 

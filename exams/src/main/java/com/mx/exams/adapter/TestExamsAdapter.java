@@ -1,7 +1,6 @@
 package com.mx.exams.adapter;
 
 import android.content.Context;
-import android.os.Environment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,11 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.mx.exams.R;
-import com.mx.exams.cache.ACache;
-import com.mx.exams.model.ExaModel;
-import com.mx.mxbase.utils.FileUtils;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

@@ -14,7 +14,6 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-
 import com.moxi.haierexams.R;
 import com.moxi.haierexams.db.SQLUtil;
 import com.moxi.haierexams.model.OptionModel;

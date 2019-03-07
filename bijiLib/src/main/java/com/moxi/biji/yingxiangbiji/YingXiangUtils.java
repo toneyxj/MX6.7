@@ -1,12 +1,13 @@
 package com.moxi.biji.yingxiangbiji;
 
-import android.app.Activity;
+import android.support.v4.app.FragmentActivity;
 
 import com.evernote.client.android.EvernoteSession;
 import com.evernote.client.android.EvernoteUtil;
 import com.evernote.client.android.asyncclient.EvernoteNoteStoreClient;
 import com.evernote.edam.type.Note;
 import com.evernote.edam.type.Notebook;
+import com.moxi.biji.BijiUtils;
 import com.moxi.biji.intf.BackImp;
 import com.moxi.biji.intf.NoteUtilsImp;
 import com.moxi.biji.mdoel.BiJiModel;
@@ -24,7 +25,7 @@ public class YingXiangUtils implements NoteUtilsImp {
      * @return
      */
     @Override
-    public  boolean isLogin(Activity activity) {
+    public  boolean isLogin(FragmentActivity activity) {
         if (EvernoteSession.getInstance().isLoggedIn()) {
             return true;
         } else {
@@ -68,7 +69,7 @@ public class YingXiangUtils implements NoteUtilsImp {
                     Note note = new Note();
                     note.setNotebookGuid(myNB.getGuid());
                     note.setTitle(model.getTitle());
-                   note.setContent(EvernoteUtil.NOTE_PREFIX + model.getContent() + EvernoteUtil.NOTE_SUFFIX);
+                   note.setContent(EvernoteUtil.NOTE_PREFIX + BijiUtils.readFile( model.getContent()) + EvernoteUtil.NOTE_SUFFIX);
                     //上传同步note
                      noteStoreClient.createNote(note);
                     imp.result();

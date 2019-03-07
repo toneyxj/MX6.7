@@ -318,7 +318,6 @@ public class ReadMainActivity extends BaseGroupActivity implements
         } else {
             readInfo = new ReadInfo();
         }
-
         readInfo.setDefaultPid(productId);
         readInfo.setInternetBookCover(internetBookCover);
         readInfo.setBought(isBought);

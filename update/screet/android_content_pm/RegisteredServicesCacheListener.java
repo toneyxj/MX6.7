@@ -16,8 +16,6 @@
 
 package android.content.pm;
 
-import android.os.Parcelable;
-
 /**
  * Listener for changes to the set of registered services managed by a RegisteredServicesCache.
  * @hide

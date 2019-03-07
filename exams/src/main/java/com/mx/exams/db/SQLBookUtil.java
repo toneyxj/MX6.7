@@ -5,18 +5,12 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.google.gson.Gson;
-import com.mx.exams.R;
-import com.mx.exams.model.CourseModel;
 import com.mx.exams.model.ExamsDetails;
 import com.mx.exams.model.ExamsDetailsModel;
-import com.mx.exams.model.OptionModel;
 
-import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by Administrator on 2016/9/30 0030.

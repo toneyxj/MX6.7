@@ -9,13 +9,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.mx.exams.R;
-import com.mx.exams.activity.MXErrorExamsActivity;
 import com.mx.exams.cache.ACache;
 import com.mx.exams.model.ChoseExamsModel;
 import com.mx.exams.model.ExamsDetails;
-import com.mx.exams.model.ExamsDetailsModel;
 import com.mx.mxbase.interfaces.OnItemClickListener;
-import com.mx.mxbase.utils.GsonTools;
 
 import java.util.List;
 

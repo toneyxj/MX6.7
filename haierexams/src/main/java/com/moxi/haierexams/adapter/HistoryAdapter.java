@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-
 import com.moxi.haierexams.R;
 import com.moxi.haierexams.model.HistoryModel;
 

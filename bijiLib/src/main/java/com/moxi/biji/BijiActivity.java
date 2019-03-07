@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.util.Log;
 import android.widget.Toast;
 
 import com.evernote.client.android.login.EvernoteLoginFragment;
@@ -12,11 +11,11 @@ import com.moxi.biji.intf.BackImp;
 import com.moxi.biji.intf.NoteUtilsImp;
 import com.moxi.biji.mdoel.BiJiModel;
 import com.moxi.biji.yingxiangbiji.YingXiangUtils;
-import com.moxi.yingxiangbiji.R;
+
+import java.io.Serializable;
 
 public class BijiActivity extends FragmentActivity implements EvernoteLoginFragment.ResultCallback, BackImp {
     public static boolean isStart = false;
-
     /**
      * @param context 上下文
      */
@@ -42,7 +41,17 @@ public class BijiActivity extends FragmentActivity implements EvernoteLoginFragm
             if (savedInstanceState == null) {
                 savedInstanceState = getIntent().getExtras();
             }
-            model = (BiJiModel) savedInstanceState.getSerializable("model");
+            Serializable sb=savedInstanceState.getSerializable("model");
+            if (sb==null){
+                model=BiJiModel.builder().setTitle(savedInstanceState.getString("title"))
+                        .setContent(savedInstanceState.getString("content"))
+                        .setNoteBook(savedInstanceState.getString("noteBook"))
+                        .setSdkType(savedInstanceState.getInt("sdkType"))
+                        .setShareType(savedInstanceState.getInt("shareType"));
+            }else {
+                model = (BiJiModel)sb;
+            }
+            if (null==model.getTitle()){finish(); return;}
             startShare();
         } catch (Exception e) {
             e.printStackTrace();
@@ -106,12 +115,10 @@ public class BijiActivity extends FragmentActivity implements EvernoteLoginFragm
 
     @Override
     public void start() {
-        Log.e("back", "start");
     }
 
     @Override
     public void result() {
-        Log.e("back", "result");
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -123,7 +130,6 @@ public class BijiActivity extends FragmentActivity implements EvernoteLoginFragm
 
     @Override
     public void error(final Exception e) {
-        Log.e("back", "error");
         e.printStackTrace();
         runOnUiThread(new Runnable() {
             @Override

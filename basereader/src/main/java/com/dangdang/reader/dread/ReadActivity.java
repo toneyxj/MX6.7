@@ -102,6 +102,8 @@ import com.dangdang.reader.moxiUtils.NotificationWhat;
 import com.dangdang.reader.moxiUtils.SaveNoteDialog;
 import com.dangdang.reader.moxiUtils.SettingInterface;
 import com.dangdang.reader.moxiUtils.SettingNewDialog;
+import com.dangdang.reader.moxiUtils.share.ContentBuilderInterface;
+import com.dangdang.reader.moxiUtils.share.ShareCallBack;
 import com.dangdang.reader.moxiUtils.share.YingxiangContent;
 import com.dangdang.reader.personal.DataUtil;
 import com.dangdang.reader.personal.domain.ShelfBook;
@@ -128,7 +130,6 @@ import com.dangdang.zframework.utils.DRUiUtility;
 import com.dangdang.zframework.utils.NetUtil;
 import com.dangdang.zframework.utils.UiUtil;
 import com.dangdang.zframework.view.DDImageView;
-import com.moxi.biji.intf.ContentBuilderInterface;
 import com.mx.mxbase.constant.APPLog;
 import com.mx.mxbase.dialog.HitnDialog;
 import com.mx.mxbase.dialog.ListDialog;
@@ -498,11 +499,12 @@ public class ReadActivity extends PubReadActivity implements
             if (mBookNoteWrappers==null)return;
             if (mBookNoteWrappers.size()==0){
                 ToastUtils.getInstance().showToastShort("暂无笔记内容");
+                return;
             }
             final List<BookNoteDataWrapper> finalMBookNoteWrappers = mBookNoteWrappers;
             ListDialog.getdialog(ReadActivity.this,"请选择分享笔记平台", new ListDialog.ClickListItemListener() {
                 @Override
-                public void onClickItem(int position) {
+                public void onClickItem(final int position) {
                     ContentBuilderInterface content=null;
                     //笔记内容拼接
                     if (position==0){//印象笔记
@@ -510,10 +512,43 @@ public class ReadActivity extends PubReadActivity implements
                     }else {//有道笔记
                         ToastUtils.getInstance().showToastShort("暂未开发...");
                     }
-                    if (content!=null){
-                        String ct=content.getContent(finalMBookNoteWrappers,getBook());
-                    }
+                    if (content==null)return;
+                    showDialog("");
+                    content.getContent(finalMBookNoteWrappers, getBook(), new ShareCallBack() {
+                        @Override
+                        public void shareSavePath(final boolean isSucess, final String path) {
+                            if (isFinishing())return;
+                            hideShow();
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    if(!isSucess){
+                                        ToastUtils.getInstance().showToastShort("笔记转换失败！！");
+                                        return;
+                                    }
 
+                                    ReadInfo readInfo = (ReadInfo) getReadInfo();
+                                    String title="《"+readInfo.getBookName()+"》的笔记（作者"+readInfo.getAuthorName()+"）";
+
+                                        Bundle bundle=new Bundle();
+                                        bundle.putString("title",title);
+                                        bundle.putString("content",path);
+                                        bundle.putString("noteBook","topsir电子书 网上书城");
+                                        bundle.putInt("shareType",1);
+                                        bundle.putInt("sdkType",position+1);
+
+//                                        Intent intent = new Intent();
+//                                        ComponentName cnInput = new ComponentName("com.moxi.biji", "com.moxi.biji.BijiActivity");
+//                                        intent.setComponent(cnInput);
+                                        Intent intent=new Intent("com.moxi.biji.start");
+                                        intent.putExtras(bundle);
+                                        startActivity(intent);
+                                }
+                            });
+
+
+                        }
+                    });
 
                 }
             },"印象笔记","有道云笔记");

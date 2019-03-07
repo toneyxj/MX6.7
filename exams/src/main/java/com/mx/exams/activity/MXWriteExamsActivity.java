@@ -1,11 +1,9 @@
 package com.mx.exams.activity;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Message;
 import android.os.PersistableBundle;
-import android.telephony.TelephonyManager;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -20,10 +18,7 @@ import com.mx.mxbase.base.BaseActivity;
 import com.mx.mxbase.constant.Constant;
 import com.mx.mxbase.http.MXHttpHelper;
 import com.mx.mxbase.model.BaseModel;
-import com.mx.mxbase.utils.AppUtil;
-import com.mx.mxbase.utils.DeviceUtil;
 import com.mx.mxbase.utils.GsonTools;
-import com.mx.mxbase.utils.Log;
 import com.mx.mxbase.utils.MXUamManager;
 import com.mx.mxbase.utils.Toastor;
 import com.mx.mxbase.view.AlertDialog;

@@ -1,7 +1,6 @@
 package com.dangdang.reader;
 
 import android.app.ActivityManager;
-import android.os.*;
 
 import com.dangdang.zframework.plugin.AppUtil;
 import com.mx.mxbase.base.MyApplication;
@@ -21,6 +20,7 @@ public abstract class DDBaseApplication extends MyApplication{
     public void onCreate() {
         super.onCreate();
         int myId = android.os.Process.myPid();
+//        (new BijiUtils()).startBijiInit(this);
         ActivityManager activityManager = (ActivityManager)this.getSystemService("activity");
         List runningAppProcesses = activityManager.getRunningAppProcesses();
         Iterator var5 = runningAppProcesses.iterator();

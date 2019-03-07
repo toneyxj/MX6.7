@@ -21,7 +21,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.moxi.updateapp.UpdateUtil;
-import com.moxi.updateapp.utils.FileUtil;
 import com.mx.main.R;
 import com.mx.main.utils.CheckVersionCode;
 import com.mx.mxbase.base.BaseActivity;
@@ -33,7 +32,6 @@ import com.mx.mxbase.utils.MXVersionManager;
 import com.mx.mxbase.utils.StorageUtil;
 import com.mx.mxbase.utils.Toastor;
 import com.mx.mxbase.view.AlertDialog;
-import com.onyx.android.sdk.device.EpdController;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
 
