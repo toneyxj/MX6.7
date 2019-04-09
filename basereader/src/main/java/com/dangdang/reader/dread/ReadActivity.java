@@ -2,6 +2,7 @@ package com.dangdang.reader.dread;
 
 import android.app.ActivityManager;
 import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -537,10 +538,10 @@ public class ReadActivity extends PubReadActivity implements
                                         bundle.putInt("shareType",1);
                                         bundle.putInt("sdkType",position+1);
 
-//                                        Intent intent = new Intent();
-//                                        ComponentName cnInput = new ComponentName("com.moxi.biji", "com.moxi.biji.BijiActivity");
-//                                        intent.setComponent(cnInput);
-                                        Intent intent=new Intent("com.moxi.biji.start");
+                                        Intent intent = new Intent();
+                                        ComponentName cnInput = new ComponentName("com.moxi.biji", "com.moxi.biji.BijiActivity");
+                                        intent.setComponent(cnInput);
+//                                        Intent intent=new Intent("com.moxi.biji.start");
                                         intent.putExtras(bundle);
                                         startActivity(intent);
                                 }
@@ -554,7 +555,6 @@ public class ReadActivity extends PubReadActivity implements
             },"印象笔记","有道云笔记");
 
         }
-
         @Override
         public void endReader() {
             onBackPressed();

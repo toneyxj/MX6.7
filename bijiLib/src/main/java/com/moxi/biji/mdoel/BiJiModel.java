@@ -16,7 +16,7 @@ public class BiJiModel implements Serializable{
      */
     private String title;
     /**
-     *同步内容
+     *同步内容，图片上传必须是.mxpng结尾的图片文件，且必须是文件夹
      */
     private String content;
     /**

@@ -2,4 +2,9 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="moxi_text_size_26">30sp</dimen>
+    <dimen name="height_65dp">75dp</dimen>
+    <dimen name="moxi_text_size_20">24sp</dimen>
+    <dimen name="moxi_text_size_24">28sp</dimen>
 </resources>

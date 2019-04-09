@@ -9,4 +9,94 @@
         android:layout_height="80dp"
         android:layout_marginLeft="50dp"
         android:layout_centerInParent="true"/>
+    <LinearLayout
+        android:id="@+id/dialog_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/di_white_bian_font"
+        android:orientation="vertical"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBlack"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="笔记重复"
+            android:textColor="@color/colorWihte"
+            android:textSize="@dimen/moxi_text_size_24" />
+
+        <EditText
+            android:id="@+id/input_new_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/arc_big_di_white_bian_font"
+            android:hint="请输入标题名称"
+            android:textColorHint="@color/colorGray"
+            android:padding="12dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/moxi_text_size_20" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/color_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_65dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/quit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/white_to_font"
+                android:gravity="center"
+                android:text="退出"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/moxi_text_size_26" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_line" />
+            <Button
+                android:id="@+id/fugai"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/white_to_font"
+                android:gravity="center"
+                android:text="覆盖"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/moxi_text_size_26" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_line" />
+
+            <Button
+                android:id="@+id/chongmingming"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/white_to_font"
+                android:gravity="center"
+                android:text="重命名"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/moxi_text_size_26" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 </RelativeLayout>
