@@ -15,7 +15,7 @@ public class DmnFragmentPagerAdapter extends FragmentPagerAdapter {
 	private DmnMarkFragment mMarkFragment;
 	private DmnNoteFragment mNoteFragment;
 	private String mBookName;
-	private int mCount = 2;//只保留了目录
+	private int mCount = 3;//只保留了目录
 
 	public DmnFragmentPagerAdapter(FragmentManager fm, String bookName) {
 		super(fm);
@@ -35,19 +35,19 @@ public class DmnFragmentPagerAdapter extends FragmentPagerAdapter {
 			ret = mDirFragment;
 			break;
 		case 1:
-//			if (mMarkFragment == null) {
-//				mMarkFragment = new DmnMarkFragment();
-//				/*
-//				 * mMarkFragment.SetOnResultListener(new OnResultListener() {
-//				 *
-//				 * @Override public void OnBackResult(boolean isSucess) { if
-//				 * (isSucess && !mClickEntryMark) { mCurrentModule = NOTE;
-//				 * setSelection(); loadChildModule(mCurrentModule); } } });
-//				 */
-//			}
-//			ret = mMarkFragment;
-//			break;
-//		case 2:
+			if (mMarkFragment == null) {
+				mMarkFragment = new DmnMarkFragment();
+				/*
+				 * mMarkFragment.SetOnResultListener(new OnResultListener() {
+				 *
+				 * @Override public void OnBackResult(boolean isSucess) { if
+				 * (isSucess && !mClickEntryMark) { mCurrentModule = NOTE;
+				 * setSelection(); loadChildModule(mCurrentModule); } } });
+				 */
+			}
+			ret = mMarkFragment;
+			break;
+		case 2:
 			if (mNoteFragment == null) {
 				mNoteFragment = new DmnNoteFragment();
 			}

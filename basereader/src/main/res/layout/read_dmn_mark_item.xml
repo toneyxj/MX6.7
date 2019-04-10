@@ -16,7 +16,7 @@
         android:gravity="left"
         android:singleLine="true"
         android:textColor="@color/read_note_content_color"
-        android:textSize="12dp" />
+        android:textSize="@dimen/moxi_text_size_18dp" />
 
     <com.dangdang.zframework.view.DDTextView
         android:id="@+id/read_dmn_mitem_page"
@@ -30,7 +30,7 @@
         android:gravity="right"
         android:singleLine="true"
         android:textColor="@color/read_note_content_color"
-        android:textSize="12dp" />
+        android:textSize="@dimen/moxi_text_size_18dp" />
 
     <com.dangdang.zframework.view.DDTextView
         android:id="@+id/read_dmn_mitem_text"
@@ -45,6 +45,6 @@
         android:lineSpacingMultiplier="1.5"
         android:maxLines="2"
         android:textColor="@color/read_text_light_black"
-        android:textSize="12dp" />
+        android:textSize="@dimen/moxi_text_size_18dp" />
 
 </RelativeLayout>

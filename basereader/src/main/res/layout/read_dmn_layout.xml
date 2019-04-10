@@ -48,7 +48,6 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="gone"
             android:layout_weight="1">
 
             <com.dangdang.zframework.view.DDImageView
@@ -67,8 +66,9 @@
                 android:gravity="center"
                 android:lines="1"
                 android:paddingLeft="17dip"
+                android:textStyle="bold"
                 android:text="@string/bookmark"
-                android:textColor="@color/reader_dnm_tab_selector"
+                android:textColor="@color/colorBlack"
                 android:textSize="@dimen/moxi_text_size_20dp" />
         </RelativeLayout>
 
