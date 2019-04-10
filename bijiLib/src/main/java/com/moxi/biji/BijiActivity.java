@@ -19,6 +19,7 @@ import com.moxi.biji.intf.BackImp;
 import com.moxi.biji.intf.NoteUtilsImp;
 import com.moxi.biji.intf.SucessImp;
 import com.moxi.biji.mdoel.BiJiModel;
+import com.moxi.biji.utils.NetWorkUtil;
 import com.moxi.biji.utils.StringUtils;
 import com.moxi.biji.yingxiangbiji.YingXiangUtils;
 
@@ -72,27 +73,32 @@ public class BijiActivity extends FragmentActivity implements EvernoteLoginFragm
         fugai.setOnClickListener(this);
         chongmingming.setOnClickListener(this);
 
-        try {
-            if (savedInstanceState == null) {
-                savedInstanceState = getIntent().getExtras();
-            }
-            Serializable sb = savedInstanceState.getSerializable("model");
-            if (sb == null) {
-                model = BiJiModel.builder().setTitle(savedInstanceState.getString("title"))
-                        .setContent(savedInstanceState.getString("content"))
-                        .setNoteBook(savedInstanceState.getString("noteBook"))
-                        .setSdkType(savedInstanceState.getInt("sdkType"))
-                        .setShareType(savedInstanceState.getInt("shareType"));
-            } else {
-                model = (BiJiModel) sb;
-            }
-            if (null == model.getTitle()) {
+        if (NetWorkUtil.isNetworkConnected(this)) {
+            try {
+                if (savedInstanceState == null) {
+                    savedInstanceState = getIntent().getExtras();
+                }
+                Serializable sb = savedInstanceState.getSerializable("model");
+                if (sb == null) {
+                    model = BiJiModel.builder().setTitle(savedInstanceState.getString("title"))
+                            .setContent(savedInstanceState.getString("content"))
+                            .setNoteBook(savedInstanceState.getString("noteBook"))
+                            .setSdkType(savedInstanceState.getInt("sdkType"))
+                            .setShareType(savedInstanceState.getInt("shareType"));
+                } else {
+                    model = (BiJiModel) sb;
+                }
+                if (null == model.getTitle()) {
+                    finish();
+                    return;
+                }
+                startShare();
+            } catch (Exception e) {
+                e.printStackTrace();
                 finish();
-                return;
             }
-            startShare();
-        } catch (Exception e) {
-            e.printStackTrace();
+        }else {
+            Toast.makeText(BijiActivity.this, "网络未连接", Toast.LENGTH_LONG).show();
             finish();
         }
     }
