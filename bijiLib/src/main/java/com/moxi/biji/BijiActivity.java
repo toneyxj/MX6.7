@@ -22,6 +22,9 @@ import com.moxi.biji.mdoel.BiJiModel;
 import com.moxi.biji.utils.NetWorkUtil;
 import com.moxi.biji.utils.StringUtils;
 import com.moxi.biji.yingxiangbiji.YingXiangUtils;
+import com.moxi.biji.youdao.YouDaoUtils;
+import com.moxi.biji.youdao.config.YouDaoInfo;
+import com.mx.mxbase.utils.ToastUtils;
 
 import java.io.Serializable;
 import java.util.List;
@@ -126,7 +129,10 @@ public class BijiActivity extends FragmentActivity implements EvernoteLoginFragm
                         }
                         break;
                     case 2://有道云笔记
-
+                        noteUtils = new YouDaoUtils();
+                        if (noteUtils.isLogin(BijiActivity.this)) {
+                            noteUtils.sendNote(model, BijiActivity.this);
+                        }
                         break;
                     default:
                         break;
@@ -136,20 +142,26 @@ public class BijiActivity extends FragmentActivity implements EvernoteLoginFragm
 
     }
 
-    /**
-     * 印象笔记
-     */
-    private void startYingxiang() {
-        switch (model.getShareType()) {
-            case 1://文本
-                break;
-            case 2://图片
-                break;
-            default:
-                break;
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode!=RESULT_OK){
+            if (requestCode==10)finish();
+            return;
+        }
+        if (requestCode==10){
+            if (YouDaoInfo.getInstance().isNullCode()||YouDaoInfo.getInstance().isNullAccessToken()){
+                //登录失败
+                if (!NetWorkUtil.isNetworkConnected(BijiActivity.this)){
+                    ToastUtils.getInstance().showToastShort("请检查网络连接！！");
+                }
+                finish();
+            }else {//登录成功
+                startShare();
+            }
         }
     }
-
     @Override
     protected void onSaveInstanceState(Bundle bundle) {
         super.onSaveInstanceState(bundle);
@@ -214,6 +226,7 @@ public class BijiActivity extends FragmentActivity implements EvernoteLoginFragm
         super.onDestroy();
         isStart = false;
         deleteRefs = null;
+        noteUtils=null;
     }
 
     @Override
@@ -276,6 +289,5 @@ public class BijiActivity extends FragmentActivity implements EvernoteLoginFragm
         }
         return super.dispatchTouchEvent(ev);
     }
-
 }
 

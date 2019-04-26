@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        release {
+            keyAlias 'archer'
+            keyPassword '111111'
+            storeFile file('F:/MX/Key.jks')
+            storePassword '111111'
+        }
+    }
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
 
@@ -18,6 +26,14 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
     }
 }
 
@@ -27,4 +43,8 @@ dependencies {
     testCompile 'junit:junit:4.12'
 
     compile 'com.evernote:android-sdk:2.0.0-RC4'
+
+    compile project(':mxbase')
+    compile files('libs/oauth.jar')
+    compile 'com.alibaba:fastjson:1.1.71.android'
 }

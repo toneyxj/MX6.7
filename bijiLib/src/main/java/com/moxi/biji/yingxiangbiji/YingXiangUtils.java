@@ -123,9 +123,14 @@ public class YingXiangUtils implements NoteUtilsImp {
                             return;
                         }
 
+                        File[] myF=new File[listF.length];
+                        for (int i = 0; i < listF.length; i++) {
+                            myF[listF.length-i-1]=listF[i];
+                        }
+
                         StringBuffer buffer=new StringBuffer();
                         buffer.append(EvernoteUtil.NOTE_PREFIX);
-                        for (File ff:listF){
+                        for (File ff:myF){
                             try {
                                 buffer.append(EvernoteUtil.createEnMediaTag(insertImage(note,ff.getAbsolutePath(),ff.getName())));
                             }catch (Exception e){

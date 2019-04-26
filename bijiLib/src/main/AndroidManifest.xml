@@ -15,12 +15,11 @@
             android:exported="true"
             android:theme="@style/dialog">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
                 <action android:name="com.moxi.biji.start"/>
             </intent-filter>
         </activity>
+        <activity android:name=".youdao.OauthActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
     </application>
 
 </manifest>
