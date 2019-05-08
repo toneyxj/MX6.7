@@ -2,5 +2,25 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/basereader" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/bijiLib" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/bookreader" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/bookstore" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/calendar" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/exmas1006" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/filemanager" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/framework_plugin_uneditable" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/haierc" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/handwritinglibs" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/handwritten" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/mxbase" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/mxuser" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/remotefilemanager" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/systemapp" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/timetable" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/update" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/updateapp" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/wechatshare" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/writenote" vcs="svn" />
   </component>
 </project>
