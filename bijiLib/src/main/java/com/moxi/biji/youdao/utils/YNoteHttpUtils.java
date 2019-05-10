@@ -5,6 +5,7 @@ import com.moxi.biji.mdoel.BiJiModel;
 import com.moxi.biji.youdao.config.URLUtils;
 import com.moxi.biji.youdao.config.YouDaoInfo;
 import com.moxi.biji.youdao.inter.RequestBackInter;
+import com.mx.mxbase.constant.APPLog;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
 
@@ -194,6 +195,7 @@ public class YNoteHttpUtils {
                 .build();
         Response response = okHttpClient.newCall(request).execute();
         String body=response.body().string();
+        APPLog.e("upload-"+file.getAbsolutePath(),body);
         if (response.isSuccessful()) {
             return body;
         } else {

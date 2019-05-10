@@ -16,8 +16,8 @@ android {
         applicationId "com.moxi.biji"
         minSdkVersion 15
         targetSdkVersion 23
-        versionCode 1
-        versionName "ZXTopsirH68_1.1.1"
+        versionCode 11
+        versionName "ZXTopsirH68_1.1.11"
         multiDexEnabled true
 
     }
