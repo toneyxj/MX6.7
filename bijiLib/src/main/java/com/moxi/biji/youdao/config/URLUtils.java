@@ -73,6 +73,6 @@ public class URLUtils {
     }
 
     public static String getOneImageHtml(String scr){
-        return "<img path=\""+scr+"\" src=\""+scr+"\">";
+        return "<img src=\""+scr+"\">";
     }
 }

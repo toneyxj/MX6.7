@@ -55,6 +55,7 @@ public class SettingNewDialog extends Dialog implements View.OnClickListener, Li
     private TextView title_name;
     private TextView select_title;
     private TextView page_index;
+    private TextView yu_yin;
     private TextView read_progress_txt;
     private TextView read_page_txt;
     private TextView read_tiaozhaung_txt;
@@ -134,6 +135,7 @@ public class SettingNewDialog extends Dialog implements View.OnClickListener, Li
         show_directory = (TextView) findViewById(R.id.show_directory);
         show_font = (TextView) findViewById(R.id.show_font);
         show_page = (TextView) findViewById(R.id.show_page);
+        yu_yin = (TextView) findViewById(R.id.yu_yin);
         show_progress = (TextView) findViewById(R.id.show_progress);
         show_setting = (TextView) findViewById(R.id.show_setting);
         show_title = (TextView) findViewById(R.id.show_title);
@@ -158,6 +160,7 @@ public class SettingNewDialog extends Dialog implements View.OnClickListener, Li
         progress_hitn = (TextView) findViewById(R.id.progress_hitn);
 
         page_index.setOnClickListener(this);
+        yu_yin.setOnClickListener(this);
 
         main_setting_layout.setOnClickListener(this);
         show_title.setOnClickListener(this);
@@ -217,6 +220,13 @@ public class SettingNewDialog extends Dialog implements View.OnClickListener, Li
         read_tiaozhaung_txt.setText(setTitleProgress(2));
     }
 
+    /**
+     *
+     * @param is 是否正在播放
+     */
+    public void setYuYinStatus(boolean is){
+        yu_yin.setText(is?"停止":"播放");
+    }
     private long Ctime=0;
     @Override
     public void onClick(View v) {
@@ -229,6 +239,11 @@ public class SettingNewDialog extends Dialog implements View.OnClickListener, Li
         if (i == R.id.page_index) {//点击查看目录 showDirMarkNote(DirectoryMarkNoteActivity.MARK);
             if (anInterface != null) {
                 anInterface.shareBiJi();
+                this.dismiss();
+            }
+        } else if (i == R.id.yu_yin) {
+            if (anInterface != null) {
+                anInterface.startYuyin();
                 this.dismiss();
             }
         } else if (i == R.id.show_directory) {//点击查看目录 showDirMarkNote(DirectoryMarkNoteActivity.MARK);

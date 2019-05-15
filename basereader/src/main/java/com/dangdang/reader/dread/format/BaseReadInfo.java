@@ -1,15 +1,14 @@
 package com.dangdang.reader.dread.format;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.content.res.Configuration;
-import android.text.TextUtils;
 
 import com.dangdang.reader.dread.config.ReadConfig;
 import com.dangdang.reader.dread.data.ReadInfo;
 import com.dangdang.reader.dread.jni.BaseJniWarp;
 import com.dangdang.reader.utils.InbuildBooks;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class BaseReadInfo {
 	
@@ -85,7 +84,19 @@ public class BaseReadInfo {
 	private int category = CATEGORY_NORMAL;
 	private boolean isSupportTTS=true;
 	private boolean isSupportConvert=true;
+	private boolean speekStaus=false;
 
+	/**
+	 * 语音播报状态
+	 * @return
+	 */
+	public synchronized boolean isSpeekStaus() {
+		return speekStaus;
+	}
+
+	public synchronized void setSpeekStaus(boolean speekStaus) {
+		this.speekStaus = speekStaus;
+	}
 	public boolean isSupportTTS() {
 		return isSupportTTS;
 	}

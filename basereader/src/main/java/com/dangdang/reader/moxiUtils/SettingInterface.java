@@ -68,4 +68,9 @@ public interface SettingInterface {
      * @param lastPage 上一章传true，下一章传false
      */
     void onChapterJump(boolean lastPage);
+
+    /**
+     * 开启语音播报
+     */
+    void startYuyin();
 }
