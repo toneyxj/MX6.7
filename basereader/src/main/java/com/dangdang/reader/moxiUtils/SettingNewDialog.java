@@ -10,6 +10,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -30,6 +31,8 @@ import com.mx.mxbase.view.NoGridView;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.dangdang.reader.R.id.progress_show_layout;
 
 /**
  * Created by Administrator on 2016/10/14.
@@ -54,8 +57,8 @@ public class SettingNewDialog extends Dialog implements View.OnClickListener, Li
     private ImageView setting_select_index;
     private TextView title_name;
     private TextView select_title;
-    private TextView page_index;
-    private TextView yu_yin;
+    private ImageButton page_index;
+    private ImageButton yu_yin;
     private TextView read_progress_txt;
     private TextView read_page_txt;
     private TextView read_tiaozhaung_txt;
@@ -135,7 +138,7 @@ public class SettingNewDialog extends Dialog implements View.OnClickListener, Li
         show_directory = (TextView) findViewById(R.id.show_directory);
         show_font = (TextView) findViewById(R.id.show_font);
         show_page = (TextView) findViewById(R.id.show_page);
-        yu_yin = (TextView) findViewById(R.id.yu_yin);
+        yu_yin = (ImageButton) findViewById(R.id.yu_yin);
         show_progress = (TextView) findViewById(R.id.show_progress);
         show_setting = (TextView) findViewById(R.id.show_setting);
         show_title = (TextView) findViewById(R.id.show_title);
@@ -143,7 +146,7 @@ public class SettingNewDialog extends Dialog implements View.OnClickListener, Li
         setting_select_index = (ImageView) findViewById(R.id.setting_select_index);
         title_name = (TextView) findViewById(R.id.title_name);
         select_title = (TextView) findViewById(R.id.select_title);
-        page_index = (TextView) findViewById(R.id.page_index);
+        page_index = (ImageButton) findViewById(R.id.page_index);
 
         read_progress_txt = (TextView) findViewById(R.id.read_progress_txt);
         read_page_txt = (TextView) findViewById(R.id.read_page_txt);
@@ -152,7 +155,7 @@ public class SettingNewDialog extends Dialog implements View.OnClickListener, Li
         font_layout = (LinearLayout) findViewById(R.id.font_layout);
         page_layout = (LinearLayout) findViewById(R.id.page_layout);
         progress_layout = (LinearLayout) findViewById(R.id.progress_layout);
-        (findViewById(R.id.progress_show_layout)).setOnClickListener(this);
+        (findViewById(progress_show_layout)).setOnClickListener(this);
 
         progress_view = (DDProgressView) findViewById(R.id.progress_view);
         chapter_next = (TextView) findViewById(R.id.chapter_next);
@@ -187,6 +190,14 @@ public class SettingNewDialog extends Dialog implements View.OnClickListener, Li
         ReadConfig readConfig = ReadConfig.getConfig();
         sourcePosition = readConfig.getProgress();
 
+        if (anInterface==null) {//弹出语音窗口
+            (findViewById(R.id.progress_show_layout)).setVisibility(View.INVISIBLE);
+            (findViewById(R.id.line_bottom)).setVisibility(View.INVISIBLE);
+            (findViewById(R.id.bottom_layout)).setVisibility(View.INVISIBLE);
+            (findViewById(R.id.title_layout)).setVisibility(View.INVISIBLE);
+            (findViewById(R.id.title_line)).setVisibility(View.INVISIBLE);
+        }
+
     }
     private DDProgressView.ProgressListener progressListener=new DDProgressView.ProgressListener() {
         @Override
@@ -205,11 +216,11 @@ public class SettingNewDialog extends Dialog implements View.OnClickListener, Li
         if (totalPage > 0) {
             this.totalPage = totalPage - 1;
             this.currentPage = currentPage;
-             (findViewById(R.id.progress_show_layout)).setVisibility(View.VISIBLE);
+             (findViewById(progress_show_layout)).setVisibility(View.VISIBLE);
             progress_view.setMaxNumber(this.totalPage);
             progress_view.setCurNumber(currentPage);
         }else {
-            (findViewById(R.id.progress_show_layout)).setVisibility(View.GONE);
+            (findViewById(progress_show_layout)).setVisibility(View.GONE);
         }
        initView();
     }
@@ -225,7 +236,7 @@ public class SettingNewDialog extends Dialog implements View.OnClickListener, Li
      * @param is 是否正在播放
      */
     public void setYuYinStatus(boolean is){
-        yu_yin.setText(is?"停止":"播放");
+//        yu_yin.setText(is?"停止":"播放");
     }
     private long Ctime=0;
     @Override

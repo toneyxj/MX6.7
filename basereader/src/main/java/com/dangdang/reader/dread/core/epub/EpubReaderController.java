@@ -77,7 +77,6 @@ import com.dangdang.zframework.utils.DRUiUtility;
 import com.moxi.wechatshare.ShareDialog;
 import com.mx.mxbase.constant.APPLog;
 import com.mx.mxbase.utils.StartActivityUtils;
-import com.mx.mxbase.utils.ToastUtils;
 import com.mx.mxbase.view.AlertDialog;
 
 import java.lang.ref.WeakReference;
@@ -751,10 +750,6 @@ public class EpubReaderController extends BaseReaderController {
 
     @Override
     public boolean onFingerSingleTap(int x, int y, long time) {
-        if (getReadInfo().isSpeekStaus()) {//弹出语音窗口
-            ToastUtils.getInstance().showToastShort("语音阅读模式下不可操作，可点击返回按钮退出语音阅读");
-            return true;
-        }
 //         clickZoneToTurnPage(x, y);
         if (isShowingWindow()) {
             SearchDataHolder.getHolder().resetCurrent();
@@ -772,7 +767,6 @@ public class EpubReaderController extends BaseReaderController {
             return;
         }
         try {
-            APPLog.e("clickEvent", "进入了这里");
             ClickResult cResult = clickEvent(x, y);
 
             if (cResult.isClick()) {

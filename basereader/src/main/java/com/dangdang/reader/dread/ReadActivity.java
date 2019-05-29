@@ -1943,7 +1943,7 @@ public class ReadActivity extends PubReadActivity implements
         int currentPage = mReaderApps.getCurrentPageIndex();
         int totalpage = mReaderApps.getPageSize();
         String mulu = getIntent().getStringExtra(IntentK.BookName);
-        settingNewDialog = SettingNewDialog.getdialog(ReadActivity.this, mulu, totalpage, currentPage, anInterface);
+        settingNewDialog = SettingNewDialog.getdialog(ReadActivity.this, mulu, totalpage, currentPage, getReadInfo().isSpeekStaus()?null:anInterface);
     }
 
     private void toPage(int pageIndex) {
@@ -2082,6 +2082,12 @@ public class ReadActivity extends PubReadActivity implements
             getReadInfo().setOnpause(true);
             switchWakeLock(false);
             updateProgress(true, 2);
+            if (settingNewDialog != null && settingNewDialog.isShowing()) {
+                settingNewDialog.dismiss();
+            }
+            if (saveNoteDialog != null && saveNoteDialog.isShowing()) {
+                saveNoteDialog.dismiss();
+            }
         } catch (Exception e) {
             LogM.e(" onReadPauseImpl " + e.toString());
         }

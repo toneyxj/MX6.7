@@ -48,7 +48,7 @@
             android:layout_height="1dp"
             android:layout_weight="1" />
 
-        <TextView
+        <ImageButton
             android:id="@+id/yu_yin"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -56,10 +56,12 @@
             android:gravity="center_vertical"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
+            android:src="@mipmap/tingshu"
             android:text="播放"
             android:textColor="@color/colorBlack"
             android:textSize="@dimen/moxi_text_size_22" />
-        <TextView
+
+        <ImageButton
             android:id="@+id/page_index"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -67,12 +69,14 @@
             android:gravity="center_vertical"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
+            android:src="@mipmap/tongbubiji"
             android:text="分享"
             android:textColor="@color/colorBlack"
             android:textSize="@dimen/moxi_text_size_22" />
     </LinearLayout>
 
     <View
+        android:id="@+id/title_line"
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:layout_below="@+id/title_layout"
