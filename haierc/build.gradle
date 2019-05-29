@@ -8,8 +8,8 @@ android {
         applicationId "com.moxi.haierc"
         minSdkVersion 15
         targetSdkVersion 24
-        versionCode 304
-        versionName "ZXTopsirH68_F1_V3.0.4"
+        versionCode 305
+        versionName "ZXTopsirH68_F1_V3.0.5"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         javaCompileOptions {
