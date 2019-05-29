@@ -3,6 +3,7 @@ package com.dangdang.reader.dread.function;
 import com.dangdang.reader.dread.core.base.BaseReaderApplicaion;
 import com.dangdang.reader.dread.core.base.IReaderWidget;
 import com.dangdang.zframework.utils.DRUiUtility;
+import com.mx.mxbase.constant.APPLog;
 
 public class NextPageFunction extends MFunctionImpl {
 

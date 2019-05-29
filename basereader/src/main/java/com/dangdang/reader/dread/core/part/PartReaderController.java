@@ -108,8 +108,6 @@ public class PartReaderController extends EpubReaderController {
         }
 
         if (pageIndex == DPageIndex.Next) {
-
-
 			/*
              * if(isLoadingPage){ return false; }
 			 */

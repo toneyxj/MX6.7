@@ -53,6 +53,7 @@ import com.dangdang.reader.dread.core.base.IEpubReaderController;
 import com.dangdang.reader.dread.core.base.IFunctionManager;
 import com.dangdang.reader.dread.core.base.IMediaInterface;
 import com.dangdang.reader.dread.core.base.IReaderApplication.IAbortParserListener;
+import com.dangdang.reader.dread.core.base.IReaderController;
 import com.dangdang.reader.dread.core.base.IVideoInterface;
 import com.dangdang.reader.dread.core.epub.EpubReaderController;
 import com.dangdang.reader.dread.core.epub.EpubReaderWidget;
@@ -622,7 +623,7 @@ public class ReadActivity extends PubReadActivity implements
             settingNewDialog.setYuYinStatus(getReadInfo().isSpeekStaus());
         }
     }
-    private   int nextPage=0;
+    private boolean nextpage=false;
     private void switchYuyin(){
         EpubReaderController controller = (EpubReaderController) mReaderApps.getReaderController();
         controller.setLodingListener(lodingSucess);
@@ -634,21 +635,28 @@ public class ReadActivity extends PubReadActivity implements
         }
 
         String value=controller.getParagraphText();
-        if (value.equals("nextPage")||controller.isFanYe()){
-            mReaderApps.pageTurning(false);
-            controller.closeYuYin();
+        if (value.equals("nextPage")){
+            APPLog.e("nextPage");
+            nextpage=true;
+                turnPageByVolumeKey(false);
         }else {
+            nextpage=false;
             yuYinManager.SendYuYinMsg(value);
-//            if (controller.isFanYe()) {
-//                mReaderApps.pageTurning(false);
-//
-//            }
+            if (controller.isFanYe()) {
+                turnPageByVolumeKey(false);
+            }
         }
     }
     private LodingSucess lodingSucess=new LodingSucess() {
         @Override
         public void onLodingSucess() {
-            switchYuyin();
+            APPLog.e("onLodingSucess",nextpage);
+            if (nextpage){
+                switchYuyin();
+            }else {
+                EpubReaderController controller = (EpubReaderController) mReaderApps.getReaderController();
+                controller.highLightParagraphText();
+            }
         }
     };
     private void stopYuyin(){
@@ -1733,6 +1741,10 @@ public class ReadActivity extends PubReadActivity implements
                 }
                 break;
             case KeyEvent.KEYCODE_BACK:
+                if (getReadInfo().isSpeekStaus()) {
+                    stopYuyin();
+                    return true;
+                }
                 if (System.currentTimeMillis() - downTime >= 2000) break;
                 handler.removeMessages(101);
                 if (getReadInfo().isSpeekStaus()) {
@@ -1783,13 +1795,11 @@ public class ReadActivity extends PubReadActivity implements
             case KeyEvent.KEYCODE_PAGE_UP:
             case KeyEvent.KEYCODE_VOLUME_UP:
                 if (getReadInfo().isSpeekStaus())return true;
-//                mReaderApps.pageTurning(true);
                 turnPageByVolumeKey(true);
                 return true;
             case KeyEvent.KEYCODE_PAGE_DOWN:
             case KeyEvent.KEYCODE_VOLUME_DOWN:
                 if (getReadInfo().isSpeekStaus())return true;
-//                mReaderApps.pageTurning(false);
                 turnPageByVolumeKey(false);
                 return true;
         }
@@ -1848,8 +1858,14 @@ public class ReadActivity extends PubReadActivity implements
 //        if (saveNoteDialog != null && saveNoteDialog.isShowing()) {
 //            saveNoteDialog.dismiss();
 //        }
-        mReaderApps.doFunction(up ? FunctionCode.FCODE_TURNPAGE_BACK
-                : FunctionCode.FCODE_TURNPAGE_FORWARD);
+        if (getReadInfo().isOnpause() && getReadInfo().isSpeekStaus()) {
+            EpubReaderController controller = (EpubReaderController) mReaderApps.getReaderController();
+            controller.onScrollingEnd(IReaderController.DPageIndex.Next);
+        }else {
+            mReaderApps.doFunction(up ? FunctionCode.FCODE_TURNPAGE_BACK
+                    : FunctionCode.FCODE_TURNPAGE_FORWARD);
+        }
+
         return true;
     }
 
@@ -2063,6 +2079,7 @@ public class ReadActivity extends PubReadActivity implements
         try {
 //            UmengStatistics.onPageEnd(getClass().getSimpleName());
 //            printLog(" onPause() ");
+            getReadInfo().setOnpause(true);
             switchWakeLock(false);
             updateProgress(true, 2);
         } catch (Exception e) {
@@ -2111,15 +2128,13 @@ public class ReadActivity extends PubReadActivity implements
 
     @Override
     public void onReadResumeImpl() {
-//        if (isfirst)
-//        setttingScreenOrientaton(-1, false, isfirst);
-
+        if (getReadInfo().isOnpause() && getReadInfo().isSpeekStaus()) {
+//        //刷新界面
+            resetView();
+        }
+        getReadInfo().setOnpause(false);
         isfirst = false;
-
         printLog(" onResume() ");
-//        if (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT != getCurrentOrientation() && !mIsLandSpace) {
-//            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-//        }
         switchWakeLock(true);
         createWakeLock();
         initFirstInTime();

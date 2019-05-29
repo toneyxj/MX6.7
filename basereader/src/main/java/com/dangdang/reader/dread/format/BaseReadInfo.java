@@ -84,19 +84,29 @@ public class BaseReadInfo {
 	private int category = CATEGORY_NORMAL;
 	private boolean isSupportTTS=true;
 	private boolean isSupportConvert=true;
-	private boolean speekStaus=false;
+	private  boolean speekStaus=false;
+	private  boolean onpause=false;
 
 	/**
 	 * 语音播报状态
 	 * @return
 	 */
-	public synchronized boolean isSpeekStaus() {
+	public  synchronized boolean isSpeekStaus() {
 		return speekStaus;
 	}
 
 	public synchronized void setSpeekStaus(boolean speekStaus) {
 		this.speekStaus = speekStaus;
 	}
+
+	public  boolean isOnpause() {
+		return onpause;
+	}
+
+	public void setOnpause(boolean onpause) {
+		this.onpause = onpause;
+	}
+
 	public boolean isSupportTTS() {
 		return isSupportTTS;
 	}
