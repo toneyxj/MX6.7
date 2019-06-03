@@ -22,6 +22,7 @@ import com.mx.mxbase.constant.APPLog;
 public class YuYinManager {
     private Activity context;
     private YuYinCallBack callBack;
+    private long time=0;
 
     public void setCallBack(YuYinCallBack callBack) {
         this.callBack = callBack;
@@ -41,6 +42,7 @@ public class YuYinManager {
     public void SendYuYinMsg(String msg) {
         if (!mBond){
             if (callBack!=null)callBack.onYuYinFail("语音服务绑定失败");
+            bindServiceInvoked();
             return;
         }else if (msg==null||msg.trim().equals("")){
             if (callBack!=null)callBack.onYuYinFail("无可阅读内容");
@@ -53,7 +55,6 @@ public class YuYinManager {
         clientMessage.setData(bundle);
         try {
             serverMessenger.send(clientMessage);
-
         } catch (RemoteException e) {
             e.printStackTrace();
         }
@@ -63,8 +64,12 @@ public class YuYinManager {
      * 停止语音播放
      */
     public boolean stopYuYinMsg() {
+        long cur=System.currentTimeMillis();
+        if ((cur-time)<1000)return false;
+        time=cur;
         if (!mBond){
             if (callBack!=null)callBack.onYuYinFail("语音服务绑定失败");
+            bindServiceInvoked();
             return false;
         }
         Message clientMessage = Message.obtain();
@@ -118,11 +123,16 @@ public class YuYinManager {
     };
 
     public void bindServiceInvoked() {
-        APPLog.e("bindServiceInvoked");
-        Intent intent = new Intent();
-        intent.setAction("com.baidu.yuyinhecheng.YuYinService");
-        context.startService(intent);
-        context.bindService(intent, conn, Context.BIND_AUTO_CREATE);
+        try {
+            APPLog.e("bindServiceInvoked");
+            Intent intent = new Intent();
+            intent.setAction("com.baidu.yuyinhecheng.YuYinService");
+            context.startService(intent);
+            context.bindService(intent, conn, Context.BIND_AUTO_CREATE);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
     }
 
     public void onDestroy() {
